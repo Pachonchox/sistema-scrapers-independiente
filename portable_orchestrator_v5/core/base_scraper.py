@@ -54,6 +54,16 @@ except ImportError:
     Page = Browser = BrowserContext = Route = Request = None
     BeautifulSoup = Tag = None
 
+# Configurar logging con emojis PRIMERO
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+logger = logging.getLogger(__name__)
+
 # Imports internos
 from .exceptions import *
 from .field_mapper import ETLFieldMapper
@@ -68,16 +78,6 @@ try:
 except ImportError:
     PARQUET_BACKUP_AVAILABLE = False
     logger.warning("⚠️ Sistema de respaldo Parquet no disponible")
-
-# Configurar logging con emojis
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-logger = logging.getLogger(__name__)
 
 @dataclass
 class ScrapingResult:

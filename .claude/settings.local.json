@@ -23,7 +23,8 @@
       "Bash(xcopy:*)",
       "Bash(tree:*)",
       "WebFetch(domain:github.com)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

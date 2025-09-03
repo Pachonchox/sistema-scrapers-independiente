@@ -1,0 +1,136 @@
+{
+  "validation_id": "validation_1756933919",
+  "scrapers_tested": 6,
+  "scrapers_passed": 6,
+  "scrapers_failed": 0,
+  "detailed_results": {
+    "paris": {
+      "retailer": "paris",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.paris_scraper_v5.ParisScraperV5 object at 0x0000027943AAFE00>",
+      "validation_time": "2025-09-03T17:11:59.350612"
+    },
+    "falabella": {
+      "retailer": "falabella",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.falabella_scraper_v5.FalabellaScraperV5 object at 0x0000027943D60590>",
+      "validation_time": "2025-09-03T17:11:59.351115"
+    },
+    "ripley": {
+      "retailer": "ripley",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.ripley_scraper_v5.RipleyScraperV5 object at 0x0000027943D606E0>",
+      "validation_time": "2025-09-03T17:11:59.351431"
+    },
+    "hites": {
+      "retailer": "hites",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.hites_scraper_v5.HitesScraperV5 object at 0x0000027943D60830>",
+      "validation_time": "2025-09-03T17:11:59.351731"
+    },
+    "abcdin": {
+      "retailer": "abcdin",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.abcdin_scraper_v5.AbcdinScraperV5 object at 0x0000027943D60980>",
+      "validation_time": "2025-09-03T17:11:59.351992"
+    },
+    "mercadolibre": {
+      "retailer": "mercadolibre",
+      "status": "passed",
+      "tests_passed": [
+        "import_module",
+        "instantiation",
+        "configuration (100.0%)",
+        "has_initialize_method",
+        "critical_methods (100.0%)"
+      ],
+      "tests_failed": [],
+      "warnings": [
+        "Inicialización completa omitida para evitar browser"
+      ],
+      "critical_issues": [],
+      "scraper_instance": "<portable_orchestrator_v5.scrapers.mercadolibre_scraper_v5.MercadoLibreScraperV5 object at 0x0000027943D60AD0>",
+      "validation_time": "2025-09-03T17:11:59.352239"
+    }
+  },
+  "critical_errors": [],
+  "warnings": [
+    "paris: Inicialización completa omitida para evitar browser",
+    "falabella: Inicialización completa omitida para evitar browser",
+    "ripley: Inicialización completa omitida para evitar browser",
+    "hites: Inicialización completa omitida para evitar browser",
+    "abcdin: Inicialización completa omitida para evitar browser",
+    "mercadolibre: Inicialización completa omitida para evitar browser"
+  ],
+  "summary": {
+    "total_scrapers": 6,
+    "passed_scrapers": 6,
+    "failed_scrapers": 0,
+    "success_rate_percent": 100.0,
+    "overall_status": "PASSED",
+    "critical_errors_count": 0,
+    "warnings_count": 6
+  },
+  "validation_duration_seconds": 0.002204,
+  "validation_end": "2025-09-03T17:11:59.352720"
+}

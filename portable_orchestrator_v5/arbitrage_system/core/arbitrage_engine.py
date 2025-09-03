@@ -15,6 +15,9 @@ import json
 from pathlib import Path
 import uuid
 
+# Configurar logger PRIMERO
+logger = logging.getLogger(__name__)
+
 # Importaciones V5 SOLO internas (completamente autónomas)
 from ...core.redis_intelligence_system import RedisIntelligenceSystem
 from ...core.intelligent_cache_manager import IntelligentCacheManager
@@ -48,8 +51,6 @@ except ImportError as e:
     
     def send_arbitrage_opportunity_alert(*args, **kwargs):
         logger.info(f"📢 Alerta de arbitraje (sistema no disponible): {args}")
-
-logger = logging.getLogger(__name__)
 
 class ArbitrageEngineV5:
     """
