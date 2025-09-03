@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-09-03T15:57:05.210019",
+  "timestamp": "2025-09-03T16:47:05.210034",
   "metrics": {
-    "total_tasks_executed": 19,
-    "successful_tasks": 19,
+    "total_tasks_executed": 22,
+    "successful_tasks": 22,
     "failed_tasks": 0,
-    "total_products_scraped": 541,
+    "total_products_scraped": 648,
     "average_task_duration": 0.0,
-    "uptime_percentage": 100.0,
+    "uptime_percentage": 1.0416773958333334,
     "retailers_performance": {
       "falabella": {
-        "tasks_executed": 3,
+        "tasks_executed": 4,
         "success_rate": 1.0,
-        "avg_products_per_task": 18.119999999999997,
-        "avg_execution_time": 0.9896738926666667,
-        "last_successful_execution": "2025-09-03T15:55:50.680655"
+        "avg_products_per_task": 21.496,
+        "avg_execution_time": 1.163117757466667,
+        "last_successful_execution": "2025-09-03T15:57:42.186311"
       },
       "paris": {
         "tasks_executed": 4,
@@ -23,11 +23,11 @@
         "last_successful_execution": "2025-09-03T15:55:53.186748"
       },
       "ripley": {
-        "tasks_executed": 4,
+        "tasks_executed": 5,
         "success_rate": 1.0,
-        "avg_products_per_task": 35.568,
-        "avg_execution_time": 1.0052069337333336,
-        "last_successful_execution": "2025-09-03T15:54:45.508982"
+        "avg_products_per_task": 35.0544,
+        "avg_execution_time": 1.1253728403200003,
+        "last_successful_execution": "2025-09-03T15:57:32.136455"
       },
       "hites": {
         "tasks_executed": 3,
@@ -37,19 +37,19 @@
         "last_successful_execution": "2025-09-03T15:54:34.844888"
       },
       "abcdin": {
-        "tasks_executed": 5,
+        "tasks_executed": 6,
         "success_rate": 1.0,
-        "avg_products_per_task": 30.939200000000007,
-        "avg_execution_time": 1.3371476417600001,
-        "last_successful_execution": "2025-09-03T15:55:18.196330"
+        "avg_products_per_task": 32.55136,
+        "avg_execution_time": 1.4584354634080001,
+        "last_successful_execution": "2025-09-03T15:57:22.361775"
       }
     },
     "tiers_performance": {
       "critical": {
-        "executions_today": 19,
+        "executions_today": 22,
         "success_rate": 1.0,
-        "avg_execution_time": 1.3100345661992456,
-        "products_scraped": 541
+        "avg_execution_time": 1.547861279894014,
+        "products_scraped": 648
       },
       "important": {
         "executions_today": 0,
@@ -68,7 +68,7 @@
   },
   "anti_detection_metrics": {
     "success_rate": 1.0,
-    "total_requests": 19,
+    "total_requests": 22,
     "proxy_rotations": 0,
     "ua_rotations": 0,
     "pattern_breaks": 0,
@@ -80,11 +80,11 @@
   "tier_status": {
     "tiers": {
       "critical": {
-        "last_run": "2025-09-03T15:55:53.186777",
-        "next_scheduled": "2025-09-03T17:56:50.033769",
-        "executions_today": 57,
+        "last_run": "2025-09-03T15:57:42.186364",
+        "next_scheduled": "2025-09-03T17:59:51.687483",
+        "executions_today": 60,
         "success_rate": 1.0,
-        "avg_execution_time": 2.008128388045069,
+        "avg_execution_time": 2.038367396858794,
         "products_extracted": 0
       },
       "important": {
@@ -105,7 +105,7 @@
       }
     },
     "system": {
-      "total_executions_today": 186,
+      "total_executions_today": 189,
       "overall_success_rate": 1.0,
       "pattern_break_counter": 0,
       "next_scheduled": {

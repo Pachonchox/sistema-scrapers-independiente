@@ -27,14 +27,27 @@ from .ml_integration import MLIntegrationV5, create_ml_integration_v5
 from .opportunity_detector import OpportunityDetectorV5
 from ..schedulers.arbitrage_scheduler import ArbitrageSchedulerV5
 
-# Importar sistema de alertas integrado
+# Importar sistema de alertas integrado con path correcto
 try:
-    from ......core.alerts_bridge import get_alerts_bridge, send_arbitrage_opportunity_alert
+    import sys
+    from pathlib import Path
+    # Agregar ruta raíz del proyecto
+    project_root = Path(__file__).parent.parent.parent.parent
+    sys.path.insert(0, str(project_root))
+    
+    from core.alerts_bridge import get_alerts_bridge, send_arbitrage_opportunity_alert
     ALERTS_SYSTEM_AVAILABLE = True
     logger.info("✅ Sistema de alertas integrado disponible en V5")
-except ImportError:
+except ImportError as e:
     ALERTS_SYSTEM_AVAILABLE = False
-    logger.warning("⚠️ Sistema de alertas no disponible en V5")
+    logger.warning(f"⚠️ Sistema de alertas no disponible en V5: {e}")
+    
+    # Crear stubs para mantener funcionalidad
+    def get_alerts_bridge():
+        return None
+    
+    def send_arbitrage_opportunity_alert(*args, **kwargs):
+        logger.info(f"📢 Alerta de arbitraje (sistema no disponible): {args}")
 
 logger = logging.getLogger(__name__)
 

@@ -21,7 +21,9 @@
       "Bash(docker exec:*)",
       "Bash(robocopy:*)",
       "Bash(xcopy:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
