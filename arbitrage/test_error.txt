@@ -1,0 +1,19 @@
+❌ Error en test: no existe la columna «precio_normal»
+LINE 3:                    precio_normal, precio_oferta, precio_min_...
+                           ^
+
+Traceback (most recent call last):
+  File "C:\Users\osmar\OneDrive\Escritorio\portable_orchestrator\arbitrage\test_direct_ml.py", line 27, in run_direct_ml_test
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        SELECT codigo_interno, nombre, marca, retailer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        LIMIT 20
+        ^^^^^^^^
+    """)
+    ^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna «precio_normal»
+LINE 3:                    precio_normal, precio_oferta, precio_min_...
+                           ^
+

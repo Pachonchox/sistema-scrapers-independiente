@@ -1,0 +1,3 @@
+ERROR: column "retailer_compra" does not exist
+LINE 3:                 WHERE retailer_compra = 'falabella' AND reta...
+                              ^

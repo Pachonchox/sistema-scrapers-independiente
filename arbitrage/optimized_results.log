@@ -1,0 +1,10 @@
+INFO:scraper_v4.ml.normalization.attribute_extractor:\u2705 Cargado normalizador ML mejorado con 226 entradas
+INFO:scraper_v4.ml.normalization.match_scorer:\u2705 Sistema ML mejorado cargado para matching
+INFO:ml_integration_sync:\u2705 MatchScoringModel integrado exitosamente
+Traceback (most recent call last):
+  File "C:\Users\osmar\OneDrive\Escritorio\portable_orchestrator\arbitrage\run_optimized_arbitrage.py", line 219, in <module>
+    success = run_optimized_arbitrage()
+  File "C:\Users\osmar\OneDrive\Escritorio\portable_orchestrator\arbitrage\run_optimized_arbitrage.py", line 48, in run_optimized_arbitrage
+    print(f"\nCONFIGURACIÓN OPTIMIZADA:")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.

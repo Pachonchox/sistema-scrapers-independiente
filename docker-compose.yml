@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: orchestrator_postgres
+    environment:
+      POSTGRES_DB: price_orchestrator
+      POSTGRES_USER: orchestrator
+      POSTGRES_PASSWORD: orchestrator_2025
+    ports:
+      - "5434:5432"  # Puerto 5434 como en el README principal
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./arbitrage:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orchestrator -d price_orchestrator"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: orchestrator_redis
+    ports:
+      - "6380:6379"  # Puerto 6380 como en el README principal
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:

@@ -1,0 +1,21 @@
+[2025-09-03 11:00:17] [INFO] 🚀 Iniciando detección completa de anomalías
+[2025-09-03 11:00:17] [INFO] ✅ Conectado a BD: localhost:5434/price_orchestrator
+[2025-09-03 11:00:17] [INFO] 🔍 Buscando precios anómalos de los últimos 30 días
+[2025-09-03 11:00:17] [INFO] 🎯 Encontrados 618 productos con precios anómalos
+[2025-09-03 11:00:17] [INFO]    CRÍTICO: 2 productos
+[2025-09-03 11:00:17] [INFO]    SOSPECHOSO: 616 productos
+[2025-09-03 11:00:17] [INFO] 📊 Excel creado exitosamente: precios_anomalos_20250903_110017.xlsx
+[2025-09-03 11:00:17] [INFO]    Total productos: 618
+[2025-09-03 11:00:17] [INFO]    Archivo: data\price_anomalies\excel\precios_anomalos_20250903_110017.xlsx
+[2025-09-03 11:00:17] [INFO] ✅ Conectado a BD: localhost:5434/price_orchestrator
+[2025-09-03 11:00:17] [INFO] ✅ Columnas de anomalía agregadas/verificadas
+[2025-09-03 11:00:18] [INFO] 🏷️ Marcados 618 productos como anómalos
+[2025-09-03 11:00:18] [INFO] ✅ Conectado a BD: localhost:5434/price_orchestrator
+[2025-09-03 11:00:18] [INFO] ❌ Error eliminando producto 756804: relation "master_precios_deleted" does not exist
+LINE 2:                         INSERT INTO master_precios_deleted 
+                                            ^
+
+[2025-09-03 11:00:18] [INFO] ❌ Error eliminando producto 756807: current transaction is aborted, commands ignored until end of transaction block
+
+[2025-09-03 11:00:18] [INFO] 🗑️ Eliminados automáticamente 0 productos críticos
+[2025-09-03 11:00:18] [INFO] ✅ Detección completa finalizada exitosamente

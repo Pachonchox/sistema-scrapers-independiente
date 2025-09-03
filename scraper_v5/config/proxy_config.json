@@ -1,0 +1,71 @@
+{
+  "providers": [
+    {
+      "provider_id": "brightdata",
+      "name": "Bright Data",
+      "api_endpoint": "https://brd-customer-hl_username-zone-datacenter_proxy1:password@brd.superproxy.io:22225",
+      "auth_token": "",
+      "proxy_type": "datacenter",
+      "rotation_interval": 600,
+      "concurrent_limit": 100,
+      "cost_per_gb": 15.0,
+      "countries_available": [
+        "CL",
+        "US",
+        "DE",
+        "SG"
+      ],
+      "protocols_supported": [
+        "http",
+        "https"
+      ],
+      "reliability_score": 0.95,
+      "is_active": false
+    },
+    {
+      "provider_id": "smartproxy",
+      "name": "SmartProxy",
+      "api_endpoint": "http://user:pass@gate.smartproxy.com:7000",
+      "auth_token": "",
+      "proxy_type": "residential",
+      "rotation_interval": 300,
+      "concurrent_limit": 50,
+      "cost_per_gb": 12.5,
+      "countries_available": [
+        "CL",
+        "PE",
+        "CO",
+        "AR"
+      ],
+      "protocols_supported": [
+        "http",
+        "https"
+      ],
+      "reliability_score": 0.9,
+      "is_active": false
+    },
+    {
+      "provider_id": "local_test",
+      "name": "Local Test Proxy",
+      "api_endpoint": "http://127.0.0.1:8888",
+      "auth_token": "",
+      "proxy_type": "datacenter",
+      "rotation_interval": 60,
+      "concurrent_limit": 10,
+      "cost_per_gb": 0.0,
+      "countries_available": [
+        "CL"
+      ],
+      "protocols_supported": [
+        "http",
+        "https"
+      ],
+      "reliability_score": 0.5,
+      "is_active": true
+    }
+  ],
+  "max_concurrent_per_proxy": 5,
+  "rotation_strategy": "intelligent",
+  "min_success_rate": 0.7,
+  "health_check_interval": 300
+}

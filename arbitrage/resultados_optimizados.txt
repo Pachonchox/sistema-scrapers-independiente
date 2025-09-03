@@ -1,0 +1,3038 @@
+RESULTADOS SISTEMA ARBITRAJE - PARÁMETROS OPTIMIZADOS
+============================================================
+
+CONFIGURACIÓN:
+• Similitud mínima: 0.45 (optimizada desde 0.7-0.85)
+• Margen mínimo: $2,000 (optimizado desde $5K-15K)
+• ROI mínimo: 10% (optimizado desde 15-25%)
+
+RESULTADOS:
+Productos analizados: 3304
+Matches encontrados (≥0.45): 732
+Oportunidades detectadas: 503
+
+🎯 OPORTUNIDADES DETECTADAS:
+----------------------------------------
+
+1. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,392,000.0 (42453.1% ROI)
+   Similitud ML: 0.495
+
+2. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,392,000.0 (42453.1% ROI)
+   Similitud ML: 0.466
+
+3. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,385,000.0 (22581.7% ROI)
+   Similitud ML: 0.466
+
+4. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $44,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,355,000.0 (7457.2% ROI)
+   Similitud ML: 0.466
+
+5. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,130,000.0 (1159.3% ROI)
+   Similitud ML: 0.495
+
+6. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,130,000.0 (1159.3% ROI)
+   Similitud ML: 0.495
+
+7. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,110,000.0 (1072.5% ROI)
+   Similitud ML: 0.519
+
+8. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $3,080,000.0 (962.5% ROI)
+   Similitud ML: 0.495
+
+9. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $569,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $2,830,000.0 (496.5% ROI)
+   Similitud ML: 0.519
+
+10. SAMSUNG 65 Neo QLED 4K QN1EF Vision AI Smart TV 20
+   Comprar en falabella: $659,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $2,740,000.0 (415.2% ROI)
+   Similitud ML: 0.519
+
+11. SAMSUNG 85 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $999,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $2,400,000.0 (240.0% ROI)
+   Similitud ML: 0.495
+
+12. SAMSUNG 85 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $999,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $2,400,000.0 (240.0% ROI)
+   Similitud ML: 0.495
+
+13. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $1,109,990.0
+   Vender en ripley: $3,399,990.0
+   MARGEN: $2,290,000.0 (206.3% ROI)
+   Similitud ML: 0.466
+
+14. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $1,999,990.0
+   MARGEN: $1,650,000.0 (471.4% ROI)
+   Similitud ML: 0.483
+
+15. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $1,899,990.0
+   MARGEN: $1,550,000.0 (442.9% ROI)
+   Similitud ML: 0.505
+
+16. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,999,990.0
+   MARGEN: $1,550,000.0 (344.5% ROI)
+   Similitud ML: 0.483
+
+17. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,999,990.0
+   MARGEN: $1,550,000.0 (344.5% ROI)
+   Similitud ML: 0.483
+
+18. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,899,990.0
+   MARGEN: $1,450,000.0 (322.2% ROI)
+   Similitud ML: 0.505
+
+19. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,899,990.0
+   MARGEN: $1,450,000.0 (322.2% ROI)
+   Similitud ML: 0.505
+
+20. TCL QLED Smart TV 85" 4K UHD T6C Google TV
+   Comprar en falabella: $769,990.0
+   Vender en ripley: $1,999,990.0
+   MARGEN: $1,230,000.0 (159.7% ROI)
+   Similitud ML: 0.498
+
+21. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $1,142,000.0 (14292.9% ROI)
+   Similitud ML: 0.459
+
+22. SAMSUNG Smart TV con Marco QLED 4K 50" The Frame L
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $1,135,000.0 (7571.7% ROI)
+   Similitud ML: 0.535
+
+23. TCL QLED Smart TV 85" 4K UHD T6C Google TV
+   Comprar en falabella: $769,990.0
+   Vender en ripley: $1,899,990.0
+   MARGEN: $1,130,000.0 (146.8% ROI)
+   Similitud ML: 0.505
+
+24. SAMSUNG Smart TV con Marco QLED 4K 50" The Frame L
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $1,125,000.0 (4501.8% ROI)
+   Similitud ML: 0.535
+
+25. SAMSUNG Smart TV con Marco QLED 4K 43" The Frame L
+   Comprar en falabella: $108,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $1,041,000.0 (955.1% ROI)
+   Similitud ML: 0.535
+
+26. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $950,000.0 (271.4% ROI)
+   Similitud ML: 0.505
+
+27. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $950,000.0 (271.4% ROI)
+   Similitud ML: 0.505
+
+28. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $1,109,990.0
+   MARGEN: $930,000.0 (516.7% ROI)
+   Similitud ML: 0.479
+
+29. HP Notebook Gamer Victus 15-FA0026LA Intel Core i5
+   Comprar en falabella: $749,990.0
+   Vender en ripley: $1,649,990.0
+   MARGEN: $900,000.0 (120.0% ROI)
+   Similitud ML: 0.455
+
+30. HP Notebook Gamer Victus 15-FA0026LA Intel Core i5
+   Comprar en falabella: $749,990.0
+   Vender en ripley: $1,649,990.0
+   MARGEN: $900,000.0 (120.0% ROI)
+   Similitud ML: 0.455
+
+31. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $880,000.0 (325.9% ROI)
+   Similitud ML: 0.459
+
+32. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $880,000.0 (325.9% ROI)
+   Similitud ML: 0.459
+
+33. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $860,000.0 (296.6% ROI)
+   Similitud ML: 0.457
+
+34. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $850,000.0 (188.9% ROI)
+   Similitud ML: 0.505
+
+35. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $850,000.0 (188.9% ROI)
+   Similitud ML: 0.505
+
+36. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $850,000.0 (188.9% ROI)
+   Similitud ML: 0.505
+
+37. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $850,000.0 (188.9% ROI)
+   Similitud ML: 0.505
+
+38. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $830,000.0 (259.4% ROI)
+   Similitud ML: 0.459
+
+39. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $822,000.0 (10287.9% ROI)
+   Similitud ML: 0.511
+
+40. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $822,000.0 (10287.9% ROI)
+   Similitud ML: 0.479
+
+41. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $1,109,990.0
+   MARGEN: $820,000.0 (282.8% ROI)
+   Similitud ML: 0.479
+
+42. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $820,000.0 (455.6% ROI)
+   Similitud ML: 0.511
+
+43. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $820,000.0 (455.6% ROI)
+   Similitud ML: 0.511
+
+44. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $815,000.0 (5437.0% ROI)
+   Similitud ML: 0.479
+
+45. SAMSUNG 75 Crystal UHD U8200F 4K Smart TV 2025
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $805,000.0 (3221.3% ROI)
+   Similitud ML: 0.465
+
+46. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $44,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $785,000.0 (1744.8% ROI)
+   Similitud ML: 0.479
+
+47. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $1,159,990.0
+   MARGEN: $750,000.0 (182.9% ROI)
+   Similitud ML: 0.470
+
+48. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $1,159,990.0
+   MARGEN: $750,000.0 (182.9% ROI)
+   Similitud ML: 0.470
+
+49. LG NanoCell Smart Tv 55" 55NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $419,990.0
+   Vender en ripley: $1,159,990.0
+   MARGEN: $740,000.0 (176.2% ROI)
+   Similitud ML: 0.485
+
+50. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $722,000.0 (9036.3% ROI)
+   Similitud ML: 0.544
+
+51. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $722,000.0 (9036.3% ROI)
+   Similitud ML: 0.493
+
+52. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $715,000.0 (4769.8% ROI)
+   Similitud ML: 0.493
+
+53. LG Smart TV LED 43" 43UT7300PSA 4K UHD + Magic Rem
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $710,000.0 (273.1% ROI)
+   Similitud ML: 0.478
+
+54. LG Smart TV LED 43" 43UT7300PSA 4K UHD + Magic Rem
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $710,000.0 (273.1% ROI)
+   Similitud ML: 0.478
+
+55. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $710,000.0 (244.8% ROI)
+   Similitud ML: 0.511
+
+56. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $710,000.0 (244.8% ROI)
+   Similitud ML: 0.511
+
+57. SAMSUNG 75 Crystal UHD U8200F 4K Smart TV 2025
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $705,000.0 (2821.1% ROI)
+   Similitud ML: 0.453
+
+58. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $44,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $685,000.0 (1522.6% ROI)
+   Similitud ML: 0.493
+
+59. SAMSUNG SAMSUNG GALAXY A06 5G 128GB NEGRO
+   Comprar en ripley: $119,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $660,000.0 (550.0% ROI)
+   Similitud ML: 0.461
+
+60. ASUS Notebook Vivobook 14 X1404 intel Core i5 8GB 
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,099,990.0
+   MARGEN: $650,000.0 (144.4% ROI)
+   Similitud ML: 0.462
+
+61. ASUS Notebook Vivobook 14 X1404 intel Core i5 8GB 
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $1,099,990.0
+   MARGEN: $650,000.0 (144.4% ROI)
+   Similitud ML: 0.462
+
+62. SAMSUNG Smart TV con Marco QLED 4K 43" The Frame L
+   Comprar en falabella: $499,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $650,000.0 (130.0% ROI)
+   Similitud ML: 0.535
+
+63. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $630,000.0 (286.4% ROI)
+   Similitud ML: 0.487
+
+64. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $630,000.0 (286.4% ROI)
+   Similitud ML: 0.487
+
+65. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $569,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $580,000.0 (101.8% ROI)
+   Similitud ML: 0.457
+
+66. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $560,000.0 (193.1% ROI)
+   Similitud ML: 0.527
+
+67. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $560,000.0 (193.1% ROI)
+   Similitud ML: 0.527
+
+68. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $560,000.0 (136.6% ROI)
+   Similitud ML: 0.470
+
+69. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $560,000.0 (136.6% ROI)
+   Similitud ML: 0.470
+
+70. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $560,000.0 (207.4% ROI)
+   Similitud ML: 0.511
+
+71. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $560,000.0 (207.4% ROI)
+   Similitud ML: 0.511
+
+72. TCL SMART TV TCL QLED 4K UHD 75” 75P8K
+   Comprar en ripley: $209,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $560,000.0 (266.7% ROI)
+   Similitud ML: 0.505
+
+73. LG NanoCell Smart Tv 55" 55NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $419,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $550,000.0 (131.0% ROI)
+   Similitud ML: 0.470
+
+74. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $540,000.0 (186.2% ROI)
+   Similitud ML: 0.495
+
+75. TCL QLED Smart TV 85" 4K UHD T6C Google TV
+   Comprar en falabella: $769,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $530,000.0 (68.8% ROI)
+   Similitud ML: 0.505
+
+76. TCL QLED Smart TV 85" 4K UHD T6C Google TV
+   Comprar en falabella: $769,990.0
+   Vender en ripley: $1,299,990.0
+   MARGEN: $530,000.0 (68.8% ROI)
+   Similitud ML: 0.505
+
+77. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $510,000.0 (159.4% ROI)
+   Similitud ML: 0.511
+
+78. TCL SMART TV TCL QLED 4K UHD 50” 50S5K
+   Comprar en ripley: $259,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $510,000.0 (196.2% ROI)
+   Similitud ML: 0.505
+
+79. XIAOMI SMART TV XIAOMI QLED 4K UHD 55” A PRO 2025
+   Comprar en ripley: $149,990.0
+   Vender en falabella: $659,990.0
+   MARGEN: $510,000.0 (340.0% ROI)
+   Similitud ML: 0.499
+
+80. SAMSUNG CELULAR SAMSUNG GALAXY S24 FE 256GB 8GB RA
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $1,099,990.0
+   MARGEN: $500,000.0 (83.3% ROI)
+   Similitud ML: 0.456
+
+81. SAMSUNG 65 Neo QLED 4K QN1EF Vision AI Smart TV 20
+   Comprar en falabella: $659,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $490,000.0 (74.2% ROI)
+   Similitud ML: 0.466
+
+82. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $659,990.0
+   MARGEN: $480,000.0 (266.7% ROI)
+   Similitud ML: 0.495
+
+83. TCL SMART TV TCL QLED 4K UHD 50” 50T6C
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $470,000.0 (156.7% ROI)
+   Similitud ML: 0.505
+
+84. TCL SMART TV TCL QLED 4K UHD 55” 55C7K
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $470,000.0 (156.7% ROI)
+   Similitud ML: 0.505
+
+85. LG Smart TV LED 43" 43UT7300PSA 4K UHD + Magic Rem
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $719,990.0
+   MARGEN: $460,000.0 (176.9% ROI)
+   Similitud ML: 0.478
+
+86. LG Smart TV LED 43" 43UT7300PSA 4K UHD + Magic Rem
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $719,990.0
+   MARGEN: $460,000.0 (176.9% ROI)
+   Similitud ML: 0.478
+
+87. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $460,000.0 (170.4% ROI)
+   Similitud ML: 0.511
+
+88. SAMSUNG 43 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $269,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $460,000.0 (170.4% ROI)
+   Similitud ML: 0.511
+
+89. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $399,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $450,000.0 (112.5% ROI)
+   Similitud ML: 0.487
+
+90. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $399,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $450,000.0 (112.5% ROI)
+   Similitud ML: 0.487
+
+91. PHILIPS SMART TV PHILIPS LED HD 32” 32PHD6909
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $629,990.0
+   MARGEN: $450,000.0 (250.0% ROI)
+   Similitud ML: 0.470
+
+92. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $539,990.0
+   MARGEN: $445,000.0 (468.5% ROI)
+   Similitud ML: 0.483
+
+93. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $539,990.0
+   MARGEN: $445,000.0 (468.5% ROI)
+   Similitud ML: 0.483
+
+94. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $440,000.0 (151.7% ROI)
+   Similitud ML: 0.495
+
+95. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $529,990.0
+   MARGEN: $435,000.0 (457.9% ROI)
+   Similitud ML: 0.476
+
+96. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $529,990.0
+   MARGEN: $435,000.0 (457.9% ROI)
+   Similitud ML: 0.476
+
+97. SAMSUNG SAMSUNG GALAXY A06 5G 128GB NEGRO
+   Comprar en ripley: $119,990.0
+   Vender en falabella: $539,990.0
+   MARGEN: $420,000.0 (350.0% ROI)
+   Similitud ML: 0.509
+
+98. ASUS Notebook Vivobook 15 (X1502) I7 16gb RAM 512g
+   Comprar en falabella: $749,990.0
+   Vender en ripley: $1,159,990.0
+   MARGEN: $410,000.0 (54.7% ROI)
+   Similitud ML: 0.491
+
+99. ASUS Notebook Vivobook 15 (X1502) I7 16gb RAM 512g
+   Comprar en falabella: $749,990.0
+   Vender en ripley: $1,159,990.0
+   MARGEN: $410,000.0 (54.7% ROI)
+   Similitud ML: 0.491
+
+100. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $410,000.0 (128.1% ROI)
+   Similitud ML: 0.544
+
+101. SAMSUNG SAMSUNG GALAXY A06 5G 128GB NEGRO
+   Comprar en ripley: $119,990.0
+   Vender en falabella: $529,990.0
+   MARGEN: $410,000.0 (341.7% ROI)
+   Similitud ML: 0.556
+
+102. APPLE IPHONE 16 128GB PINK-NUEVO
+   Comprar en ripley: $1,049,990.0
+   Vender en falabella: $1,449,990.0
+   MARGEN: $400,000.0 (38.1% ROI)
+   Similitud ML: 0.455
+
+103. APPLE IPHONE 16 128GB PINK-NUEVO
+   Comprar en ripley: $1,049,990.0
+   Vender en falabella: $1,449,990.0
+   MARGEN: $400,000.0 (38.1% ROI)
+   Similitud ML: 0.455
+
+104. HP NOTEBOOK HP 15-FD0010LA INTEL CORE I3 8GB RAM 5
+   Comprar en ripley: $379,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $400,000.0 (105.3% ROI)
+   Similitud ML: 0.464
+
+105. HP NOTEBOOK HP 15-FD0010LA INTEL CORE I3 8GB RAM 5
+   Comprar en ripley: $379,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $400,000.0 (105.3% ROI)
+   Similitud ML: 0.464
+
+106. HISENSE LED Smart TV 50" 50A6N 4K Ultra HD
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $390,000.0 (150.0% ROI)
+   Similitud ML: 0.466
+
+107. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $569,990.0
+   MARGEN: $390,000.0 (216.7% ROI)
+   Similitud ML: 0.495
+
+108. APPLE IPHONE 14 128 GB 12MP 6.1
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $380,000.0 (63.3% ROI)
+   Similitud ML: 0.463
+
+109. APPLE IPHONE 14 128 GB 12MP 6.1
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $380,000.0 (63.3% ROI)
+   Similitud ML: 0.463
+
+110. APPLE IPHONE 14 128 GB 12MP 6.1
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $380,000.0 (63.3% ROI)
+   Similitud ML: 0.463
+
+111. APPLE IPHONE 14 128 GB 12MP 6.1
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $380,000.0 (63.3% ROI)
+   Similitud ML: 0.463
+
+112. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 65” Q8F VISIO
+   Comprar en ripley: $729,990.0
+   Vender en falabella: $1,109,990.0
+   MARGEN: $380,000.0 (52.1% ROI)
+   Similitud ML: 0.493
+
+113. HISENSE Smart Tv Mini LED 55" 55U6QV 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $370,000.0 (132.1% ROI)
+   Similitud ML: 0.536
+
+114. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $370,000.0 (132.1% ROI)
+   Similitud ML: 0.470
+
+115. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $370,000.0 (132.1% ROI)
+   Similitud ML: 0.470
+
+116. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55S7N CAN
+   Comprar en ripley: $479,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $370,000.0 (77.1% ROI)
+   Similitud ML: 0.455
+
+117. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55S7N CAN
+   Comprar en ripley: $479,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $370,000.0 (77.1% ROI)
+   Similitud ML: 0.455
+
+118. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $659,990.0
+   MARGEN: $370,000.0 (127.6% ROI)
+   Similitud ML: 0.495
+
+119. MASTER G SMART TV MASTER G LED 4K UHD 50" MGG50UFK
+   Comprar en ripley: $39,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $360,000.0 (900.2% ROI)
+   Similitud ML: 0.499
+
+120. MASTER G SMART TV MASTER G LED 4K UHD 50" MGG50UFK
+   Comprar en ripley: $39,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $360,000.0 (900.2% ROI)
+   Similitud ML: 0.499
+
+121. APPLE IPHONE 16E 6.1 128 GB 48MP
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $350,000.0 (55.6% ROI)
+   Similitud ML: 0.463
+
+122. HISENSE QLED Smart TV 43" 43Q6N 4K Ultra HD Google
+   Comprar en falabella: $229,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $350,000.0 (152.2% ROI)
+   Similitud ML: 0.456
+
+123. PHILIPS LED Smart TV 55" UHD 55PUD7019 Google UHD
+   Comprar en falabella: $6,990.0
+   Vender en ripley: $339,990.0
+   MARGEN: $333,000.0 (4763.9% ROI)
+   Similitud ML: 0.527
+
+124. PHILIPS LED Smart TV 55" UHD 55PUD7019 Google UHD
+   Comprar en falabella: $6,990.0
+   Vender en ripley: $339,990.0
+   MARGEN: $333,000.0 (4763.9% ROI)
+   Similitud ML: 0.527
+
+125. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $330,000.0 (103.1% ROI)
+   Similitud ML: 0.470
+
+126. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $330,000.0 (103.1% ROI)
+   Similitud ML: 0.470
+
+127. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $320,000.0 (97.0% ROI)
+   Similitud ML: 0.536
+
+128. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $320,000.0 (97.0% ROI)
+   Similitud ML: 0.536
+
+129. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $339,990.0
+   MARGEN: $315,010.0 (1261.0% ROI)
+   Similitud ML: 0.544
+
+130. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $339,990.0
+   MARGEN: $315,010.0 (1261.0% ROI)
+   Similitud ML: 0.544
+
+131. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $339,990.0
+   MARGEN: $315,010.0 (1261.0% ROI)
+   Similitud ML: 0.544
+
+132. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $339,990.0
+   MARGEN: $315,010.0 (1261.0% ROI)
+   Similitud ML: 0.544
+
+133. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $719,990.0
+   MARGEN: $310,000.0 (75.6% ROI)
+   Similitud ML: 0.470
+
+134. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $719,990.0
+   MARGEN: $310,000.0 (75.6% ROI)
+   Similitud ML: 0.470
+
+135. SAMSUNG SMART TV SAMSUNG LED HD 32" T4202
+   Comprar en ripley: $189,990.0
+   Vender en falabella: $499,990.0
+   MARGEN: $310,000.0 (163.2% ROI)
+   Similitud ML: 0.475
+
+136. HISENSE Smart Tv Mini LED 55" 55U6QV 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $300,000.0 (107.1% ROI)
+   Similitud ML: 0.470
+
+137. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $300,000.0 (107.1% ROI)
+   Similitud ML: 0.527
+
+138. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $300,000.0 (107.1% ROI)
+   Similitud ML: 0.527
+
+139. LG NanoCell Smart Tv 55" 55NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $419,990.0
+   Vender en ripley: $719,990.0
+   MARGEN: $300,000.0 (71.4% ROI)
+   Similitud ML: 0.470
+
+140. LG Televisor LED Web OS 75 Smart TV 4K UHD 75UA805
+   Comprar en falabella: $669,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $300,000.0 (44.8% ROI)
+   Similitud ML: 0.475
+
+141. XIAOMI SMART TV XIAOMI QLED 4K UHD 55” A PRO 2025
+   Comprar en ripley: $359,990.0
+   Vender en falabella: $659,990.0
+   MARGEN: $300,000.0 (83.3% ROI)
+   Similitud ML: 0.499
+
+142. PHILIPS SMART TV PHILIPS LED UHD 4K 55" 55PUD7908
+   Comprar en ripley: $339,990.0
+   Vender en falabella: $629,990.0
+   MARGEN: $290,000.0 (85.3% ROI)
+   Similitud ML: 0.466
+
+143. PHILIPS SMART TV PHILIPS LED UHD 4K 55" 55PUD7908
+   Comprar en ripley: $339,990.0
+   Vender en falabella: $629,990.0
+   MARGEN: $290,000.0 (85.3% ROI)
+   Similitud ML: 0.466
+
+144. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $282,000.0 (3529.4% ROI)
+   Similitud ML: 0.526
+
+145. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $282,000.0 (3529.4% ROI)
+   Similitud ML: 0.479
+
+146. HP Notebook Gamer Victus 16-R1015LA Intel Core i7-
+   Comprar en falabella: $1,369,990.0
+   Vender en ripley: $1,649,990.0
+   MARGEN: $280,000.0 (20.4% ROI)
+   Similitud ML: 0.518
+
+147. HP Notebook Gamer Victus 16-R1015LA Intel Core i7-
+   Comprar en falabella: $1,369,990.0
+   Vender en ripley: $1,649,990.0
+   MARGEN: $280,000.0 (20.4% ROI)
+   Similitud ML: 0.518
+
+148. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $569,990.0
+   MARGEN: $280,000.0 (96.6% ROI)
+   Similitud ML: 0.508
+
+149. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $829,990.0
+   Vender en falabella: $1,109,990.0
+   MARGEN: $280,000.0 (33.7% ROI)
+   Similitud ML: 0.479
+
+150. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $275,000.0 (1834.6% ROI)
+   Similitud ML: 0.479
+
+151. HISENSE Smart Tv Mini LED 55" 55U6QV 4K UHD
+   Comprar en falabella: $379,990.0
+   Vender en ripley: $649,990.0
+   MARGEN: $270,000.0 (71.1% ROI)
+   Similitud ML: 0.536
+
+152. HISENSE SMART TV HISENSE QLED 4K UHD 75” 75Q6QV
+   Comprar en ripley: $579,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $270,000.0 (46.6% ROI)
+   Similitud ML: 0.527
+
+153. HISENSE SMART TV HISENSE QLED 4K UHD 75” 75Q6QV
+   Comprar en ripley: $579,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $270,000.0 (46.6% ROI)
+   Similitud ML: 0.527
+
+154. LG Televisor LED Web OS 75 Smart TV 4K UHD 75UA805
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $270,000.0 (38.6% ROI)
+   Similitud ML: 0.475
+
+155. LG Televisor LED Web OS 86 Smart TV 4K UHD 86UA805
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $270,000.0 (38.6% ROI)
+   Similitud ML: 0.461
+
+156. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 65” Q8F VISIO
+   Comprar en ripley: $729,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $270,000.0 (37.0% ROI)
+   Similitud ML: 0.511
+
+157. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 65” Q8F VISIO
+   Comprar en ripley: $729,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $270,000.0 (37.0% ROI)
+   Similitud ML: 0.511
+
+158. SAMSUNG 75 Crystal UHD U8200F 4K Smart TV 2025
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $265,000.0 (1060.4% ROI)
+   Similitud ML: 0.505
+
+159. SAMSUNG 75 Crystal UHD U8200F 4K Smart TV 2025
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $265,000.0 (1060.4% ROI)
+   Similitud ML: 0.453
+
+160. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $260,000.0 (81.3% ROI)
+   Similitud ML: 0.527
+
+161. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $260,000.0 (81.3% ROI)
+   Similitud ML: 0.527
+
+162. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $569,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $260,000.0 (45.6% ROI)
+   Similitud ML: 0.495
+
+163. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $250,000.0 (75.8% ROI)
+   Similitud ML: 0.470
+
+164. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $250,000.0 (75.8% ROI)
+   Similitud ML: 0.470
+
+165. LENOVO Notebook Ideapad Slim 3 Gen 10 Táctil Intel
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $250,000.0 (48.1% ROI)
+   Similitud ML: 0.462
+
+166. LENOVO Notebook Ideapad Slim 3 Gen 10 Táctil Intel
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $250,000.0 (48.1% ROI)
+   Similitud ML: 0.462
+
+167. TCL SMART TV TCL QLED 4K UHD 65” 65P8K
+   Comprar en ripley: $519,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $250,000.0 (48.1% ROI)
+   Similitud ML: 0.505
+
+168. TCL SMART TV TCL QLED 4K UHD 98” 98P8K
+   Comprar en ripley: $519,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $250,000.0 (48.1% ROI)
+   Similitud ML: 0.505
+
+169. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $44,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $245,000.0 (544.6% ROI)
+   Similitud ML: 0.479
+
+170. APPLE Ipad 11 con Chip A16 128GB Azul
+   Comprar en falabella: $399,990.0
+   Vender en ripley: $639,990.0
+   MARGEN: $240,000.0 (60.0% ROI)
+   Similitud ML: 0.454
+
+171. APPLE Ipad 11 con Chip A16 128GB Azul
+   Comprar en falabella: $399,990.0
+   Vender en ripley: $639,990.0
+   MARGEN: $240,000.0 (60.0% ROI)
+   Similitud ML: 0.454
+
+172. TCL SMART TV TCL QLED 4K UHD 75” 75P8K
+   Comprar en ripley: $209,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $240,000.0 (114.3% ROI)
+   Similitud ML: 0.505
+
+173. TCL SMART TV TCL QLED 4K UHD 75” 75P8K
+   Comprar en ripley: $209,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $240,000.0 (114.3% ROI)
+   Similitud ML: 0.505
+
+174. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $230,000.0 (65.7% ROI)
+   Similitud ML: 0.524
+
+175. HISENSE Smart Tv LED 43" 43A4NV FHD
+   Comprar en falabella: $189,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $210,000.0 (110.5% ROI)
+   Similitud ML: 0.470
+
+176. HISENSE Smart Tv LED 43" 43A4NV FHD
+   Comprar en falabella: $189,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $210,000.0 (110.5% ROI)
+   Similitud ML: 0.470
+
+177. SAMSUNG SMART TV SAMSUNG HD 32" T4202
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $210,000.0 (116.7% ROI)
+   Similitud ML: 0.500
+
+178. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $499,990.0
+   MARGEN: $210,000.0 (72.4% ROI)
+   Similitud ML: 0.452
+
+179. APPLE IPHONE 16 256GB 48MP 6.1”
+   Comprar en ripley: $949,990.0
+   Vender en falabella: $1,149,990.0
+   MARGEN: $200,000.0 (21.1% ROI)
+   Similitud ML: 0.458
+
+180. HISENSE SMART TV HISENSE MINI LED UHD 4K 65" 65U65
+   Comprar en ripley: $649,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $200,000.0 (30.8% ROI)
+   Similitud ML: 0.470
+
+181. HISENSE SMART TV HISENSE MINI LED UHD 4K 65" 65U65
+   Comprar en ripley: $649,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $200,000.0 (30.8% ROI)
+   Similitud ML: 0.470
+
+182. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $479,990.0
+   MARGEN: $200,000.0 (71.4% ROI)
+   Similitud ML: 0.455
+
+183. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $479,990.0
+   MARGEN: $200,000.0 (71.4% ROI)
+   Similitud ML: 0.455
+
+184. HISENSE Smart Tv Mini LED 55" 55U6QV 4K UHD
+   Comprar en falabella: $379,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $200,000.0 (52.6% ROI)
+   Similitud ML: 0.470
+
+185. SAMSUNG SMART TV SAMSUNG LED HD 32" T4202
+   Comprar en ripley: $189,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $200,000.0 (105.3% ROI)
+   Similitud ML: 0.475
+
+186. SAMSUNG SMART TV SAMSUNG LED HD 32" T4202
+   Comprar en ripley: $189,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $200,000.0 (105.3% ROI)
+   Similitud ML: 0.850
+
+187. XIAOMI SMART TV XIAOMI QLED 4K UHD 55” A PRO 2025
+   Comprar en ripley: $149,990.0
+   Vender en falabella: $349,990.0
+   MARGEN: $200,000.0 (133.3% ROI)
+   Similitud ML: 0.514
+
+188. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $217,990.0
+   MARGEN: $199,000.0 (1047.9% ROI)
+   Similitud ML: 0.471
+
+189. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $217,990.0
+   MARGEN: $198,000.0 (990.5% ROI)
+   Similitud ML: 0.471
+
+190. APPLE IPhone 16e 256GB
+   Comprar en falabella: $759,990.0
+   Vender en ripley: $949,990.0
+   MARGEN: $190,000.0 (25.0% ROI)
+   Similitud ML: 0.455
+
+191. APPLE IPhone 16e 256GB
+   Comprar en falabella: $759,990.0
+   Vender en ripley: $949,990.0
+   MARGEN: $190,000.0 (25.0% ROI)
+   Similitud ML: 0.455
+
+192. HP Notebook INTEL CORE I7 16 GB DE RAM DISCO SOLID
+   Comprar en falabella: $479,990.0
+   Vender en ripley: $669,990.0
+   MARGEN: $190,000.0 (39.6% ROI)
+   Similitud ML: 0.496
+
+193. HP Notebook INTEL CORE I7 16 GB DE RAM DISCO SOLID
+   Comprar en falabella: $479,990.0
+   Vender en ripley: $669,990.0
+   MARGEN: $190,000.0 (39.6% ROI)
+   Similitud ML: 0.496
+
+194. TCL SMART TV TCL QLED 4K UHD 50” 50S5K
+   Comprar en ripley: $259,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $190,000.0 (73.1% ROI)
+   Similitud ML: 0.505
+
+195. TCL SMART TV TCL QLED 4K UHD 50” 50S5K
+   Comprar en ripley: $259,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $190,000.0 (73.1% ROI)
+   Similitud ML: 0.505
+
+196. TCL SMART TV TCL QLED 4K UHD 55” 55C7K
+   Comprar en ripley: $579,990.0
+   Vender en falabella: $769,990.0
+   MARGEN: $190,000.0 (32.8% ROI)
+   Similitud ML: 0.505
+
+197. SAMSUNG Smart TV con Marco QLED 4K 43" The Frame L
+   Comprar en falabella: $108,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $181,000.0 (166.1% ROI)
+   Similitud ML: 0.452
+
+198. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $589,990.0
+   MARGEN: $180,000.0 (43.9% ROI)
+   Similitud ML: 0.500
+
+199. LG NanoCell Smart Tv 50" 50NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $409,990.0
+   Vender en ripley: $589,990.0
+   MARGEN: $180,000.0 (43.9% ROI)
+   Similitud ML: 0.500
+
+200. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $38,990.0
+   Vender en falabella: $217,990.0
+   MARGEN: $179,000.0 (459.1% ROI)
+   Similitud ML: 0.471
+
+201. PHILIPS LED Smart TV 55" UHD 55PUD7019 Google UHD
+   Comprar en falabella: $6,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $173,000.0 (2475.0% ROI)
+   Similitud ML: 0.454
+
+202. SAMSUNG 43" QLED Q8F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $172,000.0 (2152.7% ROI)
+   Similitud ML: 0.511
+
+203. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $7,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $172,000.0 (2152.7% ROI)
+   Similitud ML: 0.479
+
+204. LENOVO TABLET LENOVO TAB PLUS 8GB RAM - 256GB ANDR
+   Comprar en ripley: $229,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $170,000.0 (73.9% ROI)
+   Similitud ML: 0.458
+
+205. LENOVO TABLET LENOVO TAB PLUS 8GB RAM - 256GB ANDR
+   Comprar en ripley: $229,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $170,000.0 (73.9% ROI)
+   Similitud ML: 0.458
+
+206. LG NanoCell Smart Tv 55" 55NANO80ASA 4K UHD WebOs
+   Comprar en falabella: $419,990.0
+   Vender en ripley: $589,990.0
+   MARGEN: $170,000.0 (40.5% ROI)
+   Similitud ML: 0.500
+
+207. SAMSUNG 65 Neo QLED 4K QN1EF Vision AI Smart TV 20
+   Comprar en falabella: $659,990.0
+   Vender en ripley: $829,990.0
+   MARGEN: $170,000.0 (25.8% ROI)
+   Similitud ML: 0.495
+
+208. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $829,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $170,000.0 (20.5% ROI)
+   Similitud ML: 0.553
+
+209. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $829,990.0
+   Vender en falabella: $999,990.0
+   MARGEN: $170,000.0 (20.5% ROI)
+   Similitud ML: 0.553
+
+210. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $170,000.0 (48.6% ROI)
+   Similitud ML: 0.505
+
+211. TCL QLED Smart TV 55" 4K UHD T6C Google TV
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $170,000.0 (48.6% ROI)
+   Similitud ML: 0.505
+
+212. SAMSUNG 65 OLED S90F 4K Vision AI Smart TV 2025
+   Comprar en falabella: $14,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $165,000.0 (1100.7% ROI)
+   Similitud ML: 0.479
+
+213. ACER NOTEBOOK ACER ASPIRE LITE INTEL CORE I7 16GB 
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $829,990.0
+   MARGEN: $160,000.0 (23.9% ROI)
+   Similitud ML: 0.471
+
+214. ACER NOTEBOOK ACER ASPIRE LITE INTEL CORE I7 16GB 
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $829,990.0
+   MARGEN: $160,000.0 (23.9% ROI)
+   Similitud ML: 0.471
+
+215. APPLE IPAD AIR 11" 256 GB WIFI
+   Comprar en ripley: $819,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $160,000.0 (19.5% ROI)
+   Similitud ML: 0.474
+
+216. APPLE IPAD AIR 11" 256 GB WIFI
+   Comprar en ripley: $819,990.0
+   Vender en falabella: $979,990.0
+   MARGEN: $160,000.0 (19.5% ROI)
+   Similitud ML: 0.474
+
+217. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $379,990.0
+   MARGEN: $160,000.0 (72.7% ROI)
+   Similitud ML: 0.505
+
+218. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $479,990.0
+   MARGEN: $160,000.0 (50.0% ROI)
+   Similitud ML: 0.468
+
+219. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $479,990.0
+   MARGEN: $160,000.0 (50.0% ROI)
+   Similitud ML: 0.468
+
+220. SAMSUNG 43" Neo QLED 4K QN90F Vision AI Smart TV (
+   Comprar en falabella: $569,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $160,000.0 (28.1% ROI)
+   Similitud ML: 0.495
+
+221. MASTER G SMART TV MASTER G LED FULL HD 43" MGG43FF
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $164,990.0
+   MARGEN: $157,000.0 (1965.0% ROI)
+   Similitud ML: 0.495
+
+222. MASTER G SMART TV MASTER G LED FULL HD 43" MGG43FF
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $164,990.0
+   MARGEN: $157,000.0 (1965.0% ROI)
+   Similitud ML: 0.495
+
+223. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $179,990.0
+   MARGEN: $155,010.0 (620.5% ROI)
+   Similitud ML: 0.475
+
+224. PHILIPS LED Smart TV 55" 55PUD7908 4K Ultra HD
+   Comprar en falabella: $24,980.0
+   Vender en ripley: $179,990.0
+   MARGEN: $155,010.0 (620.5% ROI)
+   Similitud ML: 0.475
+
+225. SAMSUNG 75 Crystal UHD U8200F 4K Smart TV 2025
+   Comprar en falabella: $24,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $155,000.0 (620.2% ROI)
+   Similitud ML: 0.465
+
+226. APPLE MacBook Air 13" M4 (10n CPU 8n GPU), 16GB RA
+   Comprar en falabella: $1,049,990.0
+   Vender en ripley: $1,199,990.0
+   MARGEN: $150,000.0 (14.3% ROI)
+   Similitud ML: 0.493
+
+227. APPLE MacBook Air 13" M4 (10n CPU 8n GPU), 16GB RA
+   Comprar en falabella: $1,049,990.0
+   Vender en ripley: $1,199,990.0
+   MARGEN: $150,000.0 (14.3% ROI)
+   Similitud ML: 0.500
+
+228. APPLE MacBook Air 13" M4 (10n CPU 8n GPU), 16GB RA
+   Comprar en falabella: $1,049,990.0
+   Vender en ripley: $1,199,990.0
+   MARGEN: $150,000.0 (14.3% ROI)
+   Similitud ML: 0.493
+
+229. APPLE MacBook Air 13" M4 (10n CPU 8n GPU), 16GB RA
+   Comprar en falabella: $1,049,990.0
+   Vender en ripley: $1,199,990.0
+   MARGEN: $150,000.0 (14.3% ROI)
+   Similitud ML: 0.500
+
+230. HP NOTEBOOK HP LAPTOP 15-FD0012LA INTEL CORE I7 8 
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $150,000.0 (23.8% ROI)
+   Similitud ML: 0.482
+
+231. HP Notebook INTEL CORE I7 16 GB DE RAM DISCO SOLID
+   Comprar en falabella: $479,990.0
+   Vender en ripley: $629,990.0
+   MARGEN: $150,000.0 (31.3% ROI)
+   Similitud ML: 0.459
+
+232. HP NOTEBOOK HP LAPTOP 15-FD0012LA INTEL CORE I7 8 
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $150,000.0 (23.8% ROI)
+   Similitud ML: 0.482
+
+233. HP Notebook INTEL CORE I7 16 GB DE RAM DISCO SOLID
+   Comprar en falabella: $479,990.0
+   Vender en ripley: $629,990.0
+   MARGEN: $150,000.0 (31.3% ROI)
+   Similitud ML: 0.459
+
+234. SAMSUNG 85 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $999,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $150,000.0 (15.0% ROI)
+   Similitud ML: 0.515
+
+235. SAMSUNG 85 QLED QEF1 4K Vision AI Smart TV 2025
+   Comprar en falabella: $999,990.0
+   Vender en ripley: $1,149,990.0
+   MARGEN: $150,000.0 (15.0% ROI)
+   Similitud ML: 0.515
+
+236. SAMSUNG Celular Galaxy Z Flip7 FE 256GB
+   Comprar en falabella: $1,099,990.0
+   Vender en ripley: $1,249,990.0
+   MARGEN: $150,000.0 (13.6% ROI)
+   Similitud ML: 0.463
+
+237. TCL SMART TV TCL QLED 4K UHD 50” 50T6C
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $150,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+238. TCL SMART TV TCL QLED 4K UHD 55” 55C7K
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $150,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+239. TCL SMART TV TCL QLED 4K UHD 50” 50T6C
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $150,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+240. TCL SMART TV TCL QLED 4K UHD 55” 55C7K
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $150,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+241. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $164,990.0
+   MARGEN: $146,000.0 (768.8% ROI)
+   Similitud ML: 0.471
+
+242. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $164,990.0
+   MARGEN: $145,000.0 (725.4% ROI)
+   Similitud ML: 0.471
+
+243. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.470
+
+244. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.470
+
+245. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.466
+
+246. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.466
+
+247. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.462
+
+248. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.462
+
+249. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.478
+
+250. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $145,000.0 (78.4% ROI)
+   Similitud ML: 0.478
+
+251. HISENSE LED Smart TV 50" 50A6N 4K Ultra HD
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $140,000.0 (53.8% ROI)
+   Similitud ML: 0.470
+
+252. LENOVO Notebook Ideapad Slim 3 Gen 10 Táctil Intel
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $659,990.0
+   MARGEN: $140,000.0 (26.9% ROI)
+   Similitud ML: 0.507
+
+253. LENOVO Notebook Ideapad Slim 3 Gen 10 Táctil Intel
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $659,990.0
+   MARGEN: $140,000.0 (26.9% ROI)
+   Similitud ML: 0.507
+
+254. PHILIPS SMART TV PHILIPS LED HD 32” 32PHD6909
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $140,000.0 (77.8% ROI)
+   Similitud ML: 0.454
+
+255. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $140,000.0 (77.8% ROI)
+   Similitud ML: 0.511
+
+256. TCL SMART TV TCL QLED 4K UHD 75” 75P8K
+   Comprar en ripley: $209,990.0
+   Vender en falabella: $349,990.0
+   MARGEN: $140,000.0 (66.7% ROI)
+   Similitud ML: 0.505
+
+257. SAMSUNG 65" OLED S85F 4K Vision AI Smart TV (2025)
+   Comprar en falabella: $44,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $135,000.0 (300.1% ROI)
+   Similitud ML: 0.479
+
+258. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $135,000.0 (69.2% ROI)
+   Similitud ML: 0.478
+
+259. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $135,000.0 (69.2% ROI)
+   Similitud ML: 0.478
+
+260. APPLE IPHONE 16E 6.1 128 GB 48MP
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $759,990.0
+   MARGEN: $130,000.0 (20.6% ROI)
+   Similitud ML: 0.484
+
+261. APPLE IPHONE 16E 6.1 128 GB 48MP
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $759,990.0
+   MARGEN: $130,000.0 (20.6% ROI)
+   Similitud ML: 0.484
+
+262. LG SMART TV LG LED 4K UHD 75” 75UA8050PSA
+   Comprar en ripley: $719,990.0
+   Vender en falabella: $849,990.0
+   MARGEN: $130,000.0 (18.1% ROI)
+   Similitud ML: 0.509
+
+263. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $130,000.0 (28.9% ROI)
+   Similitud ML: 0.505
+
+264. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $130,000.0 (28.9% ROI)
+   Similitud ML: 0.505
+
+265. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+266. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+267. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+268. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+269. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+270. XIAOMI Poco X7 Pro 5g Ram 12gb+ 512gb Ip69 Resiste
+   Comprar en falabella: $389,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $130,000.0 (33.3% ROI)
+   Similitud ML: 0.456
+
+271. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $38,990.0
+   Vender en falabella: $164,990.0
+   MARGEN: $126,000.0 (323.2% ROI)
+   Similitud ML: 0.471
+
+272. HISENSE Smart Tv Mini LED 55" 55U6QV 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $120,000.0 (42.9% ROI)
+   Similitud ML: 0.505
+
+273. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $120,000.0 (42.9% ROI)
+   Similitud ML: 0.487
+
+274. HISENSE Smart Tv QLED 50" 50Q6Qv 4K UHD
+   Comprar en falabella: $279,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $120,000.0 (42.9% ROI)
+   Similitud ML: 0.487
+
+275. HP Notebook 14-EM0017LA AMD Ryzen5 7520U 8GB RAM 5
+   Comprar en falabella: $489,990.0
+   Vender en ripley: $609,990.0
+   MARGEN: $120,000.0 (24.5% ROI)
+   Similitud ML: 0.452
+
+276. HP Notebook 14-EM0017LA AMD Ryzen5 7520U 8GB RAM 5
+   Comprar en falabella: $489,990.0
+   Vender en ripley: $609,990.0
+   MARGEN: $120,000.0 (24.5% ROI)
+   Similitud ML: 0.452
+
+277. HP NOTEBOOK HP LAPTOP 15-FD0012LA INTEL CORE I7 8 
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $120,000.0 (19.0% ROI)
+   Similitud ML: 0.476
+
+278. HP NOTEBOOK HP LAPTOP 15-FD0012LA INTEL CORE I7 8 
+   Comprar en ripley: $629,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $120,000.0 (19.0% ROI)
+   Similitud ML: 0.476
+
+279. LG Televisor LED Web OS 86 Smart TV 4K UHD 86UA805
+   Comprar en falabella: $849,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $120,000.0 (14.1% ROI)
+   Similitud ML: 0.519
+
+280. LG Televisor LED Web OS 86 Smart TV 4K UHD 86UA805
+   Comprar en falabella: $849,990.0
+   Vender en ripley: $969,990.0
+   MARGEN: $120,000.0 (14.1% ROI)
+   Similitud ML: 0.470
+
+281. ASUS Notebook Zenbook 14 Oled Ux3405 Intel Core Ul
+   Comprar en falabella: $1,099,990.0
+   Vender en ripley: $1,209,990.0
+   MARGEN: $110,000.0 (10.0% ROI)
+   Similitud ML: 0.527
+
+282. ASUS Notebook Zenbook 14 Oled Ux3405 Intel Core Ul
+   Comprar en falabella: $1,099,990.0
+   Vender en ripley: $1,209,990.0
+   MARGEN: $110,000.0 (10.0% ROI)
+   Similitud ML: 0.527
+
+283. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $110,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+284. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $110,000.0 (50.0% ROI)
+   Similitud ML: 0.505
+
+285. HP NOTEBOOK HP 15-FD0063LA INTEL CORE I7 16 GB RAM
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $110,000.0 (16.4% ROI)
+   Similitud ML: 0.512
+
+286. HP NOTEBOOK HP 15-FD0063LA INTEL CORE I7 16 GB RAM
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $779,990.0
+   MARGEN: $110,000.0 (16.4% ROI)
+   Similitud ML: 0.512
+
+287. LG SMART TV LG NANOCELL UHD 4K 65" 65NANO80TSA.AWH
+   Comprar en ripley: $589,990.0
+   Vender en falabella: $699,990.0
+   MARGEN: $110,000.0 (18.6% ROI)
+   Similitud ML: 0.479
+
+288. LG SMART TV LG NANOCELL UHD 4K 65" 65NANO80TSA.AWH
+   Comprar en ripley: $589,990.0
+   Vender en falabella: $699,990.0
+   MARGEN: $110,000.0 (18.6% ROI)
+   Similitud ML: 0.479
+
+289. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $289,990.0
+   MARGEN: $110,000.0 (61.1% ROI)
+   Similitud ML: 0.495
+
+290. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $110,000.0 (39.3% ROI)
+   Similitud ML: 0.470
+
+291. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $110,000.0 (39.3% ROI)
+   Similitud ML: 0.470
+
+292. XIAOMI XIAOMI REDMI NOTE 14 PRO 4G 8GB + 256GB MOR
+   Comprar en ripley: $239,990.0
+   Vender en falabella: $348,990.0
+   MARGEN: $109,000.0 (45.4% ROI)
+   Similitud ML: 0.470
+
+293. XIAOMI XIAOMI REDMI NOTE 14 PRO 4G 8GB + 256GB MOR
+   Comprar en ripley: $239,990.0
+   Vender en falabella: $348,990.0
+   MARGEN: $109,000.0 (45.4% ROI)
+   Similitud ML: 0.470
+
+294. ASUS NOTEBOOK ASUS VIVOBOOK GO 14 E1404 INTEL CORE
+   Comprar en ripley: $349,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $100,000.0 (28.6% ROI)
+   Similitud ML: 0.451
+
+295. ASUS NOTEBOOK ASUS VIVOBOOK GO 14 E1404 INTEL CORE
+   Comprar en ripley: $349,990.0
+   Vender en falabella: $449,990.0
+   MARGEN: $100,000.0 (28.6% ROI)
+   Similitud ML: 0.451
+
+296. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $100,000.0 (45.5% ROI)
+   Similitud ML: 0.487
+
+297. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $100,000.0 (45.5% ROI)
+   Similitud ML: 0.487
+
+298. HP Impresora Multifuncional Smart Tank 720 Wi-Fi D
+   Comprar en falabella: $79,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $100,000.0 (125.0% ROI)
+   Similitud ML: 0.469
+
+299. HP Impresora Multifuncional Smart Tank 720 Wi-Fi D
+   Comprar en falabella: $79,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $100,000.0 (125.0% ROI)
+   Similitud ML: 0.469
+
+300. PHILIPS LED Smart TV 43" PUD7019 Google UHD
+   Comprar en falabella: $239,990.0
+   Vender en ripley: $339,990.0
+   MARGEN: $100,000.0 (41.7% ROI)
+   Similitud ML: 0.487
+
+301. PHILIPS LED Smart TV 43" PUD7019 Google UHD
+   Comprar en falabella: $239,990.0
+   Vender en ripley: $339,990.0
+   MARGEN: $100,000.0 (41.7% ROI)
+   Similitud ML: 0.487
+
+302. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.498
+
+303. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.498
+
+304. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.493
+
+305. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.493
+
+306. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.478
+
+307. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.478
+
+308. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.475
+
+309. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $95,000.0 (51.4% ROI)
+   Similitud ML: 0.475
+
+310. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $379,990.0
+   MARGEN: $90,000.0 (31.0% ROI)
+   Similitud ML: 0.485
+
+311. LENOVO NOTEBOOK LENOVO IDEAPAD SLIM 3 GEN 10 INTEL
+   Comprar en ripley: $659,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $90,000.0 (13.6% ROI)
+   Similitud ML: 0.568
+
+312. LENOVO NOTEBOOK LENOVO IDEAPAD SLIM 3 GEN 10 INTEL
+   Comprar en ripley: $659,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $90,000.0 (13.6% ROI)
+   Similitud ML: 0.568
+
+313. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $269,990.0
+   MARGEN: $90,000.0 (50.0% ROI)
+   Similitud ML: 0.511
+
+314. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 75" Q7FA 4K V
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $269,990.0
+   MARGEN: $90,000.0 (50.0% ROI)
+   Similitud ML: 0.511
+
+315. TCL SMART TV TCL QLED 4K UHD 50” 50S5K
+   Comprar en ripley: $259,990.0
+   Vender en falabella: $349,990.0
+   MARGEN: $90,000.0 (34.6% ROI)
+   Similitud ML: 0.505
+
+316. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $85,000.0 (43.6% ROI)
+   Similitud ML: 0.475
+
+317. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $85,000.0 (43.6% ROI)
+   Similitud ML: 0.475
+
+318. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $80,000.0 (25.0% ROI)
+   Similitud ML: 0.487
+
+319. HISENSE Smart Tv QLED 55" 55Q6QV 4K UHD
+   Comprar en falabella: $319,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $80,000.0 (25.0% ROI)
+   Similitud ML: 0.487
+
+320. HP Notebook Gamer Victus 15-FB2028LA AMD Ryzen 5 8
+   Comprar en falabella: $649,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $80,000.0 (12.3% ROI)
+   Similitud ML: 0.466
+
+321. HP Notebook Gamer Victus 15-FB2028LA AMD Ryzen 5 8
+   Comprar en falabella: $649,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $80,000.0 (12.3% ROI)
+   Similitud ML: 0.466
+
+322. HP NOTEBOOK HP 15-FD0063LA INTEL CORE I7 16 GB RAM
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $80,000.0 (11.9% ROI)
+   Similitud ML: 0.504
+
+323. HP NOTEBOOK HP 15-FD0063LA INTEL CORE I7 16 GB RAM
+   Comprar en ripley: $669,990.0
+   Vender en falabella: $749,990.0
+   MARGEN: $80,000.0 (11.9% ROI)
+   Similitud ML: 0.504
+
+324. LG SMART TV LG NANOCELL UHD 4K 65" 65NANO80TSA.AWH
+   Comprar en ripley: $589,990.0
+   Vender en falabella: $669,990.0
+   MARGEN: $80,000.0 (13.6% ROI)
+   Similitud ML: 0.492
+
+325. SAMSUNG CELULAR SAMSUNG GALAXY S24 FE 256GB 8GB RA
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $679,990.0
+   MARGEN: $80,000.0 (13.3% ROI)
+   Similitud ML: 0.460
+
+326. SAMSUNG CELULAR SAMSUNG GALAXY S24 FE 256GB 8GB RA
+   Comprar en ripley: $599,990.0
+   Vender en falabella: $679,990.0
+   MARGEN: $80,000.0 (13.3% ROI)
+   Similitud ML: 0.460
+
+327. XIAOMI Celular Redmi Note 14 5G 256Gb
+   Comprar en falabella: $249,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $80,000.0 (32.0% ROI)
+   Similitud ML: 0.465
+
+328. XIAOMI Celular Redmi Note 14 5G 256Gb
+   Comprar en falabella: $249,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $80,000.0 (32.0% ROI)
+   Similitud ML: 0.465
+
+329. XIAOMI Redmi Note 14 Pro Plus 5G 12GB RAM+ 512GB R
+   Comprar en falabella: $439,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $80,000.0 (18.2% ROI)
+   Similitud ML: 0.458
+
+330. XIAOMI Redmi Note 14 Pro Plus 5G 12GB RAM+ 512GB R
+   Comprar en falabella: $439,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $80,000.0 (18.2% ROI)
+   Similitud ML: 0.458
+
+331. SAMSUNG SAMSUNG GALAXY A06 5G 128GB NEGRO
+   Comprar en ripley: $119,990.0
+   Vender en falabella: $194,990.0
+   MARGEN: $75,000.0 (62.5% ROI)
+   Similitud ML: 0.509
+
+332. XIAOMI Celular Redmi Note 14 256GB Ocean Blue.
+   Comprar en falabella: $205,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $74,000.0 (35.9% ROI)
+   Similitud ML: 0.456
+
+333. XIAOMI Celular Redmi Note 14 256GB Ocean Blue.
+   Comprar en falabella: $205,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $74,000.0 (35.9% ROI)
+   Similitud ML: 0.456
+
+334. CAIXUN SMART TV CAIXUN LED 32" HD ROKU TV C32V1HR
+   Comprar en ripley: $151,990.0
+   Vender en falabella: $224,990.0
+   MARGEN: $73,000.0 (48.0% ROI)
+   Similitud ML: 0.470
+
+335. CAIXUN SMART TV CAIXUN LED 32" HD ROKU TV C32V1HR
+   Comprar en ripley: $151,990.0
+   Vender en falabella: $224,990.0
+   MARGEN: $73,000.0 (48.0% ROI)
+   Similitud ML: 0.470
+
+336. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $71,000.0 (373.9% ROI)
+   Similitud ML: 0.504
+
+337. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $71,000.0 (373.9% ROI)
+   Similitud ML: 0.465
+
+338. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $70,000.0 (21.2% ROI)
+   Similitud ML: 0.546
+
+339. HISENSE Smart Tv Mini LED 50" 50U6QV 4K UHD
+   Comprar en falabella: $329,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $70,000.0 (21.2% ROI)
+   Similitud ML: 0.546
+
+340. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $70,000.0 (350.2% ROI)
+   Similitud ML: 0.465
+
+341. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $70,000.0 (350.2% ROI)
+   Similitud ML: 0.465
+
+342. HP Notebook Pavilion x360 14-EK0003LA Intel Core i
+   Comprar en falabella: $599,990.0
+   Vender en ripley: $669,990.0
+   MARGEN: $70,000.0 (11.7% ROI)
+   Similitud ML: 0.483
+
+343. HP Notebook Pavilion x360 14-EK0003LA Intel Core i
+   Comprar en falabella: $599,990.0
+   Vender en ripley: $669,990.0
+   MARGEN: $70,000.0 (11.7% ROI)
+   Similitud ML: 0.483
+
+344. LENOVO All in One Intel Core i5-12450H 8GB RAM 512
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $70,000.0 (10.0% ROI)
+   Similitud ML: 0.492
+
+345. LENOVO All in One Intel Core i5-12450H 8GB RAM 512
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $70,000.0 (10.0% ROI)
+   Similitud ML: 0.492
+
+346. LENOVO Notebook Gamer LOQ Intel Ryzen 5 7235HS 16G
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $70,000.0 (10.0% ROI)
+   Similitud ML: 0.502
+
+347. LENOVO Notebook Gamer LOQ Intel Ryzen 5 7235HS 16G
+   Comprar en falabella: $699,990.0
+   Vender en ripley: $769,990.0
+   MARGEN: $70,000.0 (10.0% ROI)
+   Similitud ML: 0.502
+
+348. SAMSUNG 65 Neo QLED 4K QN1EF Vision AI Smart TV 20
+   Comprar en falabella: $659,990.0
+   Vender en ripley: $729,990.0
+   MARGEN: $70,000.0 (10.6% ROI)
+   Similitud ML: 0.576
+
+349. SAMSUNG Galaxy S24 5G 128GB Negro
+   Comprar en falabella: $529,990.0
+   Vender en ripley: $599,990.0
+   MARGEN: $70,000.0 (13.2% ROI)
+   Similitud ML: 0.460
+
+350. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $70,000.0 (15.6% ROI)
+   Similitud ML: 0.578
+
+351. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $70,000.0 (15.6% ROI)
+   Similitud ML: 0.560
+
+352. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $70,000.0 (15.6% ROI)
+   Similitud ML: 0.578
+
+353. TCL QLED Smart TV 65" 4K UHD T6C Google TV
+   Comprar en falabella: $449,990.0
+   Vender en ripley: $519,990.0
+   MARGEN: $70,000.0 (15.6% ROI)
+   Similitud ML: 0.560
+
+354. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $348,990.0
+   MARGEN: $69,000.0 (24.6% ROI)
+   Similitud ML: 0.543
+
+355. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $348,990.0
+   MARGEN: $69,000.0 (24.6% ROI)
+   Similitud ML: 0.543
+
+356. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $74,990.0
+   MARGEN: $67,000.0 (838.5% ROI)
+   Similitud ML: 0.471
+
+357. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $74,990.0
+   MARGEN: $67,000.0 (838.5% ROI)
+   Similitud ML: 0.471
+
+358. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $134,990.0
+   MARGEN: $65,000.0 (92.9% ROI)
+   Similitud ML: 0.476
+
+359. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $134,990.0
+   MARGEN: $65,000.0 (92.9% ROI)
+   Similitud ML: 0.476
+
+360. HISENSE QLED Smart TV 43" 43Q6N 4K Ultra HD Google
+   Comprar en falabella: $229,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $60,000.0 (26.1% ROI)
+   Similitud ML: 0.456
+
+361. HISENSE QLED Smart TV 65" 65Q7N Gamer 4K Ultra HD 
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $60,000.0 (11.5% ROI)
+   Similitud ML: 0.510
+
+362. HISENSE QLED Smart TV 65" 65Q7N Gamer 4K Ultra HD 
+   Comprar en falabella: $519,990.0
+   Vender en ripley: $579,990.0
+   MARGEN: $60,000.0 (11.5% ROI)
+   Similitud ML: 0.510
+
+363. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $279,990.0
+   MARGEN: $60,000.0 (27.3% ROI)
+   Similitud ML: 0.505
+
+364. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $279,990.0
+   MARGEN: $60,000.0 (27.3% ROI)
+   Similitud ML: 0.487
+
+365. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $279,990.0
+   MARGEN: $60,000.0 (27.3% ROI)
+   Similitud ML: 0.487
+
+366. HP Notebook 14-EM0015LA AMD Ryzen 7 7730U 8GB 512G
+   Comprar en falabella: $549,990.0
+   Vender en ripley: $609,990.0
+   MARGEN: $60,000.0 (10.9% ROI)
+   Similitud ML: 0.471
+
+367. HP Notebook 14-EM0015LA AMD Ryzen 7 7730U 8GB 512G
+   Comprar en falabella: $549,990.0
+   Vender en ripley: $609,990.0
+   MARGEN: $60,000.0 (10.9% ROI)
+   Similitud ML: 0.471
+
+368. PHILIPS SMART TV PHILIPS LED HD 32” 32PHD6909
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $239,990.0
+   MARGEN: $60,000.0 (33.3% ROI)
+   Similitud ML: 0.454
+
+369. SAMSUNG Celular Galaxy A16 128GB
+   Comprar en falabella: $139,990.0
+   Vender en ripley: $199,990.0
+   MARGEN: $60,000.0 (42.9% ROI)
+   Similitud ML: 0.465
+
+370. SAMSUNG Galaxy S24 128GB Negro
+   Comprar en falabella: $539,990.0
+   Vender en ripley: $599,990.0
+   MARGEN: $60,000.0 (11.1% ROI)
+   Similitud ML: 0.468
+
+371. XIAOMI SMARTPHONE XIAOMI REDMI NOTE 14 PRO 5G 256G
+   Comprar en ripley: $329,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $60,000.0 (18.2% ROI)
+   Similitud ML: 0.494
+
+372. XIAOMI SMARTPHONE XIAOMI REDMI NOTE 14 PRO 5G 256G
+   Comprar en ripley: $329,990.0
+   Vender en falabella: $389,990.0
+   MARGEN: $60,000.0 (18.2% ROI)
+   Similitud ML: 0.494
+
+373. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $124,990.0
+   MARGEN: $55,000.0 (78.6% ROI)
+   Similitud ML: 0.500
+
+374. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $124,990.0
+   MARGEN: $55,000.0 (78.6% ROI)
+   Similitud ML: 0.500
+
+375. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.474
+
+376. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.474
+
+377. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.470
+
+378. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.470
+
+379. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.466
+
+380. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $55,000.0 (29.7% ROI)
+   Similitud ML: 0.466
+
+381. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $38,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $51,000.0 (130.8% ROI)
+   Similitud ML: 0.504
+
+382. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $38,990.0
+   Vender en falabella: $89,990.0
+   MARGEN: $51,000.0 (130.8% ROI)
+   Similitud ML: 0.465
+
+383. XIAOMI Celular Redmi Note 14 Pro 5G 256GB Midnight
+   Comprar en falabella: $348,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $51,000.0 (14.6% ROI)
+   Similitud ML: 0.491
+
+384. XIAOMI Celular Redmi Note 14 Pro 5G 256GB Midnight
+   Comprar en falabella: $348,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $51,000.0 (14.6% ROI)
+   Similitud ML: 0.491
+
+385. AOC SMART TV AOC LED HD 32” 32S5045
+   Comprar en ripley: $139,990.0
+   Vender en falabella: $189,990.0
+   MARGEN: $50,000.0 (35.7% ROI)
+   Similitud ML: 0.454
+
+386. ASUS NOTEBOOK ASUS VIVOBOOK GO 14 E1404 INTEL CORE
+   Comprar en ripley: $349,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $50,000.0 (14.3% ROI)
+   Similitud ML: 0.542
+
+387. ASUS NOTEBOOK ASUS VIVOBOOK GO 14 E1404 INTEL CORE
+   Comprar en ripley: $349,990.0
+   Vender en falabella: $399,990.0
+   MARGEN: $50,000.0 (14.3% ROI)
+   Similitud ML: 0.542
+
+388. EPSON Multifuncional L5590
+   Comprar en falabella: $249,990.0
+   Vender en ripley: $299,990.0
+   MARGEN: $50,000.0 (20.0% ROI)
+   Similitud ML: 0.471
+
+389. TCL SMART TV TCL QLED 4K UHD 50” 50T6C
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $349,990.0
+   MARGEN: $50,000.0 (16.7% ROI)
+   Similitud ML: 0.557
+
+390. TCL SMART TV TCL QLED 4K UHD 55” 55C7K
+   Comprar en ripley: $299,990.0
+   Vender en falabella: $349,990.0
+   MARGEN: $50,000.0 (16.7% ROI)
+   Similitud ML: 0.575
+
+391. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $50,000.0 (17.9% ROI)
+   Similitud ML: 0.462
+
+392. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $50,000.0 (17.9% ROI)
+   Similitud ML: 0.462
+
+393. XIAOMI Redmi Note 14 Pro 5G 12GB RAM+ 512GB Resist
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $50,000.0 (14.3% ROI)
+   Similitud ML: 0.476
+
+394. XIAOMI Redmi Note 14 Pro 5G 12GB RAM+ 512GB Resist
+   Comprar en falabella: $349,990.0
+   Vender en ripley: $399,990.0
+   MARGEN: $50,000.0 (14.3% ROI)
+   Similitud ML: 0.476
+
+395. XIAOMI XIAOMI REDMI NOTE 14 PRO 4G 8GB + 256GB MOR
+   Comprar en ripley: $239,990.0
+   Vender en falabella: $289,990.0
+   MARGEN: $50,000.0 (20.8% ROI)
+   Similitud ML: 0.477
+
+396. XIAOMI XIAOMI REDMI NOTE 14 PRO 4G 8GB + 256GB MOR
+   Comprar en ripley: $239,990.0
+   Vender en falabella: $289,990.0
+   MARGEN: $50,000.0 (20.8% ROI)
+   Similitud ML: 0.477
+
+397. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $45,000.0 (23.1% ROI)
+   Similitud ML: 0.481
+
+398. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $194,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $45,000.0 (23.1% ROI)
+   Similitud ML: 0.481
+
+399. CAIXUN Smart TV LED 32 HD Google TV C32V1HG
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.504
+
+400. CAIXUN Smart TV LED 32 HD Google TV C32V1HG
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.504
+
+401. CAIXUN Smart TV LED 32 HD Roku TV C32V1HR
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.850
+
+402. CAIXUN Smart TV LED 32 HD Google TV C32V1HG
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.458
+
+403. CAIXUN Smart TV LED 32 HD Google TV C32V1HG
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.458
+
+404. CAIXUN Smart TV LED 32 HD Roku TV C32V1HR
+   Comprar en falabella: $109,990.0
+   Vender en ripley: $151,990.0
+   MARGEN: $42,000.0 (38.2% ROI)
+   Similitud ML: 0.458
+
+405. HISENSE SMART TV HISENSE LED 4K UHD 43” 43A6N
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $259,990.0
+   MARGEN: $40,000.0 (18.2% ROI)
+   Similitud ML: 0.518
+
+406. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $40,000.0 (13.8% ROI)
+   Similitud ML: 0.529
+
+407. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $329,990.0
+   MARGEN: $40,000.0 (13.8% ROI)
+   Similitud ML: 0.529
+
+408. LENOVO NOTEBOOK LENOVO E41-50 I5 8GB SSD 512GB 14'
+   Comprar en ripley: $389,990.0
+   Vender en falabella: $429,990.0
+   MARGEN: $40,000.0 (10.3% ROI)
+   Similitud ML: 0.466
+
+409. LENOVO NOTEBOOK LENOVO E41-50 I5 8GB SSD 512GB 14'
+   Comprar en ripley: $389,990.0
+   Vender en falabella: $429,990.0
+   MARGEN: $40,000.0 (10.3% ROI)
+   Similitud ML: 0.466
+
+410. LENOVO TABLET LENOVO TAB PLUS 8GB RAM - 256GB ANDR
+   Comprar en ripley: $229,990.0
+   Vender en falabella: $269,990.0
+   MARGEN: $40,000.0 (17.4% ROI)
+   Similitud ML: 0.493
+
+411. LENOVO TABLET LENOVO TAB PLUS 8GB RAM - 256GB ANDR
+   Comprar en ripley: $229,990.0
+   Vender en falabella: $269,990.0
+   MARGEN: $40,000.0 (17.4% ROI)
+   Similitud ML: 0.493
+
+412. LG SMART TV LG LED FHD 32” 32LQ600BPSA
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $259,990.0
+   MARGEN: $40,000.0 (18.2% ROI)
+   Similitud ML: 0.470
+
+413. LG SMART TV LG LED FHD 32” 32LQ600BPSA
+   Comprar en ripley: $219,990.0
+   Vender en falabella: $259,990.0
+   MARGEN: $40,000.0 (18.2% ROI)
+   Similitud ML: 0.470
+
+414. XIAOMI CELULAR XIAOMI REDMI NOTE 13 5G 256 GB 8 GB
+   Comprar en ripley: $209,990.0
+   Vender en falabella: $249,990.0
+   MARGEN: $40,000.0 (19.0% ROI)
+   Similitud ML: 0.501
+
+415. XIAOMI CELULAR XIAOMI REDMI NOTE 13 PRO+ 5G 512 GB
+   Comprar en ripley: $399,990.0
+   Vender en falabella: $439,990.0
+   MARGEN: $40,000.0 (10.0% ROI)
+   Similitud ML: 0.480
+
+416. XIAOMI CELULAR XIAOMI REDMI NOTE 13 PRO+ 5G 512 GB
+   Comprar en ripley: $399,990.0
+   Vender en falabella: $439,990.0
+   MARGEN: $40,000.0 (10.0% ROI)
+   Similitud ML: 0.480
+
+417. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $40,000.0 (14.3% ROI)
+   Similitud ML: 0.531
+
+418. XIAOMI XIAOMI REDMI NOTE 14 PRO 256GB 8GB RAM 5G M
+   Comprar en ripley: $279,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $40,000.0 (14.3% ROI)
+   Similitud ML: 0.531
+
+419. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $40,000.0 (13.8% ROI)
+   Similitud ML: 0.537
+
+420. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $289,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $40,000.0 (13.8% ROI)
+   Similitud ML: 0.537
+
+421. SAMSUNG Galaxy A06 128 GB Negro
+   Comprar en falabella: $84,990.0
+   Vender en ripley: $119,990.0
+   MARGEN: $35,000.0 (41.2% ROI)
+   Similitud ML: 0.850
+
+422. XIAOMI Celular Redmi Note 14 256GB Ocean Blue.
+   Comprar en falabella: $205,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $34,000.0 (16.5% ROI)
+   Similitud ML: 0.500
+
+423. XIAOMI Celular Redmi Note 14 256GB Ocean Blue.
+   Comprar en falabella: $205,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $34,000.0 (16.5% ROI)
+   Similitud ML: 0.500
+
+424. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $39,990.0
+   MARGEN: $32,000.0 (400.5% ROI)
+   Similitud ML: 0.458
+
+425. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $39,990.0
+   MARGEN: $32,000.0 (400.5% ROI)
+   Similitud ML: 0.458
+
+426. HISENSE LED Smart TV 50" 50A6N 4K Ultra HD
+   Comprar en falabella: $259,990.0
+   Vender en ripley: $289,990.0
+   MARGEN: $30,000.0 (11.5% ROI)
+   Similitud ML: 0.502
+
+427. HISENSE Smart Tv LED 43" 43A4NV FHD
+   Comprar en falabella: $189,990.0
+   Vender en ripley: $219,990.0
+   MARGEN: $30,000.0 (15.8% ROI)
+   Similitud ML: 0.524
+
+428. HISENSE Smart Tv LED 43" 43A4NV FHD
+   Comprar en falabella: $189,990.0
+   Vender en ripley: $219,990.0
+   MARGEN: $30,000.0 (15.8% ROI)
+   Similitud ML: 0.524
+
+429. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $30,000.0 (10.3% ROI)
+   Similitud ML: 0.850
+
+430. HISENSE SMART TV HISENSE QLED 4K UHD 55” 55Q6QV
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $30,000.0 (10.3% ROI)
+   Similitud ML: 0.850
+
+431. SAMSUNG SMART TV SAMSUNG LED FUH 43” UN43T5203AGXZ
+   Comprar en ripley: $259,990.0
+   Vender en falabella: $289,990.0
+   MARGEN: $30,000.0 (11.5% ROI)
+   Similitud ML: 0.468
+
+432. SAMSUNG SMART TV SAMSUNG 50' CRYSTAL UHD 4K CU7090
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $30,000.0 (10.3% ROI)
+   Similitud ML: 0.494
+
+433. SAMSUNG SMART TV SAMSUNG QLED 4K UHD 43 Q7FA VISIO
+   Comprar en ripley: $289,990.0
+   Vender en falabella: $319,990.0
+   MARGEN: $30,000.0 (10.3% ROI)
+   Similitud ML: 0.594
+
+434. SAMSUNG Galaxy Tab A9 Plus 64Gb Plateado
+   Comprar en falabella: $139,990.0
+   Vender en ripley: $169,990.0
+   MARGEN: $30,000.0 (21.4% ROI)
+   Similitud ML: 0.524
+
+435. SAMSUNG Galaxy Tab A9 Plus 64Gb Plateado
+   Comprar en falabella: $139,990.0
+   Vender en ripley: $169,990.0
+   MARGEN: $30,000.0 (21.4% ROI)
+   Similitud ML: 0.524
+
+436. SAMSUNG LED Smart TV 32 T4202 HD Tizen™ (2020)
+   Comprar en falabella: $159,990.0
+   Vender en ripley: $189,990.0
+   MARGEN: $30,000.0 (18.8% ROI)
+   Similitud ML: 0.850
+
+437. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $99,990.0
+   MARGEN: $30,000.0 (42.9% ROI)
+   Similitud ML: 0.500
+
+438. TOSHIBA DISCO DURO TOSHIBA CANVIO READY 2TB
+   Comprar en ripley: $69,990.0
+   Vender en falabella: $99,990.0
+   MARGEN: $30,000.0 (42.9% ROI)
+   Similitud ML: 0.500
+
+439. XIAOMI Celular Redmi Note 14 5G 256Gb
+   Comprar en falabella: $249,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $30,000.0 (12.0% ROI)
+   Similitud ML: 0.557
+
+440. XIAOMI Celular Redmi Note 14 5G 256Gb
+   Comprar en falabella: $249,990.0
+   Vender en ripley: $279,990.0
+   MARGEN: $30,000.0 (12.0% ROI)
+   Similitud ML: 0.557
+
+441. XIAOMI Redmi Note 14 Pro 5G 8GB RAM+ 256GB Resiste
+   Comprar en falabella: $299,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $30,000.0 (10.0% ROI)
+   Similitud ML: 0.536
+
+442. XIAOMI Redmi Note 14 Pro 5G 8GB RAM+ 256GB Resiste
+   Comprar en falabella: $299,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $30,000.0 (10.0% ROI)
+   Similitud ML: 0.536
+
+443. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $299,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $30,000.0 (10.0% ROI)
+   Similitud ML: 0.539
+
+444. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $299,990.0
+   Vender en ripley: $329,990.0
+   MARGEN: $30,000.0 (10.0% ROI)
+   Similitud ML: 0.539
+
+445. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $47,990.0
+   MARGEN: $29,000.0 (152.7% ROI)
+   Similitud ML: 0.466
+
+446. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $47,990.0
+   MARGEN: $28,000.0 (140.1% ROI)
+   Similitud ML: 0.466
+
+447. XIAOMI CELULAR XIAOMI REDMI NOTE 14 6.6" 256 GB 8 
+   Comprar en ripley: $179,990.0
+   Vender en falabella: $205,990.0
+   MARGEN: $26,000.0 (14.4% ROI)
+   Similitud ML: 0.476
+
+448. BROTHER Impresora Multifuncional DCPT730DW Tinta C
+   Comprar en falabella: $214,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $25,000.0 (11.6% ROI)
+   Similitud ML: 0.512
+
+449. BROTHER Impresora Multifuncional DCPT730DW Tinta C
+   Comprar en falabella: $214,990.0
+   Vender en ripley: $239,990.0
+   MARGEN: $25,000.0 (11.6% ROI)
+   Similitud ML: 0.512
+
+450. XIAOMI Redmi Note 14 8GB RAM+ 256GB -Lime Green
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $209,990.0
+   MARGEN: $25,000.0 (13.5% ROI)
+   Similitud ML: 0.476
+
+451. XIAOMI Redmi Note 14 8GB RAM+ 256GB Memoria -Ocean
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $209,990.0
+   MARGEN: $25,000.0 (13.5% ROI)
+   Similitud ML: 0.473
+
+452. XIAOMI Redmi Note 14 Midnight Black 8GB RAM+ 256GB
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $209,990.0
+   MARGEN: $25,000.0 (13.5% ROI)
+   Similitud ML: 0.470
+
+453. XIAOMI Redmi Note 14 Pro 5G Resistente agua 8GB RA
+   Comprar en falabella: $184,990.0
+   Vender en ripley: $209,990.0
+   MARGEN: $25,000.0 (13.5% ROI)
+   Similitud ML: 0.462
+
+454. HISENSE SMART TV HISENSE LED FHD 40" LED 40A4K
+   Comprar en ripley: $169,990.0
+   Vender en falabella: $189,990.0
+   MARGEN: $20,000.0 (11.8% ROI)
+   Similitud ML: 0.579
+
+455. HISENSE SMART TV HISENSE LED FHD 40" LED 40A4K
+   Comprar en ripley: $169,990.0
+   Vender en falabella: $189,990.0
+   MARGEN: $20,000.0 (11.8% ROI)
+   Similitud ML: 0.579
+
+456. SAMSUNG SAMSUNG GALAXY A06 5G 128GB NEGRO
+   Comprar en ripley: $119,990.0
+   Vender en falabella: $139,990.0
+   MARGEN: $20,000.0 (16.7% ROI)
+   Similitud ML: 0.506
+
+457. SAMSUNG LED Smart TV 32 T4202 HD Tizen™ (2020)
+   Comprar en falabella: $159,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $20,000.0 (12.5% ROI)
+   Similitud ML: 0.562
+
+458. SAMSUNG LED Smart TV 32 T4202 HD Tizen™ (2020)
+   Comprar en falabella: $159,990.0
+   Vender en ripley: $179,990.0
+   MARGEN: $20,000.0 (12.5% ROI)
+   Similitud ML: 0.459
+
+459. XIAOMI CELULAR XIAOMI REDMI 14C 128GB 4GB RAM 8MP 
+   Comprar en ripley: $99,990.0
+   Vender en falabella: $119,990.0
+   MARGEN: $20,000.0 (20.0% ROI)
+   Similitud ML: 0.465
+
+460. XIAOMI CELULAR XIAOMI REDMI 14C 128GB 4GB RAM 8MP 
+   Comprar en ripley: $99,990.0
+   Vender en falabella: $119,990.0
+   MARGEN: $20,000.0 (20.0% ROI)
+   Similitud ML: 0.465
+
+461. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $18,990.0
+   Vender en falabella: $37,990.0
+   MARGEN: $19,000.0 (100.1% ROI)
+   Similitud ML: 0.504
+
+462. HP CARTUCHO DE TINTA HP ORIGINAL 664 NEGRO
+   Comprar en ripley: $19,990.0
+   Vender en falabella: $37,990.0
+   MARGEN: $18,000.0 (90.0% ROI)
+   Similitud ML: 0.465
+
+463. APPLE Usb-C To Lightning Cable 1M
+   Comprar en falabella: $12,990.0
+   Vender en ripley: $29,990.0
+   MARGEN: $17,000.0 (130.9% ROI)
+   Similitud ML: 0.453
+
+464. APPLE Usb-C To Lightning Cable 1M
+   Comprar en falabella: $12,990.0
+   Vender en ripley: $29,990.0
+   MARGEN: $17,000.0 (130.9% ROI)
+   Similitud ML: 0.453
+
+465. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $109,990.0
+   MARGEN: $15,000.0 (15.8% ROI)
+   Similitud ML: 0.577
+
+466. SAMSUNG SAMSUNG GALAXY A06 128GB 4GB RAM NEGRO
+   Comprar en ripley: $94,990.0
+   Vender en falabella: $109,990.0
+   MARGEN: $15,000.0 (15.8% ROI)
+   Similitud ML: 0.577
+
+467. MOTOROLA Celular Moto g05 4+64GB Verde
+   Comprar en falabella: $69,990.0
+   Vender en ripley: $81,990.0
+   MARGEN: $12,000.0 (17.1% ROI)
+   Similitud ML: 0.491
+
+468. MOTOROLA Celular Moto g05 4+64GB Verde
+   Comprar en falabella: $69,990.0
+   Vender en ripley: $81,990.0
+   MARGEN: $12,000.0 (17.1% ROI)
+   Similitud ML: 0.491
+
+469. SAMSUNG CARGADOR CELULAR SAMSUNG 25 W EP-T2510NWEG
+   Comprar en ripley: $12,990.0
+   Vender en falabella: $24,990.0
+   MARGEN: $12,000.0 (92.4% ROI)
+   Similitud ML: 0.474
+
+470. SAMSUNG CARGADOR CELULAR SAMSUNG 25 W EP-T2510NWEG
+   Comprar en ripley: $12,990.0
+   Vender en falabella: $24,990.0
+   MARGEN: $12,000.0 (92.4% ROI)
+   Similitud ML: 0.474
+
+471. APPLE Cargador 20W Original + Cable USB-C a USB-C 
+   Comprar en falabella: $19,990.0
+   Vender en ripley: $29,990.0
+   MARGEN: $10,000.0 (50.0% ROI)
+   Similitud ML: 0.471
+
+472. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $17,990.0
+   MARGEN: $10,000.0 (125.2% ROI)
+   Similitud ML: 0.471
+
+473. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $17,990.0
+   MARGEN: $10,000.0 (125.2% ROI)
+   Similitud ML: 0.471
+
+474. SAMSUNG Galaxy A06 128 GB Negro
+   Comprar en falabella: $84,990.0
+   Vender en ripley: $94,990.0
+   MARGEN: $10,000.0 (11.8% ROI)
+   Similitud ML: 0.573
+
+475. SAMSUNG Galaxy A06 128 GB Negro
+   Comprar en falabella: $84,990.0
+   Vender en ripley: $94,990.0
+   MARGEN: $10,000.0 (11.8% ROI)
+   Similitud ML: 0.573
+
+476. XIAOMI Celular Redmi A5 128Gb Negro
+   Comprar en falabella: $89,990.0
+   Vender en ripley: $99,990.0
+   MARGEN: $10,000.0 (11.1% ROI)
+   Similitud ML: 0.480
+
+477. XIAOMI Celular Redmi A5 128Gb Negro
+   Comprar en falabella: $89,990.0
+   Vender en ripley: $99,990.0
+   MARGEN: $10,000.0 (11.1% ROI)
+   Similitud ML: 0.506
+
+478. XIAOMI Celular Redmi A5 128Gb Negro
+   Comprar en falabella: $89,990.0
+   Vender en ripley: $99,990.0
+   MARGEN: $10,000.0 (11.1% ROI)
+   Similitud ML: 0.506
+
+479. XIAOMI Celular Redmi A5 128Gb Negro
+   Comprar en falabella: $89,990.0
+   Vender en ripley: $99,990.0
+   MARGEN: $10,000.0 (11.1% ROI)
+   Similitud ML: 0.499
+
+480. XIAOMI Celular Redmi A5 128Gb Negro
+   Comprar en falabella: $89,990.0
+   Vender en ripley: $99,990.0
+   MARGEN: $10,000.0 (11.1% ROI)
+   Similitud ML: 0.499
+
+481. APPLE Usb-C To Lightning Cable 1M
+   Comprar en falabella: $12,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $9,000.0 (69.3% ROI)
+   Similitud ML: 0.453
+
+482. APPLE Usb-C To Lightning Cable 1M
+   Comprar en falabella: $12,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $9,000.0 (69.3% ROI)
+   Similitud ML: 0.453
+
+483. APPLE Cargador USB-C 20W Original Con Cable C Ligh
+   Comprar en falabella: $20,990.0
+   Vender en ripley: $29,990.0
+   MARGEN: $9,000.0 (42.9% ROI)
+   Similitud ML: 0.499
+
+484. APPLE Usb-C To Lightning Cable (1M) cargador iPhon
+   Comprar en falabella: $20,990.0
+   Vender en ripley: $29,990.0
+   MARGEN: $9,000.0 (42.9% ROI)
+   Similitud ML: 0.458
+
+485. HP CARTUCHO DE TINTA HP ORIGINAL 667 TRICOLOR
+   Comprar en ripley: $38,990.0
+   Vender en falabella: $47,990.0
+   MARGEN: $9,000.0 (23.1% ROI)
+   Similitud ML: 0.503
+
+486. LUBABYCAS MUDADOR DE PAÑALES PLEGABLE GRIS ACCESOR
+   Comprar en ripley: $79,990.0
+   Vender en falabella: $88,990.0
+   MARGEN: $9,000.0 (11.3% ROI)
+   Similitud ML: 0.477
+
+487. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $13,990.0
+   MARGEN: $6,000.0 (75.1% ROI)
+   Similitud ML: 0.505
+
+488. MASTER G POWER BANK MASTER-G 5.000 MAH TIPO C
+   Comprar en ripley: $7,990.0
+   Vender en falabella: $13,990.0
+   MARGEN: $6,000.0 (75.1% ROI)
+   Similitud ML: 0.505
+
+489. APPLE CARGADOR CARGA RÁPIDA 20W APPLE CON CABLE 1M
+   Comprar en ripley: $29,990.0
+   Vender en falabella: $34,990.0
+   MARGEN: $5,000.0 (16.7% ROI)
+   Similitud ML: 0.474
+
+490. APPLE CARGADOR CARGA RÁPIDA 20W APPLE CON CABLE 1M
+   Comprar en ripley: $29,990.0
+   Vender en falabella: $34,990.0
+   MARGEN: $5,000.0 (16.7% ROI)
+   Similitud ML: 0.474
+
+491. INFANTI Mochila Pañalera Open
+   Comprar en falabella: $25,990.0
+   Vender en ripley: $30,990.0
+   MARGEN: $5,000.0 (19.2% ROI)
+   Similitud ML: 0.580
+
+492. INFANTI Mochila Pañalera Open
+   Comprar en falabella: $25,990.0
+   Vender en ripley: $30,990.0
+   MARGEN: $5,000.0 (19.2% ROI)
+   Similitud ML: 0.580
+
+493. APPLE CARGADOR CARGA RÁPIDA 20W APPLE CON CABLE 1M
+   Comprar en ripley: $29,990.0
+   Vender en falabella: $33,990.0
+   MARGEN: $4,000.0 (13.3% ROI)
+   Similitud ML: 0.507
+
+494. HP CARTUCHO DE TINTA HP951 700 PÁGINAS CYAN
+   Comprar en ripley: $33,990.0
+   Vender en falabella: $37,990.0
+   MARGEN: $4,000.0 (11.8% ROI)
+   Similitud ML: 0.476
+
+495. HP CARTUCHO DE TINTA HP951 700 PÁGINAS CYAN
+   Comprar en ripley: $33,990.0
+   Vender en falabella: $37,990.0
+   MARGEN: $4,000.0 (11.8% ROI)
+   Similitud ML: 0.476
+
+496. MASTER G Cargador Magnético Power Bank MagSafe 10.
+   Comprar en falabella: $17,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $4,000.0 (22.2% ROI)
+   Similitud ML: 0.455
+
+497. APPLE Cargador 20W Original + Cable C - C 1mt iPho
+   Comprar en falabella: $19,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $2,000.0 (10.0% ROI)
+   Similitud ML: 0.471
+
+498. APPLE Cargador 20W Original + Cable C - C 1mt iPho
+   Comprar en falabella: $19,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $2,000.0 (10.0% ROI)
+   Similitud ML: 0.471
+
+499. APPLE Cargador 20W Original + Cable USB-C a USB-C 
+   Comprar en falabella: $19,990.0
+   Vender en ripley: $21,990.0
+   MARGEN: $2,000.0 (10.0% ROI)
+   Similitud ML: 0.540
+
+500. MASTER G Cargador Magnético Power Bank MagSafe 10.
+   Comprar en falabella: $17,990.0
+   Vender en ripley: $19,990.0
+   MARGEN: $2,000.0 (11.1% ROI)
+   Similitud ML: 0.483
+
+501. MASTER G Cargador Portátil Power Bank Pocket 5000m
+   Comprar en falabella: $17,990.0
+   Vender en ripley: $19,990.0
+   MARGEN: $2,000.0 (11.1% ROI)
+   Similitud ML: 0.465
+
+502. MASTER G Cargador Portátil Power Bank Pocket 5000m
+   Comprar en falabella: $17,990.0
+   Vender en ripley: $19,990.0
+   MARGEN: $2,000.0 (11.1% ROI)
+   Similitud ML: 0.465
+
+503. MASTER G Cargador Magnético Power Bank MagSafe 10.
+   Comprar en falabella: $17,990.0
+   Vender en ripley: $19,990.0
+   MARGEN: $2,000.0 (11.1% ROI)
+   Similitud ML: 0.472
+
+📊 ESTADÍSTICAS:
+Margen total potencial: $153,737,060.0
+ROI promedio: 576.1%
+Mejor oportunidad: $3,392,000.0

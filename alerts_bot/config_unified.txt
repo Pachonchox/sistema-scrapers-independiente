@@ -1,0 +1,13 @@
+
+# Configuración actualizada para el bot de alertas
+# Apunta a la base de datos unificada con vistas de compatibilidad
+
+DUCKDB_PATH=./data/master_system_unified.duckdb
+PARQUET_ROOT=./data/master
+
+# Las vistas de compatibilidad permiten que el bot funcione sin cambios:
+# - normalized_products: tabla con productos normalizados
+# - v_current_prices: precios actuales
+# - v_current_spread: spread entre retailers
+# - v_intraday_delta: cambios intradía
+# - v_price_history_daily: histórico diario

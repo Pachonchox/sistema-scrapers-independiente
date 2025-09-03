@@ -1,0 +1,56 @@
+🤖 TEST ML ARBITRAJE MEJORADO - RESULTADOS
+=======================================================
+
+✅ Productos analizados: 30
+🔍 Comparaciones realizadas: 400
+🎯 Matches ML encontrados (≥0.7): 0
+💰 Oportunidades de arbitraje: 0
+
+🔍 TOP 10 COMPARACIONES POR SIMILITUD:
+--------------------------------------------------
+1. APPLE Audifonos EarPods USB C iphone 15- (falabella)
+    vs APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    🎯 Similitud: 0.480 | Precios: $19,990.0 vs $19,990.0
+
+2. APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    vs APPLE Audifonos EarPods USB C iphone 15- (falabella)
+    🎯 Similitud: 0.480 | Precios: $19,990.0 vs $19,990.0
+
+3. APPLE Cargador 20W Original + Cable USB- (falabella)
+    vs APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    🎯 Similitud: 0.450 | Precios: $19,990.0 vs $19,990.0
+
+4. APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    vs APPLE Cargador 20W Original + Cable USB- (falabella)
+    🎯 Similitud: 0.450 | Precios: $19,990.0 vs $19,990.0
+
+5. APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    vs APPLE Audifonos iPhone Earpods Lightning (falabella)
+    🎯 Similitud: 0.447 | Precios: $19,990.0 vs $19,990.0
+
+6. APPLE Audifonos iPhone Earpods Lightning (falabella)
+    vs APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    🎯 Similitud: 0.447 | Precios: $19,990.0 vs $19,990.0
+
+7. APPLE Lightning To Usb Cable 1M cargador (falabella)
+    vs APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    🎯 Similitud: 0.411 | Precios: $21,990.0 vs $19,990.0
+
+8. APPLE EARPODS APPLE CONECTOR USB-C (ripley)
+    vs APPLE Lightning To Usb Cable 1M cargador (falabella)
+    🎯 Similitud: 0.411 | Precios: $19,990.0 vs $21,990.0
+
+9. APPLE Usb-C Cable 240W 2Mt cargador iPho (falabella)
+    vs APPLE APPLE AIRTAG 1 UNIDAD (ripley)
+    🎯 Similitud: 0.382 | Precios: $34,990.0 vs $29,990.0
+
+10. APPLE APPLE AIRTAG 1 UNIDAD (ripley)
+    vs APPLE Usb-C Cable 240W 2Mt cargador iPho (falabella)
+    🎯 Similitud: 0.382 | Precios: $29,990.0 vs $34,990.0
+
+
+📈 ESTADÍSTICAS DE SIMILITUD:
+🔝 Máxima similitud: 0.480
+📊 Similitud promedio: 0.173
+💥 Matches con similitud ≥0.85: 0
+⚡ Matches con similitud ≥0.7: 0

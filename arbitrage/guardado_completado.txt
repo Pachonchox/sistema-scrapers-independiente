@@ -1,0 +1,27 @@
+GUARDADO DE OPORTUNIDADES COMPLETADO
+========================================
+
+FECHA: 2025-09-01
+HORA: 12:56:49
+
+ESTADISTICAS:
+Nuevas oportunidades guardadas: 12
+Oportunidades actualizadas: 5
+Total oportunidades activas en BD: 12
+
+METRICAS:
+Margen total potencial: $420,000
+ROI promedio: 71.1%
+Mejor margen: $160,000
+
+CAMPOS GUARDADOS:
+- matching_id (identificador unico)
+- fecha_deteccion
+- retailer_compra y retailer_venta
+- precios y margenes
+- links de productos (cuando disponibles)
+- codigos SKU
+- marca y categoria
+- ratings y reviews
+- metadata completa
+- sistema anti-duplicados activo

@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Read(D:\\portable_orchestrator_clean/**)",
+      "Read(D:\\portable_orchestrator_clean\\portable_orchestrator_v5/**)",
+      "Bash(pip install:*)",
+      "Read(D:\\portable_orchestrator_clean/**)",
+      "Read(D:\\portable_orchestrator_clean/**)",
+      "Bash(grep:*)",
+      "Read(D:\\portable_orchestrator_clean\\scraper_v3\\scrapers/**)",
+      "Read(D:\\portable_orchestrator_clean\\scraper_v3/**)",
+      "Read(D:\\portable_orchestrator_clean\\scraper_v3\\output/**)",
+      "Read(D:\\portable_orchestrator_clean\\scraper_v3\\output/**)",
+      "Read(D:\\portable_orchestrator_clean\\scraper_v3\\output/**)",
+      "Read(D:\\portable_orchestrator_clean/**)",
+      "Bash(find:*)",
+      "Bash(timeout:*)",
+      "Bash(copy falabella_scraper_v5.py falabella_scraper_v5_backup.py)",
+      "Bash(copy falabella_scraper_v5_fixed.py falabella_scraper_v5.py)",
+      "Bash(docker exec:*)",
+      "Bash(robocopy:*)",
+      "Bash(xcopy:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

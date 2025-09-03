@@ -1,0 +1,15 @@
+{
+  "session_id": "17755223",
+  "retailer": "falabella",
+  "start_time": "2025-09-03T10:08:11.592965",
+  "duration_seconds": 20.762254,
+  "request_count": 0,
+  "successful_requests": 0,
+  "failed_requests": 0,
+  "total_products_scraped": 0,
+  "success_rate": 0.0,
+  "products_per_minute": 0.0,
+  "consecutive_failures": 0,
+  "circuit_breaker_open": false,
+  "performance_metrics": {}
+}

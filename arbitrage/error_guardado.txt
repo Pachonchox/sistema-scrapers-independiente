@@ -1,0 +1,22 @@
+Error en guardado: column "retailer_compra" does not exist
+LINE 3:                 WHERE retailer_compra = 'falabella' AND reta...
+                              ^
+
+Traceback (most recent call last):
+  File "C:\Users\osmar\OneDrive\Escritorio\portable_orchestrator\arbitrage\save_opportunities_simple.py", line 71, in parse_and_save_opportunities
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        SELECT id FROM arbitrage_opportunities
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        LIMIT 1
+        ^^^^^^^
+    """, (retailer_compra, retailer_venta, precio_compra, precio_venta))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\osmar\OneDrive\Escritorio\portable_orchestrator\venv\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column "retailer_compra" does not exist
+LINE 3:                 WHERE retailer_compra = 'falabella' AND reta...
+                              ^
+

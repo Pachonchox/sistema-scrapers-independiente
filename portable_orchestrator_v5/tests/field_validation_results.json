@@ -1,0 +1,47 @@
+{
+  "test_date": "2025-09-02T21:20:32.143232",
+  "required_fields": [
+    "category",
+    "fecha_captura",
+    "link",
+    "nombre",
+    "precio_min_num",
+    "precio_normal",
+    "precio_normal_num",
+    "precio_oferta",
+    "precio_oferta_num",
+    "precio_tarjeta",
+    "precio_tarjeta_num",
+    "retailer",
+    "sku",
+    "tipo_precio_min"
+  ],
+  "optional_fields": [
+    "disponibilidad",
+    "imagen",
+    "marca",
+    "rating",
+    "reviews"
+  ],
+  "results": {
+    "ripley": {
+      "validation_passed": true,
+      "errors": [],
+      "warnings": [],
+      "fields_count": 19
+    },
+    "falabella": {
+      "validation_passed": true,
+      "errors": [],
+      "warnings": [],
+      "fields_count": 19
+    },
+    "paris": {
+      "validation_passed": true,
+      "errors": [],
+      "warnings": [],
+      "fields_count": 19
+    }
+  },
+  "all_passed": true
+}

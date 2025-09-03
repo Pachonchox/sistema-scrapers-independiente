@@ -1,0 +1,70 @@
+# 🚀 Scraper v5 Project - Dependencias Python
+# ============================================
+
+# Web Scraping Core
+playwright>=1.40.0          # Navegador automatizado moderno
+beautifulsoup4>=4.12.2      # Parser HTML robusto  
+requests>=2.31.0            # HTTP requests básicos
+aiohttp>=3.9.0              # HTTP async para mejor performance
+lxml>=4.9.3                 # Parser XML/HTML rápido
+
+# Machine Learning & Data Science
+scikit-learn>=1.3.0         # ML algorithms y preprocessing
+pandas>=2.0.3               # Manipulación de datos
+numpy>=1.24.3               # Operaciones numéricas
+joblib>=1.3.2               # Serialización de modelos ML
+
+# Computer Vision (para análisis de screenshots)
+opencv-python>=4.8.0       # Procesamiento de imágenes
+Pillow>=10.0.0              # Manipulación básica de imágenes
+
+# Database & Storage
+redis>=4.6.0                # Cache y coordinación
+duckdb>=0.8.1              # Base de datos analítica (opcional)
+
+# Networking & Proxies
+requests-html>=0.10.0      # Requests con soporte JS (fallback)
+urllib3>=2.0.4             # Conexiones HTTP de bajo nivel
+certifi>=2023.7.22         # Certificados SSL
+
+# Async Programming
+asyncio>=3.4.3             # Programación asíncrona
+aiofiles>=23.2.1           # File I/O asíncrono
+
+# Configuration & Utilities  
+python-dotenv>=1.0.0       # Variables de entorno
+pyyaml>=6.0.1              # Configuraciones YAML
+toml>=0.10.2               # Configuraciones TOML
+click>=8.1.7               # CLI interface
+
+# Logging & Monitoring
+colorlog>=6.7.0            # Logs con colores
+rich>=13.5.2               # Output rico en terminal
+tqdm>=4.66.1               # Progress bars
+
+# Testing & Quality
+pytest>=7.4.0             # Framework de testing
+pytest-asyncio>=0.21.1    # Testing async
+pytest-cov>=4.1.0         # Coverage de tests
+
+# Data Validation
+pydantic>=2.3.0           # Validación de datos con tipos
+marshmallow>=3.20.1       # Serialización/deserialización
+
+# Scheduling & Background Tasks
+schedule>=1.2.0            # Scheduling de tareas
+apscheduler>=3.10.4        # Advanced scheduling
+
+# Optional: Enterprise Features
+# fastapi>=0.103.0         # API REST (para versión enterprise)
+# uvicorn>=0.23.2          # ASGI server (para versión enterprise)
+# streamlit>=1.26.0        # Dashboard web (para versión enterprise)
+
+# Development Tools
+black>=23.7.0              # Code formatter
+flake8>=6.0.0              # Linting
+mypy>=1.5.1                # Type checking
+pre-commit>=3.3.3          # Git hooks
+
+# Platform Specific
+pywin32>=306; sys_platform == "win32"  # Windows utilities

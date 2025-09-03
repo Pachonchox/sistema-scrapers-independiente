@@ -1,0 +1,38 @@
+{
+  "tier_executions": {
+    "critical": {
+      "last_run": "2025-09-03T13:31:35.631877",
+      "next_scheduled": "2025-09-03T15:20:07.245655",
+      "executions_today": 38,
+      "success_rate": 1.0,
+      "avg_execution_time": 1.8676492385920673,
+      "pages_scraped_total": 112,
+      "products_extracted": 0
+    },
+    "important": {
+      "last_run": "2025-09-03T13:25:19.046928",
+      "next_scheduled": "2025-09-03T18:43:50.267004",
+      "executions_today": 15,
+      "success_rate": 1.0,
+      "avg_execution_time": 2.315555522271379,
+      "pages_scraped_total": 28,
+      "products_extracted": 0
+    },
+    "tracking": {
+      "last_run": "2025-09-03T13:31:19.787024",
+      "next_scheduled": "2025-09-04T12:26:14.498099",
+      "executions_today": 114,
+      "success_rate": 1.0,
+      "avg_execution_time": 2.1664775569489034,
+      "pages_scraped_total": 176,
+      "products_extracted": 0
+    }
+  },
+  "randomization_state": {
+    "pattern_break_counter": 0,
+    "last_proxy_rotation": "2025-09-03T12:16:20.889667",
+    "last_ua_rotation": "2025-09-03T12:16:20.889667"
+  },
+  "execution_history": [],
+  "last_save": "2025-09-03T14:16:20.911002"
+}

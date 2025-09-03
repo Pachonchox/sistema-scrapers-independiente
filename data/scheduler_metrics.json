@@ -1,0 +1,112 @@
+{
+  "timestamp": "2025-09-03T15:57:05.210019",
+  "metrics": {
+    "total_tasks_executed": 19,
+    "successful_tasks": 19,
+    "failed_tasks": 0,
+    "total_products_scraped": 541,
+    "average_task_duration": 0.0,
+    "uptime_percentage": 100.0,
+    "retailers_performance": {
+      "falabella": {
+        "tasks_executed": 3,
+        "success_rate": 1.0,
+        "avg_products_per_task": 18.119999999999997,
+        "avg_execution_time": 0.9896738926666667,
+        "last_successful_execution": "2025-09-03T15:55:50.680655"
+      },
+      "paris": {
+        "tasks_executed": 4,
+        "success_rate": 1.0,
+        "avg_products_per_task": 31.144000000000005,
+        "avg_execution_time": 0.9901027614666666,
+        "last_successful_execution": "2025-09-03T15:55:53.186748"
+      },
+      "ripley": {
+        "tasks_executed": 4,
+        "success_rate": 1.0,
+        "avg_products_per_task": 35.568,
+        "avg_execution_time": 1.0052069337333336,
+        "last_successful_execution": "2025-09-03T15:54:45.508982"
+      },
+      "hites": {
+        "tasks_executed": 3,
+        "success_rate": 1.0,
+        "avg_products_per_task": 24.520000000000003,
+        "avg_execution_time": 1.3166844333333334,
+        "last_successful_execution": "2025-09-03T15:54:34.844888"
+      },
+      "abcdin": {
+        "tasks_executed": 5,
+        "success_rate": 1.0,
+        "avg_products_per_task": 30.939200000000007,
+        "avg_execution_time": 1.3371476417600001,
+        "last_successful_execution": "2025-09-03T15:55:18.196330"
+      }
+    },
+    "tiers_performance": {
+      "critical": {
+        "executions_today": 19,
+        "success_rate": 1.0,
+        "avg_execution_time": 1.3100345661992456,
+        "products_scraped": 541
+      },
+      "important": {
+        "executions_today": 0,
+        "success_rate": 1.0,
+        "avg_execution_time": 0.0,
+        "products_scraped": 0
+      },
+      "tracking": {
+        "executions_today": 0,
+        "success_rate": 1.0,
+        "avg_execution_time": 0.0,
+        "products_scraped": 0
+      }
+    },
+    "anti_detection_effectiveness": 1.0
+  },
+  "anti_detection_metrics": {
+    "success_rate": 1.0,
+    "total_requests": 19,
+    "proxy_rotations": 0,
+    "ua_rotations": 0,
+    "pattern_breaks": 0,
+    "human_delays": 315,
+    "captcha_encounters": 0,
+    "current_session_fingerprint": "50fdc209",
+    "working_proxies": 0
+  },
+  "tier_status": {
+    "tiers": {
+      "critical": {
+        "last_run": "2025-09-03T15:55:53.186777",
+        "next_scheduled": "2025-09-03T17:56:50.033769",
+        "executions_today": 57,
+        "success_rate": 1.0,
+        "avg_execution_time": 2.008128388045069,
+        "products_extracted": 0
+      },
+      "important": {
+        "last_run": "2025-09-03T13:25:19.046928",
+        "next_scheduled": "2025-09-03T18:43:50.267004",
+        "executions_today": 15,
+        "success_rate": 1.0,
+        "avg_execution_time": 2.315555522271379,
+        "products_extracted": 0
+      },
+      "tracking": {
+        "last_run": "2025-09-03T13:31:19.787024",
+        "next_scheduled": "2025-09-04T12:26:14.498099",
+        "executions_today": 114,
+        "success_rate": 1.0,
+        "avg_execution_time": 2.1664775569489034,
+        "products_extracted": 0
+      }
+    },
+    "system": {
+      "total_executions_today": 186,
+      "overall_success_rate": 1.0,
+      "pattern_break_counter": 0,
+      "next_scheduled": {
+        "critical": 
