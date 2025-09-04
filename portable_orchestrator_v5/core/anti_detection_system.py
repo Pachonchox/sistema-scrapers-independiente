@@ -282,7 +282,7 @@ class AntiDetectionSystem:
         # Seleccionar proxy basado en success rate y tiempo de uso
         best_proxy = max(working_proxies, key=lambda p: (
             p.success_rate * 0.7 + 
-            (1 - min(1.0, (datetime.now() - (p.last_used or datetime.now())).seconds / 3600)) * 0.3
+            (1 - min(1.0, (datetime.now() - (p.last_used or datetime.now())).total_seconds() / 3600)) * 0.3
         ))
         
         best_proxy.last_used = datetime.now()
@@ -326,7 +326,7 @@ class AntiDetectionSystem:
     def should_rotate_user_agent(self) -> bool:
         """Determinar si se debe rotar el user agent"""
         requests_count = self.randomization_state['requests_with_current_ua']
-        time_since_last = (datetime.now() - self.randomization_state['last_ua_rotation']).seconds
+        time_since_last = (datetime.now() - self.randomization_state['last_ua_rotation']).total_seconds()
         
         # Rotar cada 20-40 requests o cada 30-60 minutos
         return (requests_count >= random.randint(20, 40) or 
@@ -335,7 +335,7 @@ class AntiDetectionSystem:
     def should_rotate_proxy(self) -> bool:
         """Determinar si se debe rotar el proxy"""
         requests_count = self.randomization_state['requests_with_current_proxy']
-        time_since_last = (datetime.now() - self.randomization_state['last_proxy_rotation']).seconds
+        time_since_last = (datetime.now() - self.randomization_state['last_proxy_rotation']).total_seconds()
         
         # Rotar cada 5-10 requests o cada 10-20 minutos
         return (requests_count >= random.randint(5, 10) or 
@@ -348,12 +348,12 @@ class AntiDetectionSystem:
         
         min_delay, max_delay = self.human_delays[delay_type]
         
-        # Aplicar distribución más realista (no uniforme)
-        # Favorecer delays más cortos con ocasionales delays largos
-        if random.random() < 0.8:  # 80% de las veces
-            delay = random.uniform(min_delay, min_delay + (max_delay - min_delay) * 0.6)
-        else:  # 20% delays más largos
-            delay = random.uniform(min_delay + (max_delay - min_delay) * 0.6, max_delay)
+        # Aplicar una distribución no lineal para un comportamiento más humano
+        # La mayoría de los delays serán cortos, con pausas largas ocasionales
+        delay_range = max_delay - min_delay
+        # Usar una potencia para sesgar los resultados hacia el mínimo
+        random_factor = random.random() ** 1.5
+        delay = min_delay + delay_range * random_factor
         
         self.metrics['human_delays_applied'] += 1
         return delay

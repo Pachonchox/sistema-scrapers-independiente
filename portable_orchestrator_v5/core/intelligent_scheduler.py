@@ -201,16 +201,16 @@ class IntelligentScheduler:
         self.start_time = datetime.now()
         
         try:
-            # Tareas principales en paralelo
-            main_tasks = [
-                self._main_scheduling_loop(),
-                self._task_execution_loop(), 
-                self._health_monitoring_loop(),
-                self._metrics_collection_loop(),
-                self._maintenance_loop()
+            # Tareas principales en paralelo (guardar referencias para cancelación)
+            self._background_tasks = [
+                asyncio.create_task(self._main_scheduling_loop()),
+                asyncio.create_task(self._task_execution_loop()), 
+                asyncio.create_task(self._health_monitoring_loop()),
+                asyncio.create_task(self._metrics_collection_loop()),
+                asyncio.create_task(self._maintenance_loop())
             ]
             
-            await asyncio.gather(*main_tasks, return_exceptions=True)
+            await asyncio.gather(*self._background_tasks, return_exceptions=True)
             
         except Exception as e:
             logger.error(f"❌ Error crítico en operación continua: {e}")
@@ -449,6 +449,15 @@ class IntelligentScheduler:
             if len(self.completed_tasks) > 200:
                 self.completed_tasks = self.completed_tasks[-150:]
     
+    def set_scraping_callback(self, callback: Callable):
+        """🔗 Configurar callback de scraping"""
+        self.scraper_callback = callback
+        logger.info("🔗 Callback de scraping configurado")
+    
+    def get_status(self) -> Dict[str, Any]:
+        """📊 Obtener estado completo del scheduler"""
+        return self.get_status_summary()
+    
     def _update_task_metrics(self, task: ExecutionTask, execution_time: float):
         """Actualizar métricas de la tarea"""
         self.metrics['total_tasks_executed'] += 1
@@ -667,7 +676,7 @@ class IntelligentScheduler:
             }
             
             with open(metrics_file, 'w', encoding='utf-8') as f:
-                json.dump(metrics_data, f, indent=2, ensure_ascii=False)
+                json.dump(metrics_data, f, indent=2, ensure_ascii=False, default=str)
                 
         except Exception as e:
             logger.error(f"❌ Error guardando métricas: {e}")
@@ -688,7 +697,7 @@ class IntelligentScheduler:
             self.state_file.parent.mkdir(parents=True, exist_ok=True)
             
             with open(self.state_file, 'w', encoding='utf-8') as f:
-                json.dump(state_data, f, indent=2, ensure_ascii=False)
+                json.dump(state_data, f, indent=2, ensure_ascii=False, default=str)
                 
         except Exception as e:
             logger.error(f"❌ Error guardando estado: {e}")
@@ -698,6 +707,13 @@ class IntelligentScheduler:
         logger.info("🛑 Iniciando apagado gracioso...")
         
         self.state = SchedulerState.PAUSED
+        
+        # Cancelar tareas de fondo si siguen activas
+        for t in getattr(self, '_background_tasks', []):
+            if t and not t.done():
+                t.cancel()
+        if getattr(self, '_background_tasks', None):
+            await asyncio.gather(*self._background_tasks, return_exceptions=True)
         
         # Esperar que terminen las tareas en ejecución
         max_wait_time = 300  # 5 minutos máximo

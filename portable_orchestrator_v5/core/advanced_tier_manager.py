@@ -430,8 +430,9 @@ class AdvancedTierManager:
             }
             
             if tier_execution.next_scheduled:
-                summary['system']['next_scheduled'][tier_name] = tier_execution.next_scheduled
-        
+                # Asegurar serialización JSON segura (string ISO 8601)
+                summary['system']['next_scheduled'][tier_name] = tier_execution.next_scheduled.isoformat()
+
         return summary
     
     def save_state(self):
@@ -462,7 +463,7 @@ class AdvancedTierManager:
             self.state_file.parent.mkdir(parents=True, exist_ok=True)
             
             with open(self.state_file, 'w', encoding='utf-8') as f:
-                json.dump(state, f, indent=2, ensure_ascii=False)
+                json.dump(state, f, indent=2, ensure_ascii=False, default=str)
                 
         except Exception as e:
             logger.error(f"❌ Error guardando estado: {e}")

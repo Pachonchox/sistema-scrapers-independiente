@@ -142,24 +142,36 @@ class CircuitBreaker:
             if self.last_failure_time and \
                (datetime.now() - self.last_failure_time).seconds > self.recovery_timeout:
                 self.state = "half-open"
-                return True
+                logger.info(f"⚡ Circuit Breaker cambiando a half-open.")
+                return True  # Permitir una sola ejecución de prueba
             return False
         elif self.state == "half-open":
-            return True
+            # En half-open, solo se permite una ejecución, después se bloquea hasta el resultado
+            return False
         return False
     
     def record_success(self):
         """Registrar éxito"""
+        if self.state == "half-open":
+            logger.info("✅ Circuit Breaker cerrado tras éxito en half-open.")
         self.failure_count = 0
         self.state = "closed"
     
     def record_failure(self):
         """Registrar fallo"""
+        if self.state == "half-open":
+            # Si la prueba falla, volver a abrir el circuito inmediatamente
+            self.state = "open"
+            self.last_failure_time = datetime.now()
+            logger.warning(f"❌ Fallo en half-open. Circuit Breaker re-abierto por {self.recovery_timeout}s.")
+            return
+
         self.failure_count += 1
         self.last_failure_time = datetime.now()
         
         if self.failure_count >= self.failure_threshold:
             self.state = "open"
+            logger.error(f"⚡ Circuit Breaker abierto por {self.recovery_timeout}s tras {self.failure_count} fallos.")
 
 class ScraperV5Orchestrator:
     """

@@ -314,6 +314,23 @@ class TieredOrchestratorIntegration:
             # Si no tiene método stop, solo marcamos como no running
             self.scheduler.running = False
         
+        # Cancelar tareas de fondo del scheduler si existen y forzar shutdown limpio
+        try:
+            bg = getattr(self.scheduler, '_background_tasks', []) if self.scheduler else []
+            for t in bg:
+                if t and not t.done():
+                    t.cancel()
+            if bg:
+                import asyncio as _asyncio
+                await _asyncio.gather(*bg, return_exceptions=True)
+        except Exception:
+            pass
+        try:
+            if self.scheduler and hasattr(self.scheduler, '_shutdown_gracefully'):
+                await self.scheduler._shutdown_gracefully()
+        except Exception:
+            pass
+        
         # Mostrar estadísticas finales
         self._log_final_stats()
         

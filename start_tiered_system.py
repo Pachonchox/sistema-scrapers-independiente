@@ -333,8 +333,9 @@ async def main():
         
         orchestrator = OrchestratorV5Tiered(config)
         
-        # Iniciar sistema
-        await orchestrator.start()
+        # Iniciar sistema (tarea cancelable para responder a Ctrl+C)
+        orch_task = asyncio.create_task(orchestrator.start())
+        await orch_task
         
     except KeyboardInterrupt:
         logger.info("⏹️ Sistema detenido por el usuario (Ctrl+C)")

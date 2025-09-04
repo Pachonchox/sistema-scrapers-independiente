@@ -459,22 +459,38 @@ class ETLFieldMapper:
             return None
         
         # Limpiar y normalizar marca
-        brand = re.sub(self.cleaning_patterns['marca'], '', value)
-        brand = brand.strip().upper()
-        
-        # Mapeo de marcas comunes
+        brand = re.sub(self.cleaning_patterns['marca'], '', value).strip().upper()
+
+        # Limpiar sufijos corporativos comunes
+        corporate_suffixes = [' S.A.', ' S A', ' LIMITADA', ' LTDA', ' CHILE']
+        for suffix in corporate_suffixes:
+            if brand.endswith(suffix):
+                brand = brand[:-len(suffix)]
+
+        # Mapeo de marcas comunes (más extenso)
         brand_mappings = {
             'SAMSUNG': 'SAMSUNG',
-            'SAMS': 'SAMSUNG', 
+            'SAMS': 'SAMSUNG',
             'APPLE': 'APPLE',
             'IPHONE': 'APPLE',
+            'MOTOROLA': 'MOTOROLA',
             'HUAWEI': 'HUAWEI',
             'XIAOMI': 'XIAOMI',
+            'REDMI': 'XIAOMI',
             'LG': 'LG',
             'SONY': 'SONY',
             'LENOVO': 'LENOVO',
             'HP': 'HP',
-            'DELL': 'DELL'
+            'HEWLETT-PACKARD': 'HP',
+            'DELL': 'DELL',
+            'ASUS': 'ASUS',
+            'ACER': 'ACER',
+            'NOKIA': 'NOKIA',
+            'OPPO': 'OPPO',
+            'VIVO': 'VIVO',
+            'REALME': 'REALME',
+            'GOOGLE': 'GOOGLE',
+            'PIXEL': 'GOOGLE',
         }
         
         # Aplicar mapeo si coincide

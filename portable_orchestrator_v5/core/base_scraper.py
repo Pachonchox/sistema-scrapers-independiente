@@ -534,59 +534,68 @@ class BaseScraperV5(ABC):
             logger.error("❌ Página no inicializada")
             return False
         
-        try:
-            # Rate limiting
-            await self._respect_rate_limit()
-            
-            # Configurar headers
-            await self._set_random_headers()
-            
-            # Navegar con timeout
-            logger.debug(f"🧭 Navegando a: {url}")
-            start_time = time.time()
-            
-            response = await self.page.goto(
-                url,
-                timeout=self.config.timeout * 1000,
-                wait_until='networkidle'
-            )
-            
-            load_time = time.time() - start_time
-            self.performance_metrics['page_load_time'] = load_time
-            
-            # Verificar respuesta
-            if response and response.status >= 400:
-                if response.status == 403:
-                    raise RetailerBlockedException(
-                        retailer=self.retailer,
-                        url=url,
-                        detection_indicators=[f"HTTP {response.status}"]
+        for attempt in range(self.config.max_retries):
+            try:
+                # Rate limiting
+                await self._respect_rate_limit()
+                
+                # Configurar headers
+                await self._set_random_headers()
+                
+                # Navegar con timeout
+                logger.debug(f"🧭 Navegando a: {url} (Intento {attempt + 1}/{self.config.max_retries})")
+                start_time = time.time()
+                
+                response = await self.page.goto(
+                    url,
+                    timeout=self.config.timeout * 1000,
+                    wait_until='networkidle'
+                )
+                
+                load_time = time.time() - start_time
+                self.performance_metrics['page_load_time'] = load_time
+                
+                # Verificar respuesta
+                if response and response.status >= 400:
+                    if response.status == 403:
+                        raise RetailerBlockedException(
+                            retailer=self.retailer,
+                            url=url,
+                            detection_indicators=[f"HTTP {response.status}"]
+                        )
+                    elif response.status >= 500:
+                        raise NetworkException(
+                            message=f"Error del servidor: HTTP {response.status}",
+                            url=url,
+                            status_code=response.status
+                        )
+                
+                self.request_count += 1
+                self.successful_requests += 1
+                
+                logger.debug(f"✅ Navegación exitosa en {load_time:.2f}s")
+                return True
+                
+            except TimeoutError:
+                logger.warning(f"⏳ Timeout en intento {attempt + 1} para {url}")
+                if attempt + 1 == self.config.max_retries:
+                    self.failed_requests += 1
+                    raise TimeoutException(
+                        message="Timeout navegando a página después de varios intentos",
+                        timeout_seconds=self.config.timeout,
+                        operation="navigation",
+                        context={'url': url}
                     )
-                elif response.status >= 500:
-                    raise NetworkException(
-                        message=f"Error del servidor: HTTP {response.status}",
-                        url=url,
-                        status_code=response.status
-                    )
-            
-            self.request_count += 1
-            self.successful_requests += 1
-            
-            logger.debug(f"✅ Navegación exitosa en {load_time:.2f}s")
-            return True
-            
-        except TimeoutError:
-            self.failed_requests += 1
-            raise TimeoutException(
-                message="Timeout navegando a página",
-                timeout_seconds=self.config.timeout,
-                operation="navigation",
-                context={'url': url}
-            )
-        except Exception as e:
-            self.failed_requests += 1
-            logger.error(f"💥 Error navegando a {url}: {str(e)}")
-            return False
+                await asyncio.sleep(2 * (attempt + 1))  # Pausa antes de reintentar
+            except Exception as e:
+                logger.error(f"💥 Error en intento {attempt + 1} para {url}: {str(e)}")
+                if attempt + 1 == self.config.max_retries:
+                    self.failed_requests += 1
+                    logger.error(f"💥 Error definitivo navegando a {url}: {str(e)}")
+                    return False
+                await asyncio.sleep(2 * (attempt + 1))
+        
+        return False
     
     async def _detect_blocking(self) -> bool:
         """
