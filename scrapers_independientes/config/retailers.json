@@ -1,0 +1,238 @@
+{
+  "retailers": {
+    "ripley": {
+      "name": "Ripley Chile",
+      "base_url": "https://simple.ripley.cl",
+      "search_url": "https://simple.ripley.cl/search",
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL",
+      "max_requests_per_minute": 30,
+      "requires_residential_proxy": false,
+      "strict_geo_targeting": true,
+      "lazy_loading": true,
+      "infinite_scroll": true,
+      "preferred_countries": ["CL", "PE", "CO"],
+      "user_agents": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+      ],
+      "categories": {
+        "celulares": {
+          "url": "https://simple.ripley.cl/tecno/celulares",
+          "key": "celulares",
+          "priority": 0.9
+        },
+        "computacion": {
+          "url": "https://simple.ripley.cl/tecno/computacion", 
+          "key": "computacion",
+          "priority": 0.9
+        },
+        "television": {
+          "url": "https://simple.ripley.cl/tecno/television",
+          "key": "television",
+          "priority": 0.9
+        },
+        "smartwatches_smartbands": {
+          "url": "https://simple.ripley.cl/tecno/smartwatches-y-smartbands",
+          "key": "smartwatches_smartbands",
+          "priority": 0.8
+        },
+        "mundo_bebe": {
+          "url": "https://simple.ripley.cl/jugueteria-y-ninos/mundo-bebe",
+          "key": "mundo_bebe", 
+          "priority": 0.7
+        },
+        "impresoras_tintas": {
+          "url": "https://simple.ripley.cl/tecno/impresoras-y-tintas",
+          "key": "impresoras_tintas",
+          "priority": 0.5
+        }
+      },
+      "selectors": {
+        "product_grid": ".catalog-container",
+        "product_items": ".catalog-product-item",
+        "product_title": ".catalog-product-item__name",
+        "product_price": ".catalog-product-item__price",
+        "product_link": "a.catalog-product-item__link",
+        "product_image": ".catalog-product-item__image img",
+        "load_more": ".load-more, .show-more"
+      },
+      "timing": {
+        "page_load_timeout": 30,
+        "element_wait_timeout": 15,
+        "scroll_pause": 2,
+        "lazy_load_delay": 3
+      }
+    },
+    
+    "falabella": {
+      "name": "Falabella Chile",
+      "base_url": "https://www.falabella.com/falabella-cl",
+      "search_url": "https://www.falabella.com/falabella-cl/search",
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL", 
+      "max_requests_per_minute": 25,
+      "requires_residential_proxy": true,
+      "strict_geo_targeting": true,
+      "lazy_loading": true,
+      "infinite_scroll": true,
+      "preferred_countries": ["CL", "PE", "CO", "AR"],
+      "categories": {
+        "tecnologia": {
+          "path": "/category/cat70037",
+          "description": "Tecnología",
+          "priority": 1
+        },
+        "electrohogar": {
+          "path": "/category/cat70055",
+          "description": "Electrodomésticos",
+          "priority": 2
+        }
+      }
+    },
+    
+    "paris": {
+      "name": "Paris Chile", 
+      "base_url": "https://www.paris.cl",
+      "search_url": "https://www.paris.cl/search",
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL",
+      "max_requests_per_minute": 20,
+      "requires_residential_proxy": false,
+      "strict_geo_targeting": true,
+      "preferred_countries": ["CL"],
+      "categories": {
+        "informatica": {
+          "path": "/informatica",
+          "description": "Informática",
+          "priority": 1
+        }
+      }
+    },
+    
+    "hites": {
+      "name": "Hites Chile",
+      "base_url": "https://www.hites.com", 
+      "search_url": "https://www.hites.com/search",
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL",
+      "max_requests_per_minute": 40,
+      "requires_residential_proxy": false,
+      "strict_geo_targeting": false,
+      "preferred_countries": ["CL"],
+      "categories": {
+        "informatica": {
+          "path": "/informatica",
+          "description": "Informática", 
+          "priority": 1
+        }
+      }
+    },
+    
+    "abcdin": {
+      "name": "AbcDin Chile",
+      "base_url": "https://www.abcdin.cl",
+      "search_url": "https://www.abcdin.cl/search", 
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL",
+      "max_requests_per_minute": 35,
+      "requires_residential_proxy": false,
+      "strict_geo_targeting": false,
+      "preferred_countries": ["CL"],
+      "categories": {
+        "informatica": {
+          "path": "/informatica",
+          "description": "Informática",
+          "priority": 1
+        }
+      }
+    },
+    
+    "mercadolibre": {
+      "name": "MercadoLibre Chile",
+      "base_url": "https://listado.mercadolibre.cl",
+      "search_url": "https://listado.mercadolibre.cl/", 
+      "country": "CL",
+      "currency": "CLP",
+      "language": "es-CL",
+      "max_requests_per_minute": 15,
+      "requires_residential_proxy": true,
+      "strict_geo_targeting": true,
+      "preferred_countries": ["CL", "AR", "PE", "CO"],
+      "categories": {
+        "informatica": {
+          "path": "/informatica",
+          "description": "Informática",
+          "priority": 1
+        }
+      }
+    }
+  },
+  
+  "global_settings": {
+    "default_timeout": 30,
+    "retry_attempts": 3,
+    "retry_delay": 2,
+    "concurrent_limit": 5,
+    "respect_robots_txt": false,
+    "user_agent_rotation": true,
+    "proxy_rotation": true,
+    "screenshot_on_error": true,
+    "html_dump_on_error": true
+  },
+  
+  "tier_system": {
+    "critical": {
+      "description": "TIER 1: CRÍTICO - Cada 2h - Alta volatilidad, arbitraje potencial",
+      "frequency_hours": 2,
+      "pages_per_category": 2,
+      "priority": 0.9,
+      "max_concurrent": 3,
+      "retailers": ["falabella", "paris", "ripley"],
+      "categories": {
+        "smartphones": ["celulares"],
+        "computadores": ["computacion"],
+        "smart_tv": ["television"],
+        "smartwatch": ["smartwatches_smartbands"],
+        "tablets": ["tablets"]
+      }
+    },
+    "important": {
+      "description": "TIER 2: IMPORTANTE - Cada 4h - Cambios regulares, alertas relevantes", 
+      "frequency_hours": 4,
+      "pages_per_category": 1,
+      "priority": 0.7,
+      "max_concurrent": 2,
+      "retailers": ["all"],
+      "categories": {
+        "consolas": ["gaming"],
+        "parlantes_bluetooth": ["audio"],
+        "monitores": ["monitores"],
+        "mundo_bebe": ["mundo_bebe"]
+      }
+    },
+    "complementary": {
+      "description": "TIER 3: COMPLEMENTARIO - Cada 12h - Tracking histórico, cambios lentos",
+      "frequency_hours": 12, 
+      "pages_per_category": 1,
+      "priority": 0.5,
+      "max_concurrent": 1,
+      "retailers": ["all"],
+      "categories": {
+        "accesorios_celulares": ["accesorios_celulares"],
+        "almacenamiento": ["almacenamiento"],
+        "routers": ["routers"],
+        "impresoras_tintas": ["impresoras_tintas"],
+        "linea_blanca": ["linea_blanca"],
+        "pequenos_electrodomesticos": ["pequenos_electrodomesticos"],
+        "climatizacion": ["climatizacion"]
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "sistema": {
+    "nombre": "Sistema Scrapers Independiente V5",
+    "version": "1.0.0",
+    "emoji_support": true,
+    "max_workers": 1,
+    "timeout_general": 30,
+    "export_excel": true,
+    "export_unified": true
+  },
+  "anti_deteccion": {
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0"
+    ],
+    "delay_min": 1,
+    "delay_max": 3,
+    "max_reintentos": 3,
+    "headless": true
+  },
+  "retailers": {
+    "falabella": {
+      "activo": true,
+      "url_base": "https://www.falabella.com/falabella-cl/category/cat720161/Smartphones",
+      "max_productos": 20,
+      "categoria": "smartphones",
+      "selector_contenedor": "div[data-testid=\"pod-card_web_0\"]",
+      "selectores": {
+        "nombre": "b[data-testid=\"pod-card_product-name\"]",
+        "precio": "ol[data-testid=\"price-display\"] li span:first-child",
+        "link": "a[data-testid=\"product-link\"]",
+        "imagen": "img[data-testid=\"product-item_image\"]"
+      },
+      "browser_config": {
+        "headless": true,
+        "timeout": 15000
+      }
+    },
+    "paris": {
+      "activo": true,
+      "url_base": "https://www.paris.cl/tecnologia/celulares/",
+      "max_productos": 20,
+      "categoria": "celulares",
+      "selector_contenedor": "div[data-cnstrc-item-id]",
+      "selectores": {
+        "nombre": ".name",
+        "precio": ".price",
+        "link": "a",
+        "imagen": "img"
+      },
+      "browser_config": {
+        "headless": true,
+        "timeout": 15000
+      }
+    },
+    "ripley": {
+      "activo": true,
+      "url_base": "https://simple.ripley.cl/tecno/celulares",
+      "max_productos": 20,
+      "categoria": "celulares",
+      "selector_contenedor": "div.catalog-product-details",
+      "selectores": {
+        "nombre": ".catalog-product-details__name a",
+        "precio": ".catalog-prices-primary-price",
+        "link": ".catalog-product-details__name a",
+        "imagen": "img"
+      },
+      "browser_config": {
+        "headless": false,
+        "timeout": 20000,
+        "window_position": [-2000, 0],
+        "window_size": [1280, 720]
+      },
+      "scroll_required": true
+    },
+    "hites": {
+      "activo": false,
+      "url_base": "https://hites.com/tecnologia/smartphones",
+      "max_productos": 20,
+      "categoria": "smartphones",
+      "selector_contenedor": ".vtex-search-result-3-x-galleryItem",
+      "selectores": {
+        "nombre": ".vtex-product-summary-2-x-productBrand",
+        "precio": ".tiendasjumbo-store-theme-1dCOMij_MzTzZOtKtbD49I",
+        "link": "a",
+        "imagen": "img"
+      },
+      "browser_config": {
+        "headless": true,
+        "timeout": 15000
+      }
+    },
+    "abcdin": {
+      "activo": false,
+      "url_base": "https://www.abcdin.cl/tecnologia/smartphones",
+      "max_productos": 20,
+      "categoria": "smartphones",
+      "selector_contenedor": ".vtex-search-result-3-x-galleryItem",
+      "selectores": {
+        "nombre": ".vtex-product-summary-2-x-productBrand",
+        "precio": ".tiendasjumbo-store-theme-1dCOMij_MzTzZOtKtbD49I",
+        "link": "a",
+        "imagen": "img"
+      },
+      "browser_config": {
+        "headless": true,
+        "timeout": 15000,
+        "wait_for": "domcontentloaded"
+      }
+    },
+    "mercadolibre": {
+      "activo": true,
+      "url_base": "https://listado.mercadolibre.cl/celulares-telefonia/celulares-smartphones/",
+      "max_productos": 20,
+      "categoria": "celulares",
+      "selector_contenedor": ".ui-search-result__wrapper",
+      "selectores": {
+        "nombre": ".ui-search-item__title",
+        "precio": ".andes-money-amount__fraction",
+        "link": ".ui-search-result__image a",
+        "imagen": "img"
+      },
+      "browser_config": {
+        "headless": true,
+        "timeout": 15000
+      }
+    }
+  }
+}
