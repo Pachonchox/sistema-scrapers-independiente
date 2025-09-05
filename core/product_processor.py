@@ -495,10 +495,9 @@ class ProductProcessor:
         
         # Preparar datos de precios
         price_data = []
-        product_names: Dict[str, str] = {}
-        
+
         for sku, product_data, retailer in products:
-            product_names[sku] = product_data.get('name', '')
+            product_name = product_data.get('name', '')
             # Extraer precios RAW
             precio_original = int(product_data.get('original_price', 0) or 
                                  product_data.get('precio_normal', 0) or 0)
@@ -548,7 +547,7 @@ class ProductProcessor:
                     precios_validos.append(precio_tarjeta)
                 
                 precio_min = min(precios_validos) if precios_validos else precio_normal
-                
+
                 price_data.append((
                     sku,
                     fecha_actual,
@@ -557,7 +556,8 @@ class ProductProcessor:
                     precio_oferta,
                     precio_tarjeta,
                     precio_min,
-                    datetime.now()  # timestamp_creacion
+                    datetime.now(),  # timestamp_creacion
+                    product_name,
                 ))
         
         if not price_data:
@@ -581,7 +581,7 @@ class ProductProcessor:
             existing_prices = {row[0]: row[1:] for row in existing_rows}
 
             # Contar inserciones/actualizaciones y enviar alertas
-            for sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, ts in price_data:
+            for sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, ts, product_name in price_data:
                 prev = existing_prices.get(sku)
                 if prev:
                     if (prev[0] != p_normal or prev[1] != p_oferta or prev[2] != p_tarjeta):
@@ -589,7 +589,7 @@ class ProductProcessor:
                         if ALERTS_AVAILABLE:
                             await self._send_price_change_alert(
                                 sku,
-                                product_names.get(sku, ''),
+                                product_name,
                                 retailer,
                                 prev,
                                 (p_normal, p_oferta, p_tarjeta),
@@ -612,7 +612,10 @@ class ProductProcessor:
                     precio_min_dia = EXCLUDED.precio_min_dia,
                     timestamp_ultima_actualizacion = EXCLUDED.timestamp_creacion
                 """,
-                price_data,
+                [
+                    (sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, ts)
+                    for sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, ts, _ in price_data
+                ],
             )
 
             elapsed = perf_counter() - start_time
