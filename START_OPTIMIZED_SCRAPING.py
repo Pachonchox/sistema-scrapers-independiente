@@ -93,6 +93,7 @@ if os.name == 'nt':  # Windows
 # Verificar dependencias
 try:
     from production_ready_system import ProductionScrapingSystem
+    from core.product_processor import ProductProcessor
     print("✅ Dependencias verificadas")
 except ImportError as e:
     print(f"❌ Error de dependencias: {e}")
@@ -107,11 +108,16 @@ async def quick_start_demo():
     print("=" * 55)
     print("Proxy Decodo integrado | Ahorro de datos máximo")
     print("70% directo + 30% proxy con fallback inteligente")
+    print("🗄️ Inserción directa a PostgreSQL activada")
     print()
     
     # Inicializar sistema de producción
     system = ProductionScrapingSystem()
     current_system = system  # Asignar a variable global para cleanup
+    
+    # Inicializar ProductProcessor para DB
+    processor = ProductProcessor(enable_excel_backup=True, batch_size=50)
+    print("✅ ProductProcessor inicializado - conectado a PostgreSQL")
     
     print("📋 RETAILERS DISPONIBLES:")
     for retailer, config in system.supported_retailers.items():
@@ -128,7 +134,75 @@ async def quick_start_demo():
             max_products_per_category=15  # Cantidad moderada para demo
         )
         
-        # Guardar resultados
+        # 🗄️ PROCESAR DATOS A POSTGRESQL
+        print("\n🗄️ INSERTANDO DATOS EN POSTGRESQL...")
+        productos_insertados = 0
+        
+        for retailer, retailer_data in results["results"].items():
+            for category, cat_data in retailer_data["categories"].items():
+                if cat_data.get("success", False) and cat_data.get("products"):
+                    for product in cat_data["products"]:
+                        # Convertir formato del scraper al formato esperado por ProductProcessor
+                        precios_raw = product.get('precio', '0').split('\n')
+                        precios_numericos = []
+                        
+                        # Extraer solo precios válidos (con $, sin %)
+                        for precio_str in precios_raw:
+                            if '$' in precio_str and '%' not in precio_str:
+                                precio_limpio = ''.join(filter(str.isdigit, precio_str.replace('$', '').replace('.', '')))
+                                if precio_limpio:
+                                    precios_numericos.append(int(precio_limpio))
+                        
+                        # 🔧 CORRECCIÓN ESPECÍFICA PARA FALABELLA
+                        if retailer == 'falabella' and len(precios_numericos) >= 2:
+                            # Falabella: primer precio = oferta, segundo precio = normal
+                            original_price = precios_numericos[1]  # Segundo precio = precio normal
+                            current_price = precios_numericos[0]   # Primer precio = precio oferta
+                        else:
+                            # Otros retailers: primer precio = normal
+                            original_price = precios_numericos[0] if precios_numericos else 0
+                            current_price = 0
+                        
+                        # 🧮 ALGORITMO MATEMÁTICO ROBUSTO PARA SKU ÚNICO MULTICATEGORÍA
+                        import hashlib
+                        
+                        # 1. Obtener posición única del producto en la lista
+                        product_position = cat_data["products"].index(product)
+                        
+                        # 2. Componentes determinísticos invariantes
+                        retailer_code = retailer[:3].upper()  # FAL, RIP
+                        category_hash = hashlib.md5(category.encode()).hexdigest()[:2].upper()  # SM, CO, TA
+                        
+                        # 3. Firma única del producto (determinística)
+                        product_signature = f"{product.get('nombre', '')}_{category}_{product_position}_{retailer}"
+                        product_hash = hashlib.sha256(product_signature.encode()).hexdigest()[:5].upper()
+                        
+                        # 4. SKU matemático final: [RET][CAT][HASH5] = 10 caracteres
+                        mathematical_sku = f"{retailer_code}{category_hash}{product_hash}"
+                        
+                        product_data = {
+                            'title': product.get('nombre', ''),
+                            'nombre': product.get('nombre', ''),
+                            'sku': mathematical_sku,  # SKU matemático robusto
+                            'link': f'https://{retailer}.com/{category}/product/{product_hash}',  # Link determinístico
+                            'original_price': original_price,
+                            'current_price': current_price,
+                            'retailer': retailer,
+                            'category': category,
+                            'extracted_at': product.get('extracted_at'),
+                            'position_in_category': product_position  # Para referencia
+                        }
+                        
+                        # Procesar con ProductProcessor
+                        sku = processor.process_product(product_data, retailer)
+                        if sku:
+                            productos_insertados += 1
+        
+        # Procesar batch final
+        await processor.flush_batch()
+        print(f"✅ {productos_insertados} productos procesados e insertados en DB")
+        
+        # Guardar resultados (mantener funcionalidad original)
         results_file = await system.save_results(results)
         
         # MOSTRAR RESULTADOS
@@ -181,6 +255,7 @@ async def quick_start_demo():
     finally:
         # Cleanup automático
         await system.cleanup_all()
+        processor.close()  # Cerrar ProductProcessor y conexiones DB
         print(f"\n🧹 Recursos limpiados automáticamente")
 
 async def configuration_test():

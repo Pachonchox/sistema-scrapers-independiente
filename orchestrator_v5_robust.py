@@ -31,6 +31,18 @@ from typing import Dict, List, Any, Optional
 import json
 import pandas as pd
 
+# Imports de mi sistema optimizado
+from core.product_processor import ProductProcessor
+from core.sku_generator import SKUGenerator
+from core.price_manager import PriceManager
+
+# Import del sistema de arbitraje V5
+try:
+    from portable_orchestrator_v5.arbitrage_system.core.arbitrage_engine import ArbitrageEngineV5
+    ARBITRAGE_V5_AVAILABLE = True
+except ImportError as e:
+    ARBITRAGE_V5_AVAILABLE = False
+
 # Configurar paths
 sys.path.append(str(Path(__file__).parent.parent))
 sys.path.append(str(Path(__file__).parent))
@@ -75,6 +87,12 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
 
 logger = logging.getLogger("OrchestratorV5")
+
+# Log de sistemas importados
+if ARBITRAGE_V5_AVAILABLE:
+    logger.info("✅ Sistema de arbitraje V5 disponible")
+else:
+    logger.warning("⚠️ Sistema de arbitraje V5 no disponible")
 
 
 class OrchestratorV5Robust:
@@ -131,6 +149,9 @@ class OrchestratorV5Robust:
         self.scrapers = {}
         self.master_system = None
         
+        # Sistema de arbitraje V5
+        self.arbitrage_engine = None
+        
         logger.info("🚀 Orquestador V5 Robusto inicializado")
         logger.info(f"📋 Configuración: {json.dumps(self.config, indent=2)}")
     
@@ -144,21 +165,24 @@ class OrchestratorV5Robust:
         # 1. Inicializar Master System si está habilitado
         if self.config['master_enabled'] and self.config['data_backend'] == 'postgres':
             try:
-                logger.info("📦 Inicializando Master System con PostgreSQL...")
+                logger.info("📦 Inicializando Sistema Optimizado con PostgreSQL...")
                 
-                from core.integrated_master_system import IntegratedMasterSystem
-                
-                self.master_system = IntegratedMasterSystem(
-                    backend_type='postgres',
-                    enable_normalization=True
+                # Inicializar ProductProcessor optimizado
+                self.product_processor = ProductProcessor(
+                    enable_excel_backup=True,
+                    batch_size=self.config['batch_size']
                 )
                 
-                logger.info("✅ Master System inicializado correctamente")
+                logger.info("✅ Sistema Optimizado inicializado correctamente")
+                
+                # Mantener compatibilidad con el código existente
+                self.master_system = self.product_processor
                 
             except Exception as e:
-                logger.error(f"❌ Error inicializando Master System: {e}")
-                logger.info("⚠️  Continuando sin Master System...")
+                logger.error(f"❌ Error inicializando Sistema Optimizado: {e}")
+                logger.info("⚠️  Continuando sin sistema de procesamiento...")
                 self.master_system = None
+                self.product_processor = None
         
         # 2. Verificar conexión PostgreSQL
         if self.config['data_backend'] == 'postgres':
@@ -166,6 +190,10 @@ class OrchestratorV5Robust:
         
         # 3. Inicializar scrapers V5
         await self.initialize_scrapers()
+        
+        # 4. Inicializar sistema de arbitraje V5
+        if self.config['arbitrage_enabled']:
+            await self.initialize_arbitrage_engine()
         
         logger.info("✅ Todos los sistemas inicializados")
     
@@ -237,6 +265,28 @@ class OrchestratorV5Robust:
                     
                 except Exception as e:
                     logger.error(f"  ❌ Error inicializando {retailer}: {e}")
+    
+    async def initialize_arbitrage_engine(self):
+        """💰 Inicializar sistema de arbitraje V5"""
+        
+        if not ARBITRAGE_V5_AVAILABLE:
+            logger.warning("⚠️ Sistema de arbitraje V5 no disponible - saltando inicialización")
+            return
+        
+        try:
+            logger.info("\n💰 Inicializando sistema de arbitraje V5...")
+            
+            # Crear instancia del ArbitrageEngine V5
+            self.arbitrage_engine = ArbitrageEngineV5()
+            
+            # Inicializar el engine
+            await self.arbitrage_engine.initialize()
+            
+            logger.info("✅ Sistema de arbitraje V5 inicializado correctamente")
+            
+        except Exception as e:
+            logger.error(f"❌ Error inicializando sistema de arbitraje V5: {e}")
+            self.arbitrage_engine = None
     
     async def run_scraping_cycle(self) -> Dict[str, Any]:
         """🔄 Ejecutar un ciclo completo de scraping"""
@@ -379,30 +429,40 @@ class OrchestratorV5Robust:
         return products
     
     async def process_with_master_system(self, products: List[Dict[str, Any]]):
-        """🎯 Procesar productos con Master System"""
+        """🎯 Procesar productos con Sistema Optimizado"""
         
-        if not self.master_system:
+        if not self.product_processor:
             return
         
-        logger.info(f"\n📦 Procesando {len(products)} productos con Master System...")
+        logger.info(f"\n📦 Procesando {len(products)} productos con Sistema Optimizado...")
         
         processed = 0
         errors = 0
         
         for product in products:
             try:
-                # Master System se encarga de todo
-                self.master_system.process_product(product)
-                processed += 1
+                # Extraer retailer del producto
+                retailer = product.get('retailer', 'unknown')
                 
-                if processed % 10 == 0:
-                    logger.debug(f"  Procesados: {processed}/{len(products)}")
-                    
+                # Procesar con mi ProductProcessor optimizado
+                sku = self.product_processor.process_product(product, retailer)
+                
+                if sku:
+                    processed += 1
+                    if processed % 10 == 0:
+                        logger.debug(f"  ✅ Procesados: {processed}/{len(products)} (último SKU: {sku})")
+                        
             except Exception as e:
                 errors += 1
-                logger.debug(f"  Error procesando: {e}")
+                logger.debug(f"  ❌ Error procesando: {e}")
         
-        logger.info(f"  ✅ Procesados: {processed}")
+        # Flush final de batch
+        try:
+            await self.product_processor.flush_batch()
+        except Exception as e:
+            logger.warning(f"⚠️ Error en flush final: {e}")
+        
+        logger.info(f"  ✅ Procesados: {processed} productos")
         
         if errors > 0:
             logger.warning(f"  ⚠️ Errores: {errors}")
@@ -416,40 +476,34 @@ class OrchestratorV5Robust:
             await self.cleanup_anomalous_prices()
     
     async def detect_arbitrage_opportunities(self):
-        """💰 Detectar oportunidades de arbitraje"""
+        """💰 Detectar oportunidades de arbitraje usando ArbitrageEngine V5"""
+        
+        if not self.arbitrage_engine:
+            logger.debug("⚠️ ArbitrageEngine no disponible - saltando detección")
+            return
         
         try:
-            import psycopg2
+            logger.info("  💰 Ejecutando ciclo de detección de arbitraje...")
             
-            conn_params = {
-                'host': os.getenv('PGHOST', 'localhost'),
-                'port': os.getenv('PGPORT', '5432'),
-                'database': os.getenv('PGDATABASE', 'orchestrator'),
-                'user': os.getenv('PGUSER', 'postgres'),
-                'password': os.getenv('PGPASSWORD', 'postgres')
-            }
+            # Ejecutar ciclo de arbitraje con el engine V5
+            arbitrage_result = await self.arbitrage_engine.run_arbitrage_cycle()
             
-            conn = psycopg2.connect(**conn_params)
-            cur = conn.cursor()
-            
-            # Contar oportunidades del día
-            cur.execute("""
-                SELECT COUNT(*) 
-                FROM arbitrage_opportunities
-                WHERE DATE(created_at) = CURRENT_DATE
-            """)
-            
-            count = cur.fetchone()[0]
-            
-            if count > self.stats['arbitrage_opportunities']:
-                new_opportunities = count - self.stats['arbitrage_opportunities']
-                logger.info(f"  💰 {new_opportunities} nuevas oportunidades de arbitraje detectadas!")
-                self.stats['arbitrage_opportunities'] = count
-            
-            conn.close()
+            if arbitrage_result.get('status') == 'success':
+                opportunities_found = arbitrage_result.get('opportunities_found', 0)
+                opportunities_sent = arbitrage_result.get('alerts_sent', 0)
+                
+                if opportunities_found > 0:
+                    logger.info(f"  🎯 {opportunities_found} oportunidades detectadas")
+                    logger.info(f"  📤 {opportunities_sent} alertas enviadas")
+                    
+                    self.stats['arbitrage_opportunities'] += opportunities_found
+                else:
+                    logger.debug("  📊 No se encontraron nuevas oportunidades")
+            else:
+                logger.warning(f"  ⚠️ Ciclo de arbitraje falló: {arbitrage_result.get('error', 'Unknown error')}")
             
         except Exception as e:
-            logger.debug(f"  Error verificando arbitraje: {e}")
+            logger.error(f"  ❌ Error ejecutando detección de arbitraje: {e}")
     
     async def cleanup_anomalous_prices(self):
         """🧹 Limpiar precios anómalos automáticamente"""

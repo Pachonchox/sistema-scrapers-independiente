@@ -1,55 +1,55 @@
 {
-  "start_time": "2025-09-03T21:43:27.508655",
+  "start_time": "2025-09-04T21:11:22.464638",
   "metrics": {
-    "total_tasks_executed": 30,
-    "successful_tasks": 30,
+    "total_tasks_executed": 0,
+    "successful_tasks": 0,
     "failed_tasks": 0,
-    "total_products_scraped": 871,
+    "total_products_scraped": 0,
     "average_task_duration": 0.0,
     "uptime_percentage": 100.0,
     "retailers_performance": {
       "falabella": {
-        "tasks_executed": 8,
+        "tasks_executed": 0,
         "success_rate": 1.0,
-        "avg_products_per_task": 28.882816000000005,
-        "avg_execution_time": 1.302380638312107,
-        "last_successful_execution": "2025-09-03T21:57:15.769458"
+        "avg_products_per_task": 0.0,
+        "avg_execution_time": 0.0,
+        "last_successful_execution": null
       },
       "paris": {
-        "tasks_executed": 7,
+        "tasks_executed": 0,
         "success_rate": 1.0,
-        "avg_products_per_task": 24.855552000000007,
-        "avg_execution_time": 1.1865552106304003,
-        "last_successful_execution": "2025-09-03T21:56:35.899953"
+        "avg_products_per_task": 0.0,
+        "avg_execution_time": 0.0,
+        "last_successful_execution": null
       },
       "ripley": {
-        "tasks_executed": 5,
+        "tasks_executed": 0,
         "success_rate": 1.0,
-        "avg_products_per_task": 23.854400000000002,
-        "avg_execution_time": 1.28735553832,
-        "last_successful_execution": "2025-09-03T21:53:09.158568"
+        "avg_products_per_task": 0.0,
+        "avg_execution_time": 0.0,
+        "last_successful_execution": null
       },
       "hites": {
-        "tasks_executed": 4,
+        "tasks_executed": 0,
         "success_rate": 1.0,
-        "avg_products_per_task": 35.263999999999996,
-        "avg_execution_time": 1.3025333489333335,
-        "last_successful_execution": "2025-09-03T21:56:03.574839"
+        "avg_products_per_task": 0.0,
+        "avg_execution_time": 0.0,
+        "last_successful_execution": null
       },
       "abcdin": {
-        "tasks_executed": 6,
+        "tasks_executed": 0,
         "success_rate": 1.0,
-        "avg_products_per_task": 27.203520000000005,
-        "avg_execution_time": 1.0562358631573336,
-        "last_successful_execution": "2025-09-03T21:57:28.531529"
+        "avg_products_per_task": 0.0,
+        "avg_execution_time": 0.0,
+        "last_successful_execution": null
       }
     },
     "tiers_performance": {
       "critical": {
-        "executions_today": 30,
+        "executions_today": 0,
         "success_rate": 1.0,
-        "avg_execution_time": 1.430143870136432,
-        "products_scraped": 871
+        "avg_execution_time": 0.0,
+        "products_scraped": 0
       },
       "important": {
         "executions_today": 0,
@@ -64,7 +64,7 @@
         "products_scraped": 0
       }
     },
-    "anti_detection_effectiveness": 1.0
+    "anti_detection_effectiveness": 0.0
   },
   "continuous_config": {
     "max_runtime_hours": 720,
@@ -75,8 +75,8 @@
     "session_break_probability": 0.05,
     "pattern_evolution_hours": 168
   },
-  "task_queue_count": 105,
+  "task_queue_count": 0,
   "executing_tasks_count": 0,
-  "completed_tasks_count": 30,
-  "last_save": "2025-09-03T21:57:36.120286"
+  "completed_tasks_count": 0,
+  "last_save": "2025-09-04T21:11:29.590329"
 }

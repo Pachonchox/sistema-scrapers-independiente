@@ -1,0 +1,576 @@
+{
+  "cycle_id": "cycle_1757036209",
+  "start_time": "2025-09-04T21:36:49.078614",
+  "retailers": [
+    "falabella",
+    "ripley"
+  ],
+  "results": {
+    "falabella": {
+      "categories": {
+        "smartphones": {
+          "retailer": "falabella",
+          "category": "smartphones",
+          "success": true,
+          "products": [
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 629.990\n-21%\n$ 649.990\n$ 799.991",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.849025"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 109.990\n-45%\n$ 199.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.860209"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 499.990\n-43%\n$ 529.990\n$ 869.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.870826"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 799.990\n-16%\n$ 839.990\n$ 949.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.881887"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 299.990\n-44%\n$ 339.990\n$ 539.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.893373"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 249.990\n-48%\n$ 269.990\n$ 479.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.905612"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 269.990\n-33%\n$ 399.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.916468"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 299.990\n-44%\n$ 339.990\n$ 539.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.926768"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 469.990\n-22%\n$ 489.990\n$ 599.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.936868"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 189.990\n-37%\n$ 199.990\n$ 299.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.947005"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 1.269.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.960063"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 2.199.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.970024"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 379.990\n-45%\n$ 399.990\n$ 689.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.980459"
+            },
+            {
+              "nombre": "MOTOROLA",
+              "precio": "$ 149.990\n-35%\n$ 159.990\n$ 229.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:50.990753"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 79.990\n-38%\n$ 84.990\n$ 129.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:51.000620"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "PROXY",
+          "duration_seconds": 1.925487,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "PROXY",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 100.0,
+              "direct_success_rate": 0.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 0,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "ALTO USO DE PROXY - Considera optimizar selectores para modo directo",
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        },
+        "computadores": {
+          "retailer": "falabella",
+          "category": "computadores",
+          "success": true,
+          "products": [
+            {
+              "nombre": "GENERICO",
+              "precio": "$ 179.990\n-25%\n$ 189.990\n$ 239.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.157512"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 1.099.990\n-31%\n$ 1.599.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.168477"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 599.990\n-25%\n$ 619.990\n$ 799.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.179154"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 699.990\n-30%\n$ 719.990\n$ 999.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.189675"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 739.990\n-24%\n$ 766.990\n$ 979.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.199370"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 149.990\n-25%\n$ 154.990\n$ 199.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.210150"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 999.990\n-31%\n$ 1.049.990\n$ 1.439.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.221206"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 369.990\n-24%\n$ 489.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.231938"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 666.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.241930"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 249.990\n-33%\n$ 259.990\n$ 374.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.252694"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 399.990\n-18%\n$ 419.990\n$ 489.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.262463"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 949.990\n-14%\n$ 969.990\n$ 1.099.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.273302"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 989.990\n-34%\n$ 999.990\n$ 1.499.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.283799"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 189.990\n-37%\n$ 299.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.294332"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 129.990\n-24%\n$ 149.990\n$ 169.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:54.304662"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "DIRECT",
+          "duration_seconds": 1.296098,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "DIRECT",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 50.0,
+              "direct_success_rate": 100.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 1,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        },
+        "tablets": {
+          "retailer": "falabella",
+          "category": "tablets",
+          "success": true,
+          "products": [
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 1.799.990\n-61%\n$ 4.599.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.628838"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 699.990\n-39%\n$ 1.149.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.639941"
+            },
+            {
+              "nombre": "LG",
+              "precio": "$ 219.990\n-27%\n$ 229.990\n$ 299.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.651237"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 309.990\n-42%\n$ 319.990\n$ 529.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.660940"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 289.990\n-36%\n$ 449.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.671830"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 599.990\n-54%\n$ 619.990\n$ 1.299.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.681940"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 369.990\n-41%\n$ 379.990\n$ 629.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.694883"
+            },
+            {
+              "nombre": "LG",
+              "precio": "$ 629.990\n-19%\n$ 669.990\n$ 779.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.706184"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 699.990\n-30%\n$ 999.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.716762"
+            },
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 1.299.990\n-42%\n$ 1.319.990\n$ 2.239.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.729704"
+            },
+            {
+              "nombre": "JVC",
+              "precio": "$ 369.990\n-24%\n$ 489.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.743681"
+            },
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 299.990\n-46%\n$ 309.990\n$ 559.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.758206"
+            },
+            {
+              "nombre": "PHILIPS",
+              "precio": "$ 279.990\n-38%\n$ 449.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.770505"
+            },
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 319.990\n-36%\n$ 329.990\n$ 499.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.781659"
+            },
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 279.990\n-39%\n$ 459.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:36:57.792297"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "DIRECT",
+          "duration_seconds": 1.479244,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "DIRECT",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 33.33333333333333,
+              "direct_success_rate": 100.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 2,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        }
+      },
+      "total_products": 45,
+      "total_duration": 4.700829000000001,
+      "success_rate": 100.0
+    },
+    "ripley": {
+      "categories": {
+        "computacion": {
+          "retailer": "ripley",
+          "category": "computacion",
+          "success": true,
+          "products": [
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.536813"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.545633"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.551938"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.562103"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.567156"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.573698"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.579323"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.585039"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.590572"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.595728"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.601030"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.606791"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.612268"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.619215"
+            },
+            {
+              "nombre": "N/A",
+              "precio": "N/A",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:37:05.627421"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "PROXY",
+          "duration_seconds": 5.825914,
+          "estimated_savings_percent": 50.1,
+          "page_stats": {
+            "method_used": "PROXY",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "ripley",
+            "data_optimization": {
+              "level": "MODERADO",
+              "estimated_savings_percent": 50.1,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 100.0,
+              "direct_success_rate": 0.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 0,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "ALTO USO DE PROXY - Considera optimizar selectores para modo directo"
+            ]
+          }
+        },
+        "smartphones": {
+          "retailer": "ripley",
+          "category": "smartphones",
+          "success": false,
+          "error": "HTTP 403",
+          "attempts": 3
+        },
+        "tablets": {
+          "retailer": "ripley",
+          "category": "tablets",
+          "success": false,
+          "error": "HTTP 403",
+          "attempts": 3
+        }
+      },
+      "total_products": 15,
+      "total_duration": 5.825914,
+      "success_rate": 33.33333333333333
+    }
+  },
+  "summary": {
+    "total_products": 60,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "total_estimated_savings": 143.7,
+    "average_savings_percent": 71.85
+  },
+  "end_time": "2025-09-04T21:37:27.537904",
+  "total_duration_minutes": 0.6409881666666667
+}

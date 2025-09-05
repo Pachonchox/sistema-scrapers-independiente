@@ -186,82 +186,204 @@ class ProductionScrapingSystem:
             }
     
     async def _extract_products(self, page, retailer: str, max_products: int) -> List[Dict[str, Any]]:
-        """Extraer productos de la página (básico - adaptar según retailer)"""
+        """🔧 Extraer productos usando selectores funcionales basados en paris_final.py"""
         
         products = []
+        logger.info(f"🔍 Extrayendo productos de {retailer} (método paris_final)...")
         
         try:
-            if retailer == "falabella":
-                # Selectores específicos de Falabella
-                product_containers = await page.query_selector_all('[data-testid*="product"], .pod, [data-automation*="product"]')
+            if retailer == "paris":
+                # 🎯 EXTRACTORES FUNCIONALES DE PARIS (basados en paris_final.py)
+                product_containers = await page.query_selector_all('div[data-cnstrc-item-id]')
+                logger.info(f"📦 Paris: Encontrados {len(product_containers)} contenedores con data-cnstrc-item-id")
                 
-                for container in product_containers[:max_products]:
+                for i, container in enumerate(product_containers[:max_products]):
                     try:
-                        # Extraer datos básicos
-                        name_elem = await container.query_selector('h1, h2, h3, .pod-title, [data-testid*="title"]')
-                        price_elem = await container.query_selector('.prices, .price, [data-testid*="price"]')
+                        # Extraer información desde data attributes (método funcional)
+                        product_code = await container.get_attribute('data-cnstrc-item-id') or ''
+                        product_name = (await container.get_attribute('data-cnstrc-item-name') or '').strip()
+                        price_from_data = await container.get_attribute('data-cnstrc-item-price') or ''
                         
-                        name = await name_elem.inner_text() if name_elem else "N/A"
-                        price_text = await price_elem.inner_text() if price_elem else "N/A"
+                        # Extraer precios usando selectores exactos de paris_final.py
+                        current_price_text = ""
+                        current_price_elem = await container.query_selector('span.ui-text-\\[13px\\].ui-leading-\\[15px\\].desktop\\:ui-text-lg, span[class*="ui-font-semibold"][class*="desktop:ui-font-medium"]')
+                        if current_price_elem:
+                            current_price_text = await current_price_elem.inner_text()
                         
-                        products.append({
-                            "nombre": name.strip(),
-                            "precio": price_text.strip(),
-                            "retailer": retailer,
-                            "extracted_at": datetime.now().isoformat()
-                        })
+                        # Precio anterior (tachado)
+                        old_price_text = ""
+                        old_price_elem = await container.query_selector('span.ui-line-through.ui-font-semibold')
+                        if old_price_elem:
+                            old_price_text = await old_price_elem.inner_text()
+                        
+                        # Construir precio completo para compatibilidad
+                        precio_completo = f"{current_price_text}\\n{old_price_text}".strip()
+                        
+                        if product_code and product_name:
+                            products.append({
+                                "nombre": product_name,
+                                "precio": precio_completo,
+                                "retailer": retailer,
+                                "extracted_at": datetime.now().isoformat()
+                            })
+                            logger.debug(f"✅ Paris producto {i+1}: {product_name[:50]}... - {current_price_text}")
                         
                     except Exception as e:
-                        logger.debug(f"Error extrayendo producto: {e}")
+                        logger.debug(f"⚠️ Error producto Paris {i}: {e}")
+                        continue
+                        
+            elif retailer == "falabella":
+                # 🎯 EXTRACTORES FUNCIONALES DE FALABELLA (adaptados del portable)
+                product_containers = await page.query_selector_all('div[class*="search-results"][class*="grid-pod"], a[data-key]')
+                logger.info(f"📦 Falabella: Encontrados {len(product_containers)} productos grid-pod")
+                
+                for i, container in enumerate(product_containers[:max_products]):
+                    try:
+                        # Buscar nombre con selectores específicos
+                        name_elem = await container.query_selector('b[class*="copy"], span[class*="copy"], .pod-title, [data-automation*="product-title"]')
+                        price_elem = await container.query_selector('[data-internet-price], [data-cmr-price], .price-1, .copy14')
+                        
+                        name = await name_elem.inner_text() if name_elem else ""
+                        price_text = await price_elem.inner_text() if price_elem else ""
+                        
+                        if name.strip() and name != "N/A":
+                            products.append({
+                                "nombre": name.strip(),
+                                "precio": price_text.strip() if price_text else "No disponible",
+                                "retailer": retailer,
+                                "extracted_at": datetime.now().isoformat()
+                            })
+                            logger.debug(f"✅ Falabella producto {i+1}: {name[:50]}... - {price_text}")
+                            
+                    except Exception as e:
+                        logger.debug(f"⚠️ Error producto Falabella {i}: {e}")
                         continue
                         
             elif retailer == "ripley":
-                # Selectores específicos de Ripley
-                product_containers = await page.query_selector_all('.catalog-product-item, .product-card, [data-testid="product"]')
+                # 🎯 EXTRACTORES FUNCIONALES DE RIPLEY (basados en selectores reales)
+                product_containers = await page.query_selector_all('[data-product-id], .catalog-product-item')
+                logger.info(f"📦 Ripley: Encontrados {len(product_containers)} productos data-product-id")
                 
-                for container in product_containers[:max_products]:
+                for i, container in enumerate(product_containers[:max_products]):
                     try:
-                        name_elem = await container.query_selector('.product-title, .title, h3')
-                        price_elem = await container.query_selector('.price, .catalog-prices-price')
+                        # Usar selectores exactos de ripley funcional
+                        name_elem = await container.query_selector('.catalog-product-details__name')
+                        price_normal_elem = await container.query_selector('.catalog-prices__list-price.catalog-prices__line_thru')
+                        price_offer_elem = await container.query_selector('.catalog-prices__offer-price')
+                        price_card_elem = await container.query_selector('.catalog-prices__card-price')
                         
-                        name = await name_elem.inner_text() if name_elem else "N/A"
-                        price_text = await price_elem.inner_text() if price_elem else "N/A"
+                        name = await name_elem.inner_text() if name_elem else ""
                         
-                        products.append({
-                            "nombre": name.strip(),
-                            "precio": price_text.strip(),
-                            "retailer": retailer,
-                            "extracted_at": datetime.now().isoformat()
-                        })
+                        # Construir precio completo como en el formato original
+                        prices = []
+                        if price_normal_elem:
+                            normal_text = await price_normal_elem.inner_text()
+                            if normal_text:
+                                prices.append(f"Normal: {normal_text}")
                         
-                    except Exception:
+                        if price_offer_elem:
+                            offer_text = await price_offer_elem.inner_text()
+                            if offer_text:
+                                prices.append(f"Internet: {offer_text}")
+                                
+                        if price_card_elem:
+                            card_text = await price_card_elem.inner_text()
+                            if card_text:
+                                prices.append(f"Tarjeta: {card_text}")
+                        
+                        precio_completo = " | ".join(prices) if prices else "No disponible"
+                        
+                        if name.strip() and name != "N/A":
+                            products.append({
+                                "nombre": name.strip(),
+                                "precio": precio_completo,
+                                "retailer": retailer,
+                                "extracted_at": datetime.now().isoformat()
+                            })
+                            logger.debug(f"✅ Ripley producto {i+1}: {name[:50]}... - {precio_completo[:50]}...")
+                            
+                    except Exception as e:
+                        logger.debug(f"⚠️ Error producto Ripley {i}: {e}")
                         continue
             
             else:
-                # Extractor genérico para otros retailers
-                generic_containers = await page.query_selector_all('.product, .item, .card, article')
+                # 🎯 EXTRACTOR GENÉRICO MEJORADO
+                # Buscar múltiples tipos de contenedores
+                selectors = [
+                    '[data-product-id]',
+                    '[data-cnstrc-item-id]', 
+                    'div[class*="product"]',
+                    'article[class*="product"]',
+                    '.product-item',
+                    '.catalog-product-item',
+                    'div[class*="grid-pod"]'
+                ]
                 
-                for container in generic_containers[:max_products]:
+                product_containers = []
+                for selector in selectors:
+                    containers = await page.query_selector_all(selector)
+                    if containers:
+                        product_containers = containers
+                        logger.info(f"📦 {retailer}: Usando selector '{selector}' - {len(containers)} productos")
+                        break
+                
+                for i, container in enumerate(product_containers[:max_products]):
                     try:
-                        name_elem = await container.query_selector('h1, h2, h3, .title, .name')
-                        price_elem = await container.query_selector('.price, .cost, .amount')
+                        # Múltiples selectores para nombre
+                        name_selectors = [
+                            '[data-cnstrc-item-name]',
+                            '.catalog-product-details__name',
+                            'h1, h2, h3',
+                            '.title', '.name', '.product-title',
+                            'b[class*="copy"]',
+                            'span[class*="copy"]'
+                        ]
                         
-                        name = await name_elem.inner_text() if name_elem else f"Producto {len(products)+1}"
-                        price_text = await price_elem.inner_text() if price_elem else "N/A"
+                        name = ""
+                        for selector in name_selectors:
+                            name_elem = await container.query_selector(selector)
+                            if name_elem:
+                                name = await name_elem.inner_text()
+                                if name.strip():
+                                    break
                         
-                        products.append({
-                            "nombre": name.strip(),
-                            "precio": price_text.strip(),
-                            "retailer": retailer,
-                            "extracted_at": datetime.now().isoformat()
-                        })
+                        # Si es data attribute, intentar obtenerlo
+                        if not name:
+                            name = await container.get_attribute('data-cnstrc-item-name') or ""
                         
-                    except Exception:
+                        # Múltiples selectores para precio
+                        price_selectors = [
+                            '.catalog-prices__offer-price',
+                            '.price', '.prices',
+                            '[data-price]', '[data-internet-price]',
+                            '.cost', '.amount'
+                        ]
+                        
+                        price_text = ""
+                        for selector in price_selectors:
+                            price_elem = await container.query_selector(selector)
+                            if price_elem:
+                                price_text = await price_elem.inner_text()
+                                if price_text.strip():
+                                    break
+                        
+                        if name.strip() and name != "N/A":
+                            products.append({
+                                "nombre": name.strip(),
+                                "precio": price_text.strip() if price_text else "No disponible",
+                                "retailer": retailer,
+                                "extracted_at": datetime.now().isoformat()
+                            })
+                            logger.debug(f"✅ {retailer} producto {i+1}: {name[:50]}...")
+                            
+                    except Exception as e:
+                        logger.debug(f"⚠️ Error producto {retailer} {i}: {e}")
                         continue
         
         except Exception as e:
-            logger.error(f"Error en extracción de productos {retailer}: {e}")
+            logger.error(f"❌ Error crítico en extracción {retailer}: {e}")
         
+        logger.info(f"🎯 {retailer}: Extraídos {len(products)} productos exitosamente")
         return products[:max_products]
     
     async def run_full_scraping_cycle(self, retailers: List[str] = None, max_products_per_category: int = 30) -> Dict[str, Any]:

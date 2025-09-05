@@ -173,10 +173,23 @@ class SmartProxyDataSaver:
         
         # Lanzar browser optimizado
         playwright = await async_playwright().start()
-        self.browser = await playwright.chromium.launch(
-            headless=True,
-            args=self.saver_config["browser_args"]
-        )
+        
+        # 🔧 CONFIGURACIÓN ESPECIAL PARA RIPLEY (ventana oculta, no headless)
+        if self.retailer == "ripley":
+            browser_args = self.saver_config["browser_args"] + [
+                "--window-position=-3000,-3000",  # Mover ventana fuera de pantalla
+                "--window-size=800,600"           # Tamaño normal para JS
+            ]
+            self.browser = await playwright.chromium.launch(
+                headless=False,  # No headless para Ripley
+                args=browser_args
+            )
+        else:
+            # Otros retailers: headless normal
+            self.browser = await playwright.chromium.launch(
+                headless=True,
+                args=self.saver_config["browser_args"]
+            )
         
         # CONTEXTO DIRECTO (sin proxy)
         self.direct_context = await self.browser.new_context(
@@ -372,6 +385,13 @@ class SmartProxyDataSaver:
                 
                 if response.status >= 400:
                     raise Exception(f"HTTP {response.status}")
+                
+                # 📜 SCROLL ESPECIAL PARA RIPLEY (lazy loading)
+                if self.retailer == "ripley":
+                    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    await page.wait_for_timeout(1000)  # Esperar que cargue
+                    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    await page.wait_for_timeout(1000)  # Segundo scroll
                 
                 # ✅ ÉXITO
                 mode = "PROXY" if used_proxy else "DIRECT"

@@ -271,23 +271,19 @@ class FalabellaScraperV5(BaseScraperV5):
                     }
                 ''')
                 
-                # Procesar precios - formato chileno: 239.990 = 239990
+                # Procesar precios
                 cmr_price_numeric = 0
                 internet_price_numeric = 0
                 
                 if product_data['cmrPrice']:
                     try:
-                        # Manejar formato chileno: 239.990 = 239990 (punto como separador de miles)
-                        price_str = product_data['cmrPrice'].replace('.', '').replace(',', '')
-                        cmr_price_numeric = int(price_str) if price_str.isdigit() else 0
+                        cmr_price_numeric = int(float(product_data['cmrPrice'].replace(',', '')))
                     except:
                         pass
                 
                 if product_data['internetPrice']:
                     try:
-                        # Manejar formato chileno: 239.990 = 239990 (punto como separador de miles)
-                        price_str = product_data['internetPrice'].replace('.', '').replace(',', '')
-                        internet_price_numeric = int(price_str) if price_str.isdigit() else 0
+                        internet_price_numeric = int(float(product_data['internetPrice'].replace(',', '')))
                     except:
                         pass
                 

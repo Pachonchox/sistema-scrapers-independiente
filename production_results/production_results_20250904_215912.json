@@ -1,0 +1,576 @@
+{
+  "cycle_id": "cycle_1757037495",
+  "start_time": "2025-09-04T21:58:15.917377",
+  "retailers": [
+    "falabella",
+    "ripley"
+  ],
+  "results": {
+    "falabella": {
+      "categories": {
+        "smartphones": {
+          "retailer": "falabella",
+          "category": "smartphones",
+          "success": true,
+          "products": [
+            {
+              "nombre": "APPLE",
+              "precio": "$ 499.990\n-43%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.513531"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 499.990\n-43%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.526161"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 799.990\n-16%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.537936"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 799.990\n-16%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.550172"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 299.990\n-44%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.560847"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 299.990\n-44%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.572338"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 249.990\n-48%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.582730"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 249.990\n-48%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.592927"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 469.990\n-22%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.603577"
+            },
+            {
+              "nombre": "XIAOMI",
+              "precio": "$ 469.990\n-22%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.614055"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 189.990\n-37%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.627731"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 189.990\n-37%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.637782"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 1.269.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.649693"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 1.269.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.659969"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 2.199.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:27.670582"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "PROXY",
+          "duration_seconds": 11.756438,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "PROXY",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 100.0,
+              "direct_success_rate": 0.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 0,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "ALTO USO DE PROXY - Considera optimizar selectores para modo directo",
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        },
+        "computadores": {
+          "retailer": "falabella",
+          "category": "computadores",
+          "success": true,
+          "products": [
+            {
+              "nombre": "HP",
+              "precio": "$ 739.990\n-24%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.149573"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 739.990\n-24%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.160349"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 1.099.990\n-31%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.171081"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 1.099.990\n-31%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.181271"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 599.990\n-25%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.192096"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 599.990\n-25%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.203445"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 699.990\n-30%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.215826"
+            },
+            {
+              "nombre": "LENOVO",
+              "precio": "$ 699.990\n-30%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.228220"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 149.990\n-25%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.240312"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 149.990\n-25%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.252187"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 666.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.264410"
+            },
+            {
+              "nombre": "HP",
+              "precio": "$ 666.990",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.275695"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 999.990\n-31%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.286287"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 999.990\n-31%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.296925"
+            },
+            {
+              "nombre": "APPLE",
+              "precio": "$ 369.990\n-24%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:31.308041"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "DIRECT",
+          "duration_seconds": 1.635593,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "DIRECT",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 50.0,
+              "direct_success_rate": 100.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 1,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        },
+        "tablets": {
+          "retailer": "falabella",
+          "category": "tablets",
+          "success": true,
+          "products": [
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 1.299.990\n-42%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.016361"
+            },
+            {
+              "nombre": "HISENSE",
+              "precio": "$ 1.299.990\n-42%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.030195"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.038571"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.047713"
+            },
+            {
+              "nombre": "LG",
+              "precio": "$ 219.990\n-27%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.057984"
+            },
+            {
+              "nombre": "LG",
+              "precio": "$ 219.990\n-27%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.068563"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 309.990\n-42%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.078776"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 309.990\n-42%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.090817"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.097829"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.104768"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.111693"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "No disponible",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.119018"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 369.990\n-41%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.128486"
+            },
+            {
+              "nombre": "SAMSUNG",
+              "precio": "$ 369.990\n-41%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.142777"
+            },
+            {
+              "nombre": "LG",
+              "precio": "$ 629.990\n-19%",
+              "retailer": "falabella",
+              "extracted_at": "2025-09-04T21:58:38.159218"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "DIRECT",
+          "duration_seconds": 4.8376,
+          "estimated_savings_percent": 93.6,
+          "page_stats": {
+            "method_used": "DIRECT",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "falabella",
+            "data_optimization": {
+              "level": "AGRESIVO",
+              "estimated_savings_percent": 93.6,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 33.33333333333333,
+              "direct_success_rate": 100.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 2,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "AHORRO EXCELENTE - Configuración óptima para proxy con cobro por MB"
+            ]
+          }
+        }
+      },
+      "total_products": 45,
+      "total_duration": 18.229630999999998,
+      "success_rate": 100.0
+    },
+    "ripley": {
+      "categories": {
+        "computacion": {
+          "retailer": "ripley",
+          "category": "computacion",
+          "success": true,
+          "products": [
+            {
+              "nombre": "IMPRESORA MULTIFUNCIONAL BROTHER DCP-T530DW WIFI DUPLEX",
+              "precio": "Normal: $219.990 | Internet: $189.990 | Tarjeta: $179.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.040265"
+            },
+            {
+              "nombre": "IMPRESORA MULTIFUNCIONAL BROTHER DCP-T530DW WIFI DUPLEX",
+              "precio": "Normal: $219.990 | Internet: $189.990 | Tarjeta: $179.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.064202"
+            },
+            {
+              "nombre": "MONITOR OFICINA CAIXUN 22\" FHD IPS 75 HZ VGA HDMI NEGRO C22X3F",
+              "precio": "Normal: $129.990 | Internet: $69.990 | Tarjeta: $64.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.083759"
+            },
+            {
+              "nombre": "MONITOR OFICINA CAIXUN 22\" FHD IPS 75 HZ VGA HDMI NEGRO C22X3F",
+              "precio": "Normal: $129.990 | Internet: $69.990 | Tarjeta: $64.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.104666"
+            },
+            {
+              "nombre": "NOTEBOOK ACER GAMER NITRO V15 ANV15-51-53W1-1 INTEL CORE I5 16GB RAM 512GB SSD NVIDIA RTX 2050 15.6”",
+              "precio": "Normal: $999.990 | Internet: $719.990 | Tarjeta: $699.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.126789"
+            },
+            {
+              "nombre": "NOTEBOOK ACER GAMER NITRO V15 ANV15-51-53W1-1 INTEL CORE I5 16GB RAM 512GB SSD NVIDIA RTX 2050 15.6”",
+              "precio": "Normal: $999.990 | Internet: $719.990 | Tarjeta: $699.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.148394"
+            },
+            {
+              "nombre": "NOTEBOOK ACER ASPIRE LITE AL16-53P-578Y-1 INTEL CORE ULTRA 5 16GB RAM 512GB SSD 16”",
+              "precio": "Normal: $799.990 | Internet: $699.990 | Tarjeta: $679.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.167574"
+            },
+            {
+              "nombre": "NOTEBOOK ACER ASPIRE LITE AL16-53P-578Y-1 INTEL CORE ULTRA 5 16GB RAM 512GB SSD 16”",
+              "precio": "Normal: $799.990 | Internet: $699.990 | Tarjeta: $679.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.187334"
+            },
+            {
+              "nombre": "NOTEBOOK ACER GAMER NITRO 5 ANV15-52-73S9-1 INTEL CORE I7 24GB RAM 512GB SSD NVIDIA RTX5050 15.6\"",
+              "precio": "Normal: $1.399.990 | Internet: $1.199.990",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.205528"
+            },
+            {
+              "nombre": "NOTEBOOK ACER GAMER NITRO 5 ANV15-52-73S9-1 INTEL CORE I7 24GB RAM 512GB SSD NVIDIA RTX5050 15.6\"",
+              "precio": "Normal: $1.399.990 | Internet: $1.199.990",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.226510"
+            },
+            {
+              "nombre": "NOTEBOOK ASUS VIVOBOOK GO 14 AMD R5 8GB RAM 512GB SSD 14'",
+              "precio": "Normal: $699.990 | Internet: $419.990 | Tarjeta: $409.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.252130"
+            },
+            {
+              "nombre": "NOTEBOOK ASUS VIVOBOOK GO 14 AMD R5 8GB RAM 512GB SSD 14'",
+              "precio": "Normal: $699.990 | Internet: $419.990 | Tarjeta: $409.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.279724"
+            },
+            {
+              "nombre": "MONITOR GAMER CURVO CAIXUN C32C3Q 165HZ",
+              "precio": "Normal: $359.990 | Internet: $209.990",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.304280"
+            },
+            {
+              "nombre": "MONITOR GAMER CURVO CAIXUN C32C3Q 165HZ",
+              "precio": "Normal: $359.990 | Internet: $209.990",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.324085"
+            },
+            {
+              "nombre": "NOTEBOOK GAMER ASUS TUF F16 FX607VJ-RL028W INTEL CORE 5 8 GB RAM 512 GB SSD NVIDIA RTX 3050 16\"",
+              "precio": "Normal: $1.199.990 | Internet: $729.990 | Tarjeta: $699.990 ",
+              "retailer": "ripley",
+              "extracted_at": "2025-09-04T21:58:48.349405"
+            }
+          ],
+          "products_count": 15,
+          "method_used": "PROXY",
+          "duration_seconds": 8.179441,
+          "estimated_savings_percent": 50.1,
+          "page_stats": {
+            "method_used": "PROXY",
+            "attempt_number": 1
+          },
+          "system_performance": {
+            "retailer": "ripley",
+            "data_optimization": {
+              "level": "MODERADO",
+              "estimated_savings_percent": 50.1,
+              "domains_blocked": 33
+            },
+            "proxy_intelligence": {
+              "target_proxy_ratio": 30.0,
+              "actual_proxy_ratio": 100.0,
+              "direct_success_rate": 0.0,
+              "blocked_sites_detected": 0,
+              "auto_switches_to_proxy": 0
+            },
+            "connection_stats": {
+              "direct_requests": 0,
+              "proxy_requests": 1,
+              "direct_errors": 0,
+              "proxy_errors": 0,
+              "blocked_domains_count": 0,
+              "bytes_saved_estimate": 0,
+              "switch_to_proxy_count": 0
+            },
+            "recommendations": [
+              "ALTO USO DE PROXY - Considera optimizar selectores para modo directo"
+            ]
+          }
+        },
+        "smartphones": {
+          "retailer": "ripley",
+          "category": "smartphones",
+          "success": false,
+          "error": "HTTP 403",
+          "attempts": 3
+        },
+        "tablets": {
+          "retailer": "ripley",
+          "category": "tablets",
+          "success": false,
+          "error": "HTTP 403",
+          "attempts": 3
+        }
+      },
+      "total_products": 15,
+      "total_duration": 8.179441,
+      "success_rate": 33.33333333333333
+    }
+  },
+  "summary": {
+    "total_products": 60,
+    "successful_extractions": 4,
+    "failed_extractions": 0,
+    "total_estimated_savings": 143.7,
+    "average_savings_percent": 71.85
+  },
+  "end_time": "2025-09-04T21:59:12.595581",
+  "total_duration_minutes": 0.9446367333333333
+}
