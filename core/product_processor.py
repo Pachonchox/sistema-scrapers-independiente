@@ -23,6 +23,7 @@ import os
 import asyncio
 import logging
 from datetime import datetime, date
+from time import perf_counter
 from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass, field
 try:
@@ -494,8 +495,10 @@ class ProductProcessor:
         
         # Preparar datos de precios
         price_data = []
+        product_names: Dict[str, str] = {}
         
         for sku, product_data, retailer in products:
+            product_names[sku] = product_data.get('name', '')
             # Extraer precios RAW
             precio_original = int(product_data.get('original_price', 0) or 
                                  product_data.get('precio_normal', 0) or 0)
@@ -559,59 +562,65 @@ class ProductProcessor:
         
         if not price_data:
             return
-        
-        # Insertar o actualizar precios según lógica diaria
+
+        # Insertar o actualizar precios en lote
         if should_update:
-            # Intentar actualizar primero
-            for data in price_data:
-                sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, timestamp = data
-                
-                # Verificar si ya existe precio de hoy
-                self.cursor.execute("""
-                    SELECT precio_normal, precio_oferta, precio_tarjeta
-                    FROM master_precios
-                    WHERE codigo_interno = %s AND fecha = %s
-                """, (sku, fecha))
-                
-                existing = self.cursor.fetchone()
-                
-                if existing:
-                    # Existe precio de hoy - actualizar solo si cambió
-                    if (existing[0] != p_normal or 
-                        existing[1] != p_oferta or 
-                        existing[2] != p_tarjeta):
-                        
-                        self.cursor.execute("""
-                            UPDATE master_precios
-                            SET precio_normal = %s,
-                                precio_oferta = %s,
-                                precio_tarjeta = %s,
-                                precio_min_dia = %s,
-                                timestamp_ultima_actualizacion = %s
-                            WHERE codigo_interno = %s AND fecha = %s
-                        """, (p_normal, p_oferta, p_tarjeta, p_min, timestamp, sku, fecha))
-                        
-                        if self.cursor.rowcount > 0:
-                            self.stats.prices_updated += 1
-                            
-                            # 📢 Enviar alerta de cambio de precio
-                            if ALERTS_AVAILABLE:
-                                await self._send_price_change_alert(
-                                    sku, product_data.get('name', ''), retailer,
-                                    existing, (p_normal, p_oferta, p_tarjeta)
-                                )
+            start_time = perf_counter()
+
+            # Consultar precios existentes de una sola vez
+            skus = [d[0] for d in price_data]
+            self.cursor.execute(
+                """
+                SELECT codigo_interno, precio_normal, precio_oferta, precio_tarjeta
+                FROM master_precios
+                WHERE codigo_interno = ANY(%s) AND fecha = %s
+                """,
+                (skus, fecha_actual),
+            )
+            existing_rows = self.cursor.fetchall()
+            existing_prices = {row[0]: row[1:] for row in existing_rows}
+
+            # Contar inserciones/actualizaciones y enviar alertas
+            for sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, ts in price_data:
+                prev = existing_prices.get(sku)
+                if prev:
+                    if (prev[0] != p_normal or prev[1] != p_oferta or prev[2] != p_tarjeta):
+                        self.stats.prices_updated += 1
+                        if ALERTS_AVAILABLE:
+                            await self._send_price_change_alert(
+                                sku,
+                                product_names.get(sku, ''),
+                                retailer,
+                                prev,
+                                (p_normal, p_oferta, p_tarjeta),
+                            )
                 else:
-                    # No existe precio de hoy - insertar
-                    self.cursor.execute("""
-                        INSERT INTO master_precios (
-                            codigo_interno, fecha, retailer, precio_normal,
-                            precio_oferta, precio_tarjeta, precio_min_dia,
-                            timestamp_creacion
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                    """, (sku, fecha, retailer, p_normal, p_oferta, p_tarjeta, p_min, timestamp))
-                    
-                    if self.cursor.rowcount > 0:
-                        self.stats.prices_inserted += 1
+                    self.stats.prices_inserted += 1
+
+            execute_values(
+                self.cursor,
+                """
+                INSERT INTO master_precios (
+                    codigo_interno, fecha, retailer, precio_normal,
+                    precio_oferta, precio_tarjeta, precio_min_dia,
+                    timestamp_creacion
+                ) VALUES %s
+                ON CONFLICT (codigo_interno, fecha) DO UPDATE SET
+                    precio_normal = EXCLUDED.precio_normal,
+                    precio_oferta = EXCLUDED.precio_oferta,
+                    precio_tarjeta = EXCLUDED.precio_tarjeta,
+                    precio_min_dia = EXCLUDED.precio_min_dia,
+                    timestamp_ultima_actualizacion = EXCLUDED.timestamp_creacion
+                """,
+                price_data,
+            )
+
+            elapsed = perf_counter() - start_time
+            logger.info(
+                "⏱️ Procesamiento de %d precios en %.3f s",
+                len(price_data),
+                elapsed,
+            )
         else:
             # Después de las 23:00 - no actualizar precios de hoy
             logger.info("⏰ Después de las 23:00 - precios en modo histórico")
