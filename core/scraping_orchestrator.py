@@ -257,8 +257,8 @@ class ScrapingOrchestrator:
                 product_dict = self._convert_product_to_dict(product, retailer)
                 
                 # Procesar con ProductProcessor
-                sku = self.processor.process_product(product_dict, retailer)
-                
+                sku = await self.processor.process_product(product_dict, retailer)
+
                 if sku:
                     processed_count += 1
                     
@@ -267,7 +267,7 @@ class ScrapingOrchestrator:
                 self.stats.total_errors += 1
         
         # Flush batch pendiente
-        self.processor.flush_batch()
+        await self.processor.flush_batch()
         
         return processed_count
     
@@ -380,7 +380,7 @@ class ScrapingOrchestrator:
                 })
         
         # Finalizar procesamiento
-        self.processor.finish_processing()
+        await self.processor.finish_processing()
         
         # Obtener estadísticas del processor
         processor_stats = self.processor.stats.get_summary()
@@ -438,14 +438,14 @@ class ScrapingOrchestrator:
             await asyncio.gather(*tasks, return_exceptions=True)
         
         # Finalizar
-        self.processor.finish_processing()
+        await self.processor.finish_processing()
         self.stats.execution_time = (datetime.now() - start_time).total_seconds()
         
         return self.stats
     
-    def close(self):
+    async def close(self):
         """Cierra el orquestador y libera recursos"""
-        self.processor.close()
+        await self.processor.close()
         logger.info("🔒 Orchestrator cerrado")
 
 
@@ -485,7 +485,7 @@ async def orchestrate_scraping(
         return stats.__dict__
         
     finally:
-        orchestrator.close()
+        await orchestrator.close()
 
 
 # Testing
@@ -538,9 +538,9 @@ if __name__ == "__main__":
         # )
         
         # Cerrar
-        orchestrator.close()
+        await orchestrator.close()
         
         print("\n✅ Testing completado")
-    
+
     # Ejecutar tests
     asyncio.run(test_orchestrator())

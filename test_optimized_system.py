@@ -17,6 +17,7 @@ import sys
 import io
 from pathlib import Path
 from datetime import datetime
+import pytest
 
 # Forzar soporte UTF-8 y emojis
 if sys.platform == 'win32':
@@ -204,7 +205,8 @@ def test_product_processor():
         print(f"   Cache hits: {stats['cache_hits']}")
         
         # Cerrar procesador
-        processor.close()
+        import asyncio
+        asyncio.run(processor.close())
         
         return True
         
@@ -217,6 +219,7 @@ def test_product_processor():
         return False
 
 
+@pytest.mark.asyncio
 async def test_orchestrator():
     """Test del orquestador"""
     print("\n" + "=" * 70)
@@ -253,7 +256,7 @@ async def test_orchestrator():
             else:
                 print("ℹ️ No hay scrapers disponibles para test completo")
             
-            orchestrator.close()
+            await orchestrator.close()
             return True
             
         except Exception as e:

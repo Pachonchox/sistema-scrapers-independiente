@@ -445,7 +445,7 @@ class OrchestratorV5Robust:
                 retailer = product.get('retailer', 'unknown')
                 
                 # Procesar con mi ProductProcessor optimizado
-                sku = self.product_processor.process_product(product, retailer)
+                sku = await self.product_processor.process_product(product, retailer)
                 
                 if sku:
                     processed += 1

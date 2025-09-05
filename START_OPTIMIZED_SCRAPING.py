@@ -194,7 +194,7 @@ async def quick_start_demo():
                         }
                         
                         # Procesar con ProductProcessor
-                        sku = processor.process_product(product_data, retailer)
+                        sku = await processor.process_product(product_data, retailer)
                         if sku:
                             productos_insertados += 1
         
@@ -255,7 +255,7 @@ async def quick_start_demo():
     finally:
         # Cleanup automático
         await system.cleanup_all()
-        processor.close()  # Cerrar ProductProcessor y conexiones DB
+        await processor.close()  # Cerrar ProductProcessor y conexiones DB
         print(f"\n🧹 Recursos limpiados automáticamente")
 
 async def configuration_test():

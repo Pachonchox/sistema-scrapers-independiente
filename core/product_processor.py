@@ -176,7 +176,7 @@ class ProductProcessor:
             self.conn = None
             self.cursor = None
     
-    def process_product(self, product_data: Dict, retailer: str) -> Optional[str]:
+    async def process_product(self, product_data: Dict, retailer: str) -> Optional[str]:
         """
         Procesa un producto individual con validación anti-N/A
         
@@ -200,7 +200,7 @@ class ProductProcessor:
             
             # Procesar batch si está lleno
             if len(self.product_batch) >= self.batch_size:
-                self.flush_batch()
+                await self.flush_batch()
             
             self.stats.products_processed += 1
             
@@ -690,10 +690,10 @@ class ProductProcessor:
         except Exception as e:
             logger.error(f"❌ Error guardando backup: {e}")
     
-    def finish_processing(self):
+    async def finish_processing(self):
         """Finaliza el procesamiento y limpia recursos"""
         # Procesar batches pendientes
-        self.flush_batch()
+        await self.flush_batch()
         
         # Guardar Excel pendiente
         if self.enable_excel_backup:
@@ -779,9 +779,9 @@ class ProductProcessor:
         except Exception as e:
             logger.debug(f"⚠️ Error enviando alerta para {sku}: {e}")
 
-    def close(self):
+    async def close(self):
         """Cierra conexiones y limpia recursos con resumen de protección anti-N/A"""
-        self.finish_processing()
+        await self.finish_processing()
         
         # 🛡️ MOSTRAR RESUMEN DE PROTECCIÓN ANTI-N/A
         summary = self.stats.get_summary()
@@ -803,83 +803,86 @@ class ProductProcessor:
 if __name__ == "__main__":
     # Configurar logging
     logging.basicConfig(level=logging.INFO)
-    
-    print("=" * 70)
-    print("📦 TESTING PRODUCT PROCESSOR")
-    print("=" * 70)
-    
-    # Crear procesador
-    processor = ProductProcessor(enable_excel_backup=True, batch_size=2)
-    
-    # Productos de prueba
-    test_products = [
-        {
-            'product': {
-                'title': 'iPhone 15 Pro 256GB',
-                'brand': 'Apple',
-                'sku': 'IPH15P256',
-                'product_url': 'https://falabella.com/iphone-15-pro',
-                'original_price': 1299990,
-                'current_price': 1199990,
-                'rating': 4.8,
-                'reviews_count': 156,
-                'additional_info': {
-                    'storage': '256GB',
-                    'color': 'Negro'
-                }
+
+    async def main():
+        print("=" * 70)
+        print("📦 TESTING PRODUCT PROCESSOR")
+        print("=" * 70)
+
+        # Crear procesador
+        processor = ProductProcessor(enable_excel_backup=True, batch_size=2)
+
+        # Productos de prueba
+        test_products = [
+            {
+                'product': {
+                    'title': 'iPhone 15 Pro 256GB',
+                    'brand': 'Apple',
+                    'sku': 'IPH15P256',
+                    'product_url': 'https://falabella.com/iphone-15-pro',
+                    'original_price': 1299990,
+                    'current_price': 1199990,
+                    'rating': 4.8,
+                    'reviews_count': 156,
+                    'additional_info': {
+                        'storage': '256GB',
+                        'color': 'Negro'
+                    }
+                },
+                'retailer': 'falabella'
             },
-            'retailer': 'falabella'
-        },
-        {
-            'product': {
-                'title': 'Samsung Galaxy S24 Ultra',
-                'brand': 'Samsung',
-                'sku': 'SAMS24U512',
-                'product_url': 'https://ripley.cl/samsung-galaxy-s24',
-                'original_price': 1399990,
-                'current_price': 1399990,
-                'card_price': 1259990,
-                'rating': 4.7,
-                'reviews_count': 89,
-                'additional_info': {
-                    'storage': '512GB',
-                    'ram': '12GB',
-                    'color': 'Titanio'
-                }
+            {
+                'product': {
+                    'title': 'Samsung Galaxy S24 Ultra',
+                    'brand': 'Samsung',
+                    'sku': 'SAMS24U512',
+                    'product_url': 'https://ripley.cl/samsung-galaxy-s24',
+                    'original_price': 1399990,
+                    'current_price': 1399990,
+                    'card_price': 1259990,
+                    'rating': 4.7,
+                    'reviews_count': 89,
+                    'additional_info': {
+                        'storage': '512GB',
+                        'ram': '12GB',
+                        'color': 'Titanio'
+                    }
+                },
+                'retailer': 'ripley'
             },
-            'retailer': 'ripley'
-        },
-        {
-            'product': {
-                'nombre': 'Notebook HP Pavilion 15',
-                'marca': 'HP',
-                'link': 'https://paris.cl/notebook-hp-pavilion',
-                'precio_normal': 799990,
-                'precio_oferta': 699990,
-                'rating': 4.5,
-                'reviews_count': 34
-            },
-            'retailer': 'paris'
-        }
-    ]
-    
-    print("\n📋 Procesando productos de prueba...\n")
-    
-    skus = []
-    for i, test in enumerate(test_products, 1):
-        print(f"Producto {i}: {test['product'].get('title') or test['product'].get('nombre')}")
-        sku = processor.process_product(test['product'], test['retailer'])
-        if sku:
-            skus.append(sku)
-            print(f"  ✅ SKU generado: {sku}")
-        else:
-            print(f"  ❌ Error procesando producto")
-        print()
-    
-    # Finalizar procesamiento
-    processor.finish_processing()
-    
-    # Cerrar
-    processor.close()
-    
-    print("\n✅ Testing completado")
+            {
+                'product': {
+                    'nombre': 'Notebook HP Pavilion 15',
+                    'marca': 'HP',
+                    'link': 'https://paris.cl/notebook-hp-pavilion',
+                    'precio_normal': 799990,
+                    'precio_oferta': 699990,
+                    'rating': 4.5,
+                    'reviews_count': 34
+                },
+                'retailer': 'paris'
+            }
+        ]
+
+        print("\n📋 Procesando productos de prueba...\n")
+
+        skus = []
+        for i, test in enumerate(test_products, 1):
+            print(f"Producto {i}: {test['product'].get('title') or test['product'].get('nombre')}")
+            sku = await processor.process_product(test['product'], test['retailer'])
+            if sku:
+                skus.append(sku)
+                print(f"  ✅ SKU generado: {sku}")
+            else:
+                print(f"  ❌ Error procesando producto")
+            print()
+
+        # Finalizar procesamiento
+        await processor.finish_processing()
+
+        # Cerrar
+        await processor.close()
+
+        print("\n✅ Testing completado")
+
+    asyncio.run(main())

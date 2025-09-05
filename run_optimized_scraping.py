@@ -135,7 +135,7 @@ class OptimizedScrapingSystem:
             raise
         finally:
             if self.orchestrator:
-                self.orchestrator.close()
+                await self.orchestrator.close()
     
     async def run_single_retailer(self, retailer: str, category: str = None, max_products: int = None):
         """
@@ -188,7 +188,7 @@ class OptimizedScrapingSystem:
             raise
         finally:
             if self.orchestrator:
-                self.orchestrator.close()
+                await self.orchestrator.close()
     
     async def run_custom_config(self, config: dict):
         """
@@ -216,7 +216,7 @@ class OptimizedScrapingSystem:
             raise
         finally:
             if self.orchestrator:
-                self.orchestrator.close()
+                await self.orchestrator.close()
     
     def _show_final_summary(self, stats, start_time):
         """Muestra resumen final de la ejecución"""
