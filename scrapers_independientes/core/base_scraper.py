@@ -853,6 +853,98 @@ class BaseScraperV5(ABC):
             return None
     
     # ==========================================
+    # MÉTODOS DE PAGINACIÓN CENTRALIZADA
+    # ==========================================
+    
+    def get_pagination_url(self, page_number: int, config_pagination: Dict[str, Any]) -> str:
+        """
+        📄 Generar URL de paginación usando configuración centralizada
+        
+        Args:
+            page_number: Número de página (empezando desde 1)
+            config_pagination: Configuración de paginación del config.json
+            
+        Returns:
+            str: URL para la página específica
+        """
+        try:
+            url_pattern = config_pagination.get('url_pattern', '')
+            page_param = config_pagination.get('page_param', 'page')
+            start_page = config_pagination.get('start_page', 1)
+            
+            # Para retailers que usan parámetro 'start' en lugar de 'page'
+            if page_param == 'start':
+                page_increment = config_pagination.get('page_increment', 24)
+                sz_param = config_pagination.get('sz_param', 24)
+                start_value = (page_number - 1) * page_increment
+                
+                return url_pattern.format(
+                    start=start_value,
+                    sz=sz_param
+                )
+            else:
+                # Para retailers que usan parámetro 'page' estándar
+                actual_page = page_number if start_page == 1 else (page_number + start_page - 1)
+                
+                # Para página 1, usar URL base sin parámetro si está configurado así
+                if page_number == 1 and actual_page == 1:
+                    # Verificar si el patrón tiene placeholder para página 1
+                    if '{page}' in url_pattern:
+                        return url_pattern.format(page=actual_page)
+                    else:
+                        # Usar URL base sin parámetros
+                        return url_pattern.split('?')[0]
+                
+                return url_pattern.format(page=actual_page)
+                
+        except Exception as e:
+            logger.error(f"💥 Error generando URL paginación: {e}")
+            return ""
+    
+    async def get_max_pages_from_config(self, config_pagination: Dict[str, Any]) -> int:
+        """
+        📊 Obtener número máximo de páginas de la configuración
+        
+        Args:
+            config_pagination: Configuración de paginación del config.json
+            
+        Returns:
+            int: Número máximo de páginas configurado
+        """
+        return config_pagination.get('max_pages', 10)
+    
+    async def should_continue_pagination(self, current_page: int, max_pages: int, 
+                                       products_found: int, max_products: int = None) -> bool:
+        """
+        🔍 Determinar si se debe continuar con la siguiente página
+        
+        Args:
+            current_page: Página actual
+            max_pages: Máximo de páginas permitido
+            products_found: Productos encontrados hasta ahora
+            max_products: Límite máximo de productos (opcional)
+            
+        Returns:
+            bool: True si debe continuar paginando
+        """
+        # Verificar límite de páginas
+        if current_page >= max_pages:
+            logger.info(f"📄 Límite de páginas alcanzado: {current_page}/{max_pages}")
+            return False
+            
+        # Verificar límite de productos si está definido
+        if max_products and products_found >= max_products:
+            logger.info(f"🎯 Límite de productos alcanzado: {products_found}/{max_products}")
+            return False
+            
+        # Circuit breaker
+        if self.circuit_breaker_open:
+            logger.warning("⚡ Circuit breaker abierto, deteniendo paginación")
+            return False
+            
+        return True
+
+    # ==========================================
     # MÉTODOS DE UTILIDAD Y HELPERS
     # ==========================================
     

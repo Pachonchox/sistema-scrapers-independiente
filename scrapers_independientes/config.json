@@ -23,9 +23,17 @@
   "retailers": {
     "falabella": {
       "activo": true,
-      "url_base": "https://www.falabella.com/falabella-cl/category/cat720161/Smartphones",
-      "max_productos": 20,
-      "categoria": "smartphones",
+      "url_base": "https://www.falabella.com/falabella-cl/category/cat2018/Celulares-y-Telefonos",
+      "max_productos": 9999,
+      "categoria": "celulares",
+      "paginacion": {
+        "url_pattern": "https://www.falabella.com/falabella-cl/category/cat2018/Celulares-y-Telefonos?page={page}",
+        "page_param": "page",
+        "start_page": 1,
+        "max_pages": 50,
+        "products_per_page": 30,
+        "page_detection": "auto"
+      },
       "selector_contenedor": "div[data-testid=\"pod-card_web_0\"]",
       "selectores": {
         "nombre": "b[data-testid=\"pod-card_product-name\"]",
@@ -41,8 +49,19 @@
     "paris": {
       "activo": true,
       "url_base": "https://www.paris.cl/tecnologia/celulares/",
-      "max_productos": 20,
+      "max_productos": 9999,
       "categoria": "celulares",
+      "paginacion": {
+        "url_pattern": "https://www.paris.cl/tecnologia/celulares?page={page}",
+        "page_param": "page",
+        "start_page": 1,
+        "max_pages": 150,
+        "products_per_page": 30,
+        "page_detection": "auto",
+        "auto_stop": true,
+        "empty_page_threshold": 2,
+        "min_products_per_page": 5
+      },
       "selector_contenedor": "div[data-cnstrc-item-id]",
       "selectores": {
         "nombre": ".name",
@@ -57,9 +76,19 @@
     },
     "ripley": {
       "activo": true,
-      "url_base": "https://simple.ripley.cl/tecno/celulares",
-      "max_productos": 20,
+      "url_base": "https://simple.ripley.cl/tecno/celulares?source=menu&s=mdco&type=catalog",
+      "max_productos": 9999,
       "categoria": "celulares",
+      "paginacion": {
+        "url_pattern": "https://simple.ripley.cl/tecno/celulares?source=menu&s=mdco&type=catalog&page={page}",
+        "page_param": "page",
+        "start_page": 1,
+        "max_pages": 20,
+        "products_per_page": 24,
+        "page_detection": "auto",
+        "auto_stop": true,
+        "empty_page_threshold": 2
+      },
       "selector_contenedor": "div.catalog-product-details",
       "selectores": {
         "nombre": ".catalog-product-details__name a",
@@ -78,8 +107,18 @@
     "hites": {
       "activo": false,
       "url_base": "https://hites.com/tecnologia/smartphones",
-      "max_productos": 20,
+      "max_productos": 9999,
       "categoria": "smartphones",
+      "paginacion": {
+        "url_pattern": "https://hites.com/tecnologia/smartphones?sz={sz}&start={start}&srule=best-matches",
+        "page_param": "start",
+        "start_page": 0,
+        "page_increment": 24,
+        "sz_param": 24,
+        "max_pages": 50,
+        "products_per_page": 24,
+        "page_detection": "auto"
+      },
       "selector_contenedor": ".vtex-search-result-3-x-galleryItem",
       "selectores": {
         "nombre": ".vtex-product-summary-2-x-productBrand",
@@ -93,10 +132,23 @@
       }
     },
     "abcdin": {
-      "activo": false,
-      "url_base": "https://www.abcdin.cl/tecnologia/smartphones",
-      "max_productos": 20,
+      "activo": true,
+      "url_base": "https://www.abc.cl/tecnologia/celulares/smartphones/",
+      "max_productos": 9999,
       "categoria": "smartphones",
+      "paginacion": {
+        "url_pattern": "https://www.abc.cl/tecnologia/celulares/smartphones?start={start}&sz={sz}",
+        "page_param": "start",
+        "start_page": 0,
+        "page_increment": 36,
+        "sz_param": 36,
+        "max_pages": 50,
+        "products_per_page": 36,
+        "page_detection": "auto",
+        "auto_stop": true,
+        "empty_page_threshold": 2,
+        "min_products_per_page": 5
+      },
       "selector_contenedor": ".vtex-search-result-3-x-galleryItem",
       "selectores": {
         "nombre": ".vtex-product-summary-2-x-productBrand",
@@ -113,7 +165,7 @@
     "mercadolibre": {
       "activo": true,
       "url_base": "https://listado.mercadolibre.cl/celulares-telefonia/celulares-smartphones/",
-      "max_productos": 20,
+      "max_productos": 9999,
       "categoria": "celulares",
       "selector_contenedor": ".ui-search-result__wrapper",
       "selectores": {

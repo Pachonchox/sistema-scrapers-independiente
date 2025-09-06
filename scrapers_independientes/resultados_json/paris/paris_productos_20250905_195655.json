@@ -1,0 +1,161 @@
+{
+  "retailer": "paris",
+  "extraction_timestamp": "20250905_195655",
+  "session_id": "paris_port_celulares_1757116601",
+  "execution_time_seconds": 14.587323,
+  "total_products": 5,
+  "extraction_method": "port_logic_integrated_v5",
+  "pagination_config": {
+    "url_pattern": "https://www.paris.cl/tecnologia/celulares?page={page}",
+    "page_param": "page",
+    "start_page": 1,
+    "max_pages": 150,
+    "products_per_page": 30,
+    "page_detection": "auto",
+    "auto_stop": true,
+    "empty_page_threshold": 2,
+    "min_products_per_page": 5
+  },
+  "source_url": "https://www.paris.cl/tecnologia/celulares/",
+  "products": [
+    {
+      "title": "Smartphone Galaxy A56 128GB 6.7\" Gris Increíble",
+      "sku": "987039999",
+      "brand": "Samsung",
+      "current_price": 299990.0,
+      "original_price": 499990.0,
+      "product_url": "https://www.paris.cl/smartphone-galaxy-a56-128gb-67-gris-increible-987039999.html",
+      "image_urls": [],
+      "rating": 0.0,
+      "reviews_count": 0,
+      "retailer": "paris",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:56:53.140352",
+      "additional_info": {
+        "storage": "128GB",
+        "ram": "",
+        "network": "",
+        "color": "",
+        "discount_percent": "40%",
+        "current_price_text": "$299.990",
+        "old_price_text": "$499.990",
+        "price_from_data": "329990",
+        "scraped_with": "port_logic_integrated"
+      }
+    },
+    {
+      "title": "Xiaomi Poco X7 pro 512gb 12gb ram 5g - Negro",
+      "sku": "MKN1XSIT0P",
+      "brand": "Xiaomi",
+      "current_price": 364990.0,
+      "original_price": 499990.0,
+      "product_url": "https://www.paris.cl/xiaomi-poco-x7-pro-512gb-12gb-ram-5g-negro-MKN1XSIT0P.html",
+      "image_urls": [],
+      "rating": 0.0,
+      "reviews_count": 0,
+      "retailer": "paris",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:56:53.230396",
+      "additional_info": {
+        "storage": "512GB",
+        "ram": "12GB",
+        "network": "5G",
+        "color": "Negro",
+        "discount_percent": "27%",
+        "current_price_text": "$364.990",
+        "old_price_text": "$499.990",
+        "price_from_data": "379990",
+        "scraped_with": "port_logic_integrated"
+      }
+    },
+    {
+      "title": "Smartphone Galaxy S24 128GB 6.2\" Onyx Black Liberado",
+      "sku": "625026999",
+      "brand": "Samsung",
+      "current_price": 529990.0,
+      "original_price": 979990.0,
+      "product_url": "https://www.paris.cl/smartphone-galaxy-s24-128gb-62-onyx-black-liberado-625026999.html",
+      "image_urls": [],
+      "rating": 4.6,
+      "reviews_count": 50,
+      "retailer": "paris",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:56:53.389961",
+      "additional_info": {
+        "storage": "128GB",
+        "ram": "",
+        "network": "",
+        "color": "",
+        "discount_percent": "45%",
+        "current_price_text": "$529.990",
+        "old_price_text": "$979.990",
+        "price_from_data": "569990",
+        "scraped_with": "port_logic_integrated"
+      }
+    },
+    {
+      "title": "Cargador Philips 65W Carga Ultra Rápida 3 Puertos 2 USB-C + 1 USB-A",
+      "sku": "MKK68GP3OA",
+      "brand": "Philips",
+      "current_price": 32990.0,
+      "original_price": 49990.0,
+      "product_url": "https://www.paris.cl/cargador-philips-65w-carga-ultra-rapida-3-puertos-2-usb-c-1-usb-a-MKK68GP3OA.html",
+      "image_urls": [],
+      "rating": 0.0,
+      "reviews_count": 0,
+      "retailer": "paris",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:56:53.469027",
+      "additional_info": {
+        "storage": "",
+        "ram": "",
+        "network": "",
+        "color": "",
+        "discount_percent": "34%",
+        "current_price_text": "$32.990",
+        "old_price_text": "$49.990",
+        "price_from_data": "32990",
+        "scraped_with": "port_logic_integrated"
+      }
+    },
+    {
+      "title": "Xiaomi Redmi Note 14 Pro 256gb 8gb Ram 5G Purpura",
+      "sku": "MKVUJCDQRW",
+      "brand": "Xiaomi",
+      "current_price": 289990.0,
+      "original_price": 499990.0,
+      "product_url": "https://www.paris.cl/xiaomi-redmi-note-14-pro-256gb-8gb-ram-5g-purpura-MKVUJCDQRW.html",
+      "image_urls": [],
+      "rating": 0.0,
+      "reviews_count": 0,
+      "retailer": "paris",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:56:53.558357",
+      "additional_info": {
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "color": "Purpura",
+        "discount_percent": "42%",
+        "current_price_text": "$289.990",
+        "old_price_text": "$499.990",
+        "price_from_data": "289990",
+        "scraped_with": "port_logic_integrated"
+      }
+    }
+  ],
+  "extraction_summary": {
+    "brands_found": [
+      "Samsung",
+      "Philips",
+      "Xiaomi"
+    ],
+    "price_range": {
+      "min_price": 32990.0,
+      "max_price": 529990.0,
+      "avg_price": 303590.0
+    },
+    "discounts_found": 5,
+    "products_with_specs": 4
+  }
+}

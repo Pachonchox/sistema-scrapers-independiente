@@ -1,0 +1,172 @@
+{
+  "retailer": "falabella",
+  "extraction_timestamp": "20250905_195712",
+  "session_id": "falabella_parallel_celulares_1757116623",
+  "execution_time_seconds": 9.252132,
+  "total_products": 5,
+  "extraction_method": "parallel_port_integrated_v5",
+  "pagination_config": {
+    "url_pattern": "https://www.falabella.com/falabella-cl/category/cat2018/Celulares-y-Telefonos?page={page}",
+    "page_param": "page",
+    "start_page": 1,
+    "max_pages": 50,
+    "products_per_page": 30,
+    "page_detection": "auto"
+  },
+  "source_url": "https://www.falabella.com/falabella-cl/category/cat2018/Celulares-y-Telefonos",
+  "products": [
+    {
+      "title": "APPLE",
+      "sku": "FALA_prod43139229",
+      "brand": "APPLE",
+      "current_price": 529.0,
+      "original_price": 499.0,
+      "product_url": "https://www.falabella.com/falabella-cl/product/prod43139229/Apple-iPhone-13-128Gb/15643403",
+      "image_urls": [
+        "https://media.falabella.com/FalabellaCL/NoImage/public"
+      ],
+      "rating": 4.7927,
+      "reviews_count": 0,
+      "retailer": "falabella",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:57:07.530671",
+      "additional_info": {
+        "product_id": "prod43139229",
+        "seller": "Por Falabella",
+        "storage": "",
+        "ram": "",
+        "color": "",
+        "cmr_price": "499.990",
+        "cmr_price_numeric": 499,
+        "internet_price": "529.990",
+        "internet_price_numeric": 529,
+        "scraped_with": "parallel_port_integrated"
+      }
+    },
+    {
+      "title": "APPLE",
+      "sku": "FALA_prod121902204",
+      "brand": "APPLE",
+      "current_price": 839.0,
+      "original_price": 799.0,
+      "product_url": "https://www.falabella.com/falabella-cl/product/prod121902204/Apple-iPhone-16-128-GB/17273278",
+      "image_urls": [
+        "https://media.falabella.com/FalabellaCL/NoImage/public"
+      ],
+      "rating": 4.7849,
+      "reviews_count": 0,
+      "retailer": "falabella",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:57:07.770833",
+      "additional_info": {
+        "product_id": "prod121902204",
+        "seller": "Por Falabella",
+        "storage": "",
+        "ram": "",
+        "color": "",
+        "cmr_price": "799.990",
+        "cmr_price_numeric": 799,
+        "internet_price": "839.990",
+        "internet_price_numeric": 839,
+        "scraped_with": "parallel_port_integrated"
+      }
+    },
+    {
+      "title": "SAMSUNG",
+      "sku": "FALA_142839709",
+      "brand": "SAMSUNG",
+      "current_price": 299.0,
+      "original_price": 0.0,
+      "product_url": "https://www.falabella.com/falabella-cl/product/142839709/Samsung-Galaxy-A56-256GB-Grafito-Increible/142839710",
+      "image_urls": [
+        "https://media.falabella.com/FalabellaCL/NoImage/public"
+      ],
+      "rating": 4.7439,
+      "reviews_count": 0,
+      "retailer": "falabella",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:57:07.890092",
+      "additional_info": {
+        "product_id": "142839709",
+        "seller": "Por Samsung",
+        "storage": "",
+        "ram": "",
+        "color": "",
+        "cmr_price": "299.990",
+        "cmr_price_numeric": 299,
+        "internet_price": "",
+        "internet_price_numeric": null,
+        "scraped_with": "parallel_port_integrated"
+      }
+    },
+    {
+      "title": "XIAOMI",
+      "sku": "FALA_140139838",
+      "brand": "XIAOMI",
+      "current_price": 249.0,
+      "original_price": 0.0,
+      "product_url": "https://www.falabella.com/falabella-cl/product/140139838/Xiaomi-Redmi-Note-14-Pro-8GB-RAM+-256GB-Memoria-Midnight-Black/140139839",
+      "image_urls": [
+        "https://media.falabella.com/FalabellaCL/NoImage/public"
+      ],
+      "rating": 4.2593,
+      "reviews_count": 0,
+      "retailer": "falabella",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:57:07.986493",
+      "additional_info": {
+        "product_id": "140139838",
+        "seller": "Por Orro Home",
+        "storage": "",
+        "ram": "",
+        "color": "",
+        "cmr_price": "249.990",
+        "cmr_price_numeric": 249,
+        "internet_price": "",
+        "internet_price_numeric": null,
+        "scraped_with": "parallel_port_integrated"
+      }
+    },
+    {
+      "title": "XIAOMI",
+      "sku": "FALA_17373515",
+      "brand": "XIAOMI",
+      "current_price": 469.0,
+      "original_price": 449.0,
+      "product_url": "https://www.falabella.com/falabella-cl/product/17373515/Xiaomi-14T-512GB-Gris/17373515",
+      "image_urls": [
+        "https://media.falabella.com/FalabellaCL/NoImage/public"
+      ],
+      "rating": 4.75,
+      "reviews_count": 0,
+      "retailer": "falabella",
+      "category": "celulares",
+      "extraction_timestamp": "2025-09-05T19:57:08.102131",
+      "additional_info": {
+        "product_id": "17373515",
+        "seller": "Por Falabella",
+        "storage": "",
+        "ram": "",
+        "color": "",
+        "cmr_price": "449.990",
+        "cmr_price_numeric": 449,
+        "internet_price": "469.990",
+        "internet_price_numeric": 469,
+        "scraped_with": "parallel_port_integrated"
+      }
+    }
+  ],
+  "extraction_summary": {
+    "brands_found": [
+      "XIAOMI",
+      "APPLE",
+      "SAMSUNG"
+    ],
+    "price_range": {
+      "min_price": 249.0,
+      "max_price": 839.0,
+      "avg_price": 477.0
+    },
+    "products_with_specs": 0
+  }
+}

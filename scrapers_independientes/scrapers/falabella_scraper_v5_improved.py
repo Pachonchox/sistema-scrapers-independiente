@@ -107,6 +107,10 @@ class FalabellaScraperV5Improved(BaseScraperV5):
             'page_timeout': 30000
         }
 
+    async def scrape_category(self, category: str = "celulares", max_products: int = 100, filters: Dict[str, Any] = None) -> ScrapingResult:
+        """🎯 Implementación del método abstracto - llamada al scraper principal"""
+        return await self.scrape_products(max_products=max_products)
+
     async def scrape_products(self, max_products: int = 100) -> ScrapingResult:
         """🚀 Scraper principal con método PORT optimizado"""
         

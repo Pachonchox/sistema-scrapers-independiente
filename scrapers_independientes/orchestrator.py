@@ -62,18 +62,18 @@ logger = logging.getLogger(__name__)
 # Importar todos los scrapers con campos completos
 SCRAPERS_MAPPING = {}
 try:
-    from scrapers.paris_scraper_v5_improved import ParisScraperV5Improved
+    from scrapers.paris_scraper_v5_port_integrated import ParisScraperV5PortIntegrated
     from scrapers.ripley_scraper_v5_improved import RipleyScraperV5Improved  
-    from scrapers.hites_scraper_v5_improved import HitesScraperV5Improved
+    # from scrapers.hites_scraper_v5_improved import HitesScraperV5Improved
     from scrapers.abcdin_scraper_v5_improved import AbcdinScraperV5Improved
-    from scrapers.falabella_scraper_v5_improved import FalabellaScraperV5Improved
+    from scrapers.falabella_scraper_v5_parallel import FalabellaScraperV5Parallel
     
     SCRAPERS_MAPPING = {
-        'paris': ParisScraperV5Improved,
+        'paris': ParisScraperV5PortIntegrated,
         'ripley': RipleyScraperV5Improved, 
-        'hites': HitesScraperV5Improved,
+        # 'hites': HitesScraperV5Improved,
         'abcdin': AbcdinScraperV5Improved,
-        'falabella': FalabellaScraperV5Improved
+        'falabella': FalabellaScraperV5Parallel
     }
     
     logger.info(f"✅ Scrapers cargados exitosamente: {list(SCRAPERS_MAPPING.keys())}")
@@ -155,7 +155,7 @@ class IndependentOrchestrator:
             
             # Ejecutar con timeout
             result = await asyncio.wait_for(
-                scraper.scrape_products(max_products=final_max_products),
+                scraper.scrape_category("celulares", max_products=final_max_products),
                 timeout=final_timeout
             )
             

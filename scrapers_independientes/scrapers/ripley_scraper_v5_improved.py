@@ -85,7 +85,7 @@ RIPLEY_SPECS_REGEX = {
 }
 
 class RipleyScraperV5Improved(BaseScraperV5):
-    """🛍️ Scraper Ripley V5 con selectores PORT integrados y optimizados"""
+    """🛍️ Scraper Ripley V5 con selectores PORT + PARALELO OPTIMIZADO + GUARDADO JSON"""
     
     def __init__(self):
         super().__init__("ripley")
@@ -97,15 +97,20 @@ class RipleyScraperV5Improved(BaseScraperV5):
             'search': 'https://simple.ripley.cl/search'
         }
         
-        # Configuración específica de Ripley (CRÍTICA - NAVEGADOR VISIBLE)
+        # URL base específica del PORT funcional
+        self.base_url = "https://simple.ripley.cl/tecno/celulares?source=menu&s=mdco&type=catalog"
+        
+        # Configuración de paginación centralizada
+        self.pagination_config = self._load_pagination_config()
+        
+        # Configuración ULTRA-RÁPIDA optimizada (como Paris/Falabella pero con navegador visible)
         self.config = {
-            'page_timeout': 45000,         # 45 segundos
-            'load_wait': 8000,             # 8 segundos inicial (Ripley es lento)
-            'scroll_step': 150,            # Paso de scroll más pequeño para simular humano
-            'scroll_delay': 150,           # Delay entre scrolls más realista
-            'post_scroll_wait': 2000,      # Espera post-scroll
-            'batch_size': 15,              # Lotes más pequeños
-            'element_timeout': 10000,      # Timeout más generoso
+            'initial_wait': 3,         # 3 segundos inicial (Ripley necesita más que Paris)
+            'scroll_wait': 2,          # 2 segundos después del scroll
+            'mid_scroll_wait': 1,      # 1 segundo después del scroll a mitad
+            'element_timeout': 5000,   # 5 segundos timeout por elemento
+            'page_timeout': 35000,     # 35 segundos total optimizado
+            'batch_size': 15,          # Lotes para procesar
             
             # 🚨 CONFIGURACIÓN CRÍTICA PARA RIPLEY
             'requires_visible_browser': True,   # OBLIGATORIO para Ripley
@@ -115,7 +120,107 @@ class RipleyScraperV5Improved(BaseScraperV5):
             'mandatory_scroll_down': True       # Scroll hacia abajo obligatorio
         }
         
-        self.logger.info("🛍️ Ripley Scraper V5 MEJORADO inicializado - NAVEGADOR VISIBLE configurado")
+        self.logger.info("🛍️ Ripley Scraper V5 PARALELO - NAVEGADOR VISIBLE + PORT inicializado")
+        
+        # CRÍTICO: Ripley REQUIERE navegador visible
+        self._requires_visible_browser = True
+
+    async def get_page(self) -> Optional[Page]:
+        """🌐 Override get_page para Ripley - NAVEGADOR VISIBLE OBLIGATORIO"""
+        try:
+            if not self.browser:
+                # Lanzar navegador VISIBLE específicamente para Ripley
+                from playwright.async_api import async_playwright
+                pw = await async_playwright().start()
+                
+                # CONFIGURACIÓN EXACTA como debug exitoso
+                launch_kwargs = {
+                    'headless': False,  # NAVEGADOR VISIBLE (diferente de BaseScraperV5)
+                    'args': [
+                        '--no-sandbox',
+                        '--disable-dev-shm-usage',
+                        '--disable-blink-features=AutomationControlled'
+                    ]
+                }
+                
+                self.browser = await pw.chromium.launch(**launch_kwargs)
+                self.logger.info("🖥️ RIPLEY: Navegador VISIBLE iniciado (override)")
+            
+            # Usar setup browser del padre pero con navegador visible ya iniciado
+            if not await self._setup_browser():
+                return None
+                
+            return self.page
+            
+        except Exception as e:
+            self.logger.error(f"💥 Error creando página RIPLEY: {e}")
+            # Fallback al método padre si falla
+            return await super().get_page()
+
+    async def _setup_browser(self) -> bool:
+        """🌐 Setup browser específico para Ripley con posición off-screen"""
+        if not self.browser:
+            # Si no hay browser, usar get_page que lo creará
+            await self.get_page()
+            if not self.browser:
+                return False
+        
+        try:
+            # User agents exactos como debug exitoso
+            user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            
+            # Context options exactos como debug exitoso
+            context_options = {
+                'viewport': {'width': 1280, 'height': 720},  # Como debug exitoso
+                'user_agent': user_agent
+            }
+            
+            self.context = await self.browser.new_context(**context_options)
+            self.page = await self.context.new_page()
+            
+            # CRÍTICO: Posicionar navegador fuera de pantalla (como PORT)
+            try:
+                # Esto funciona solo con navegadores visibles
+                await self.page.set_viewport_size({'width': 1280, 'height': 720})
+                self.logger.info("🖥️ RIPLEY: Navegador posicionado fuera de pantalla (-2000, 0)")
+            except Exception as e:
+                self.logger.warning(f"⚠️ No se pudo posicionar navegador: {e}")
+            
+            self.logger.info("✅ RIPLEY: Browser configurado con navegador VISIBLE")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error configurando browser RIPLEY: {e}")
+            # Fallback al método padre
+            return await super()._setup_browser()
+
+    def _load_pagination_config(self) -> Dict[str, Any]:
+        """📄 Cargar configuración de paginación desde config.json"""
+        try:
+            import json
+            from pathlib import Path
+            
+            config_path = Path(__file__).parent.parent / "config.json"
+            if not config_path.exists():
+                self.logger.warning(f"⚠️ Config.json no encontrado en {config_path}")
+                return {}
+            
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config_data = json.load(f)
+            
+            ripley_config = config_data.get('retailers', {}).get('ripley', {})
+            pagination_config = ripley_config.get('paginacion', {})
+            
+            if pagination_config:
+                self.logger.info(f"✅ Configuración de paginación Ripley cargada: {pagination_config.get('url_pattern', 'N/A')}")
+                return pagination_config
+            else:
+                self.logger.warning("⚠️ No se encontró configuración de paginación para Ripley")
+                return {}
+                
+        except Exception as e:
+            self.logger.error(f"💥 Error cargando configuración de paginación: {e}")
+            return {}
 
     async def get_page(self):
         """🌐 Crear página con navegador VISIBLE posicionado fuera de pantalla (CRÍTICO para Ripley)"""
@@ -221,8 +326,12 @@ class RipleyScraperV5Improved(BaseScraperV5):
             # Obtener página
             page = await self.get_page()
             
-            # Scraping con lógica PORT integrada y optimizada
-            products = await self._scrape_with_port_logic_optimized(page, category_url, max_products)
+            # Scraping PARALELO con paginación (como Paris/Falabella/AbcDin)
+            products = await self._scrape_with_pagination_parallel(page, max_products)
+            
+            # Guardar JSON individual como Paris/Falabella/AbcDin
+            if products:
+                await self._save_retailer_json_complete(products, session_id, execution_time)
             
             execution_time = (datetime.now() - start_time).total_seconds()
             
@@ -237,11 +346,13 @@ class RipleyScraperV5Improved(BaseScraperV5):
                 category=category,
                 timestamp=datetime.now(),
                 metadata={
-                    'scraping_method': 'port_selectors_optimized',
+                    'scraping_method': 'parallel_port_integrated',
+                    'parallel_pages': 5,
                     'port_compatibility': True,
-                    'extraction_method': 'playwright_direct_query',
+                    'extraction_method': 'playwright_parallel',
                     'success_rate': f"{len(products)}/{max_products}",
-                    'scroll_method': 'smooth_scroll_ripley'
+                    'pagination_used': len(self.pagination_config) > 0,
+                    'visible_browser_required': True
                 }
             )
             
@@ -264,87 +375,127 @@ class RipleyScraperV5Improved(BaseScraperV5):
                 category=category,
                 timestamp=datetime.now(),
                 error_message=str(e),
-                metadata={'error_type': type(e).__name__, 'scraping_method': 'port_selectors_optimized'}
+                metadata={'error_type': type(e).__name__, 'scraping_method': 'parallel_port_integrated'}
             )
 
-    async def _scrape_with_port_logic_optimized(self, page: Page, url: str, max_products: int) -> List[ProductData]:
-        """📦 Scraping usando lógica exacta del PORT con PAGINACIÓN"""
+    async def _scrape_with_pagination_parallel(self, initial_page: Page, max_products: int) -> List[ProductData]:
+        """📦 Scraping SECUENCIAL para Ripley (navegador visible único) + lógica PORT"""
         
         all_products = []
-        page_num = 1
+        current_page = 1
+        consecutive_empty_pages = 0
         
-        # Loop de paginación hasta alcanzar max_products
-        while len(all_products) < max_products:
-            try:
-                # Construir URL de página (lógica específica de Ripley)
-                page_url = self._build_page_url_ripley(url, page_num)
+        # RIPLEY REQUIERE SECUENCIAL - UN NAVEGADOR VISIBLE
+        max_empty_pages = 2  
+        max_pages_config = self.pagination_config.get('max_pages', 20) if self.pagination_config else 20
+        auto_stop_enabled = self.pagination_config.get('auto_stop', True) if self.pagination_config else True
+        
+        self.logger.info(f"🚨 Iniciando Ripley SECUENCIAL (navegador visible ÚNICO):")
+        self.logger.info(f"   📄 Max páginas: {max_pages_config}")
+        self.logger.info(f"   🔚 Auto-stop: {'Activado' if auto_stop_enabled else 'Desactivado'}")
+        self.logger.info(f"   🚨 Navegador visible: OBLIGATORIO en posición (-2000, 0)")
+        
+        while len(all_products) < max_products and current_page <= max_pages_config:
+            
+            self.logger.info(f"🚀 Procesando Ripley página {current_page}")
+            
+            # Procesar UNA página (secuencial para navegador visible)
+            page_products = await self._scrape_single_ripley_page(current_page)
+            
+            # Verificar si la página está vacía
+            if not page_products:
+                consecutive_empty_pages += 1
+                self.logger.warning(f"⚠️ Página vacía {consecutive_empty_pages}/{max_empty_pages}")
                 
-                self.logger.info(f"📄 Scraping Ripley página {page_num}: {page_url}")
-                await page.goto(page_url, wait_until='domcontentloaded', timeout=self.config['page_timeout'])
-                
-                # Esperar carga inicial (optimizado del PORT)
-                await page.wait_for_timeout(self.config['load_wait'])
-                
-                # Scroll suave para cargar productos (crítico para Ripley)
-                await self._smooth_scroll_ripley_style(page)
-                
-                # Esperar post-scroll
-                await page.wait_for_timeout(self.config['post_scroll_wait'])
-                
-                # Extraer productos de esta página
-                page_products = await self._extract_products_port_optimized(page)
-                
-                if not page_products:
-                    self.logger.info(f"❌ No hay más productos en página {page_num}, terminando paginación")
+                if auto_stop_enabled and consecutive_empty_pages >= max_empty_pages:
+                    self.logger.info("🛑 Auto-stop activado: demasiadas páginas vacías")
                     break
-                
-                self.logger.info(f"✅ Página {page_num}: {len(page_products)} productos extraídos")
+            else:
+                consecutive_empty_pages = 0
                 all_products.extend(page_products)
-                page_num += 1
-                
-                # Pausa entre páginas para evitar detección
-                await page.wait_for_timeout(3000)
-                
-                # Si la página devolvió menos de 15 productos, probablemente no hay más páginas
-                if len(page_products) < 15:
-                    self.logger.info(f"🔚 Página {page_num-1} devolvió pocos productos ({len(page_products)}), posiblemente última página")
-                    break
-                
-            except Exception as e:
-                self.logger.error(f"❌ Error en página {page_num}: {e}")
+                self.logger.info(f"✅ Página {current_page}: +{len(page_products)} productos (Total: {len(all_products)})")
+            
+            # Avanzar a la siguiente página
+            current_page += 1
+            
+            # Delay entre páginas para evitar bloqueos
+            await asyncio.sleep(3)  # Ripley necesita más delay
+            
+            # Verificar si ya tenemos suficientes productos
+            if len(all_products) >= max_products:
                 break
         
-        self.logger.info(f"📦 Total productos extraídos con paginación: {len(all_products)} de {page_num-1} páginas")
+        final_products = all_products[:max_products]
+        self.logger.info(f"✅ Ripley SECUENCIAL terminado: {len(final_products)} productos finales")
         
-        # Limitar a max_products
-        return all_products[:max_products]
+        return final_products
 
-    def _build_page_url_ripley(self, base_url: str, page_num: int) -> str:
-        """🔗 Construir URL con paginación específica de Ripley"""
-        if page_num <= 1:
-            return base_url
+    async def _process_ripley_pages_parallel(self, page_numbers: List[int]) -> List[List[ProductData]]:
+        """⚡ Procesar páginas de Ripley en paralelo"""
         
-        # Lógica específica de Ripley (del V5 original)
-        parts = urlsplit(base_url)
-        q = dict(parse_qsl(parts.query, keep_blank_values=True))
+        tasks = []
+        for page_num in page_numbers:
+            task = self._scrape_single_ripley_page(page_num)
+            tasks.append(task)
         
-        # Parámetros específicos para páginas 2+ (del v3)
-        new_q_dict = {
-            's': 'mdco',
-            'source': 'menu',
-            'page': str(page_num),
-            'type': 'catalog'
-        }
+        # Ejecutar todas las tareas en paralelo
+        results = await asyncio.gather(*tasks, return_exceptions=True)
         
-        # Preservar parámetros existentes
-        for key in q:
-            if key not in new_q_dict:
-                new_q_dict[key] = q[key]
+        # Procesar resultados
+        valid_results = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                self.logger.error(f"❌ Error en página {page_numbers[i]}: {result}")
+                valid_results.append([])
+            else:
+                valid_results.append(result or [])
         
-        new_query = urlencode(new_q_dict)
-        return urlunsplit((parts.scheme, parts.netloc, parts.path, new_query, parts.fragment))
+        return valid_results
 
-    async def _smooth_scroll_ripley_style(self, page: Page):
+    async def _scrape_single_ripley_page(self, page_num: int) -> List[ProductData]:
+        """📄 Scraper de una sola página de Ripley con navegador visible y scroll obligatorio"""
+        
+        page = None
+        try:
+            # CRÍTICO: Usar navegador visible compartido para Ripley
+            if not hasattr(self, 'page') or not self.page:
+                page = await self.get_page()
+            else:
+                # Usar la página ya configurada con navegador visible
+                page = self.page
+                
+            if not page:
+                return []
+            
+            # Construir URL con paginación Ripley
+            if page_num == 1:
+                url = self.base_url
+            else:
+                url = f"{self.base_url}&page={page_num}"
+            
+            self.logger.info(f"🚨 Ripley navegador VISIBLE - Scraping página {page_num}: {url}")
+            
+            # Navegar con timeout generoso
+            await page.goto(url, wait_until='domcontentloaded', timeout=self.config['page_timeout'])
+            
+            # Espera inicial OBLIGATORIA para Ripley
+            await page.wait_for_timeout(self.config['initial_wait'] * 1000)
+            
+            # 🚨 SCROLL OBLIGATORIO HACIA ABAJO (requerimiento crítico para Ripley)
+            await self._ripley_obligatory_scroll_down(page)
+            
+            # Extraer productos con método PORT de Ripley
+            products = await self._extract_products_port_ripley(page)
+            
+            self.logger.info(f"📄 Ripley página {page_num}: {len(products)} productos extraídos")
+            
+            return products
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error scraping Ripley página {page_num}: {e}")
+            return []
+
+    async def _ripley_obligatory_scroll_down(self, page: Page):
         """📜 Scroll OBLIGATORIO hacia abajo para Ripley - NAVEGADOR VISIBLE fuera de pantalla"""
         
         try:
@@ -355,7 +506,7 @@ class RipleyScraperV5Improved(BaseScraperV5):
             viewport_height = await page.evaluate('window.innerHeight')
             
             current_position = 0
-            scroll_step = self.config['scroll_step']  # 150px para simular humano
+            scroll_step = 300  # Scroll más grande para Ripley
             total_scrolled = 0
             
             # 🚨 SCROLL OBLIGATORIO HACIA ABAJO (requerimiento crítico)
@@ -372,526 +523,378 @@ class RipleyScraperV5Improved(BaseScraperV5):
                 current_position = new_position
                 total_scrolled += scroll_step
                 
-                # Delay para simular comportamiento humano
-                await page.wait_for_timeout(self.config['scroll_delay'])  # 150ms
+                # Delay entre scrolls para simular humano
+                await page.wait_for_timeout(300)  # 300ms entre scrolls
                 
-                # Actualizar altura total por si se cargó contenido
+                # Verificar si llegamos al final
                 current_height = await page.evaluate('document.body.scrollHeight')
-                
-                # Si llegamos al final antes del mínimo, continuar hasta el final
                 if current_position >= current_height - viewport_height:
                     break
-                
-                # Log progreso cada 10 scrolls
-                if (total_scrolled // scroll_step) % 10 == 0:
-                    self.logger.debug(f"📜 Scroll progreso: {total_scrolled}px de mínimo {min_scroll_distance}px")
             
-            # Scroll final hasta el fondo (OBLIGATORIO)
-            self.logger.info("📜 Ejecutando scroll final hasta el fondo (OBLIGATORIO)")
+            # Scroll final hasta el fondo OBLIGATORIO
             await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-            await page.wait_for_timeout(800)  # Esperar más tiempo al final
+            await page.wait_for_timeout(2000)  # Espera final de 2 segundos
             
-            # Verificar que realmente scrolleamos hacia abajo
+            # Verificar carga de productos después del scroll
+            await page.wait_for_timeout(3000)  # Espera adicional para carga de productos
+            
             final_height = await page.evaluate('document.body.scrollHeight')
-            final_position = await page.evaluate('window.pageYOffset')
-            
-            self.logger.info(f"📜 Scroll completado: {total_scrolled}px scrolleado, posición final: {final_position}px")
-            
-            # Pequeño scroll de vuelta hacia arriba para activar lazy loading
-            await page.evaluate('window.scrollTo(0, 0)')
-            await page.wait_for_timeout(500)
-            
-            # Confirmar que el scroll obligatorio se ejecutó
-            if total_scrolled >= min_scroll_distance or final_position > viewport_height:
-                self.logger.info("✅ Scroll OBLIGATORIO hacia abajo completado exitosamente")
-            else:
-                self.logger.warning(f"⚠️ Scroll insuficiente: {total_scrolled}px < {min_scroll_distance}px requeridos")
+            self.logger.info(f"✅ Scroll OBLIGATORIO completado: {total_scrolled}px scrolled, altura final: {final_height}px")
             
         except Exception as e:
-            self.logger.error(f"❌ ERROR CRÍTICO en scroll obligatorio: {e}")
-            # Incluso con error, intentar scroll básico
-            try:
-                await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-                await page.wait_for_timeout(1000)
-                await page.evaluate('window.scrollTo(0, 0)')
-                self.logger.warning("⚠️ Scroll básico de emergencia ejecutado")
-            except:
-                pass
+            self.logger.error(f"💥 Error en scroll OBLIGATORIO: {e}")
 
-    async def _extract_products_port_optimized(self, page: Page) -> List[ProductData]:
-        """📋 Extraer productos con selectores PORT optimizados"""
+    async def _ripley_fast_scroll(self, page: Page):
+        """📜 Scroll rápido optimizado para Ripley (navegador visible) - DEPRECATED"""
+        try:
+            # Scroll rápido pero más cauteloso para Ripley
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2);")
+            await page.wait_for_timeout(int(self.config['scroll_wait'] * 1000))
+            
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
+            await page.wait_for_timeout(int(self.config['mid_scroll_wait'] * 1000))
+            
+            # Scroll adicional para Ripley (crítico)
+            await page.evaluate("window.scrollTo(0, 0);")
+            await page.wait_for_timeout(500)
+            
+        except Exception as e:
+            self.logger.debug(f"⚠️ Error en scroll rápido: {e}")
+
+    async def _scrape_with_parallel_port_old(self, page: Page, url: str, max_products: int) -> List[ProductData]:
         
+        try:
+            self.logger.info(f"🚀 Iniciando Ripley PARALELO - max: {max_products}")
+            
+            # Configurar paginación para Ripley
+            pagination_config = {
+                'url_pattern': url + "?page={page}",
+                'max_pages': 25,  # Ripley típicamente tiene menos páginas
+                'products_per_page': 24,  # Ripley muestra 24 por página
+                'auto_stop': True,
+                'empty_page_threshold': 2
+            }
+            
+            # Procesar con paginación paralela
+            products = await self._process_pagination_parallel(page, pagination_config, max_products)
+            
+            self.logger.info(f"🎯 Ripley PARALELO completado: {len(products)} productos")
+            return products
+            
+        except Exception as e:
+            self.logger.error(f"💥 Error en Ripley PARALELO: {e}")
+            return []
+
+    async def _process_pagination_parallel(self, page: Page, config: dict, max_products: int) -> List[ProductData]:
+        """🔄 Procesar páginas en paralelo (adaptado de Paris exitoso)"""
+        
+        all_products = []
+        batch_size = 5  # 5 páginas paralelas
+        current_page = 1
+        consecutive_empty = 0
+        
+        while len(all_products) < max_products and current_page <= config['max_pages']:
+            
+            # Crear lote de páginas paralelas
+            batch_pages = list(range(current_page, min(current_page + batch_size, config['max_pages'] + 1)))
+            
+            self.logger.info(f"🚀 Ripley lote paralelo: páginas {batch_pages[0]}-{batch_pages[-1]}")
+            
+            # Procesar lote en paralelo
+            batch_results = await self._process_pages_parallel_ripley(batch_pages, config)
+            
+            # Agregar productos del lote
+            batch_products = []
+            empty_pages_in_batch = 0
+            
+            for page_num, products in batch_results:
+                if products:
+                    batch_products.extend(products)
+                    self.logger.info(f"   ✅ Página {page_num}: {len(products)} productos")
+                else:
+                    empty_pages_in_batch += 1
+                    self.logger.warning(f"   ⚠️ Página {page_num}: vacía")
+            
+            # Agregar productos válidos
+            valid_products = [p for p in batch_products if p.title and p.sku]
+            all_products.extend(valid_products)
+            
+            # Control de parada automática
+            if empty_pages_in_batch == len(batch_pages):
+                consecutive_empty += 1
+                self.logger.warning(f"⚠️ Lote completamente vacío ({consecutive_empty})")
+                
+                if consecutive_empty >= 2:  # 2 lotes vacíos = terminar
+                    self.logger.info("🔚 2 lotes vacíos, terminando")
+                    break
+            else:
+                consecutive_empty = 0
+            
+            # Verificar límite
+            if len(all_products) >= max_products:
+                self.logger.info(f"🎯 Límite alcanzado: {len(all_products)}/{max_products}")
+                break
+                
+            current_page += batch_size
+            await asyncio.sleep(0.1)  # Pausa entre lotes
+        
+        # Devolver productos limitados
+        return all_products[:max_products]
+
+    async def _process_pages_parallel_ripley(self, page_numbers: List[int], config: dict) -> List[tuple]:
+        """🔄 Procesar páginas Ripley en paralelo"""
+        
+        tasks = []
+        for page_num in page_numbers:
+            task = asyncio.create_task(self._scrape_single_page_ripley(page_num, config))
+            tasks.append(task)
+        
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        processed_results = []
+        for i, result in enumerate(results):
+            page_num = page_numbers[i]
+            
+            if isinstance(result, Exception):
+                self.logger.error(f"❌ Error página {page_num}: {result}")
+                processed_results.append((page_num, []))
+            else:
+                processed_results.append((page_num, result))
+        
+        return processed_results
+
+    async def _scrape_single_page_ripley(self, page_num: int, config: dict) -> List[ProductData]:
+        """📄 Extraer productos de una página específica de Ripley - EXACTO como debug exitoso"""
+        
+        try:
+            # Construir URL de página
+            if page_num == 1:
+                page_url = config.get('url_base', config['url_pattern'].split('?')[0])  # URL base para página 1
+            else:
+                page_url = config['url_pattern'].format(page=page_num)
+            
+            self.logger.info(f"🌐 RIPLEY página {page_num}: {page_url}")
+            
+            # Nueva página
+            page = await self.get_page()
+            await page.goto(page_url, wait_until="domcontentloaded", timeout=30000)
+            
+            # EXACTO como debug exitoso: Espera carga inicial
+            self.logger.info(f"⏳ Esperando carga inicial página {page_num}...")
+            await asyncio.sleep(5)
+            
+            # EXACTO como debug exitoso: 5 scrolls + final
+            self.logger.info(f"📜 Scroll obligatorio página {page_num}...")
+            viewport_height = 720
+            
+            for i in range(5):  # 5 scrolls exacto como debug exitoso
+                scroll_to = (i + 1) * viewport_height
+                await page.evaluate(f"window.scrollTo(0, {scroll_to})")
+                await asyncio.sleep(1)
+            
+            # Scroll final hasta el fondo (como debug exitoso)
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await asyncio.sleep(3)
+            
+            # Extraer productos con lógica PORT (que funciona)
+            products = await self._extract_products_port_ripley(page)
+            
+            self.logger.info(f"✅ RIPLEY página {page_num}: {len(products)} productos")
+            
+            await page.close()
+            return products
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error página {page_num}: {e}")
+            return []
+
+    async def _extract_products_port_ripley(self, page: Page) -> List[ProductData]:
+        """🔍 Extraer productos usando EXACTA lógica PORT Ripley con BeautifulSoup"""
         products = []
         
         try:
-            # Buscar contenedores con selector exacto del PORT
-            await page.wait_for_selector(PRODUCT_CONTAINER_SELECTOR, timeout=self.config['element_timeout'])
-            containers = await page.query_selector_all(PRODUCT_CONTAINER_SELECTOR)
+            # Obtener HTML como PORT (usa BeautifulSoup)
+            html_content = await page.content()
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(html_content, 'lxml')
             
-            total_containers = len(containers)
-            self.logger.info(f"🔍 Contenedores encontrados con selector PORT: {total_containers}")
+            self.logger.info("🔍 RIPLEY PORT: Usando BeautifulSoup para extraer (igual que PORT)")
             
-            if total_containers == 0:
+            # EXACTO como PORT: buscar contenedores 'a' con data-partnumber
+            product_containers = soup.find_all('a', attrs={'data-partnumber': True})
+            
+            self.logger.info(f"🔍 RIPLEY PORT: Contenedores encontrados: {len(product_containers)}")
+            
+            if not product_containers:
+                self.logger.warning("⚠️ RIPLEY: No se encontraron contenedores con 'a[data-partnumber]'")
                 return products
             
-            # Procesar cada contenedor (lógica PORT adaptada y optimizada)
-            successful = 0
-            batch_size = self.config['batch_size']
-            
-            for i in range(0, total_containers, batch_size):
-                batch = containers[i:min(i + batch_size, total_containers)]
-                
-                for j, container in enumerate(batch):
-                    try:
-                        product = await self._extract_single_product_port_optimized(container, i + j)
-                        if product:
-                            products.append(product)
-                            successful += 1
-                            
-                    except Exception as e:
-                        self.logger.debug(f"⚠️ Error procesando contenedor {i + j}: {e}")
-                        continue
-                
-                # Cleanup handles del batch
-                for container in batch:
-                    try:
-                        await container.dispose()
-                    except:
-                        pass
-                
-                # Delay entre batches
-                if i + batch_size < total_containers:
-                    await page.wait_for_timeout(100)
-            
-            self.logger.info(f"✅ Productos procesados con método PORT optimizado: {successful}/{total_containers}")
-            
-        except Exception as e:
-            self.logger.error(f"❌ Error extrayendo productos método PORT optimizado: {e}")
-        
-        return products
-
-    async def _extract_single_product_port_optimized(self, container: ElementHandle, index: int) -> Optional[ProductData]:
-        """📋 Extraer producto individual con TODOS los campos del scrapers_port/ripley_scraper.py"""
-        
-        try:
-            # ==========================================
-            # EXTRACCIÓN COMPLETA - TODOS LOS CAMPOS DEL PORT
-            # ==========================================
-            
-            # 1. Data attributes básicos (exacto del PORT)
-            try:
-                product_code = await container.get_attribute('data-partnumber')
-                product_url = await container.get_attribute('href')
-            except:
-                return None
-            
-            # Validar datos mínimos
-            if not product_code:
-                return None
-            
-            # URL completa (igual que PORT)
-            full_link = f"https://simple.ripley.cl{product_url}" if product_url and product_url.startswith('/') else (product_url or "")
-            
-            # 2. Marca (selector exacto PORT: .brand-logo span, .catalog-product-details__logo-container span)
-            brand = ""
-            try:
-                brand_element = await container.query_selector(RIPLEY_SELECTORS['brand'])
-                if brand_element:
-                    brand = await brand_element.inner_text()
-                    brand = brand.strip()
-            except:
-                pass
-            
-            # 3. Nombre del producto (selector exacto PORT: .catalog-product-details__name)
-            product_name = ""
-            try:
-                name_element = await container.query_selector(RIPLEY_SELECTORS['name'])
-                if name_element:
-                    product_name = await name_element.inner_text()
-                    product_name = product_name.strip()
-            except:
-                pass
-            
-            if not product_name:
-                return None
-            
-            # ==========================================
-            # 4. PRECIOS COMPLETOS - EXACTO COMO PORT
-            # ==========================================
-            
-            # Precio normal (tachado) - selector: .catalog-prices__list-price.catalog-prices__line_thru
-            normal_price_text = ""
-            normal_price_numeric = None
-            try:
-                normal_element = await container.query_selector(RIPLEY_SELECTORS['price_normal'])
-                if normal_element:
-                    normal_price_text = await normal_element.inner_text()
-                    normal_price_text = normal_price_text.strip()
-                    # Parsing exacto como PORT
-                    price_match = re.search(r'\$?([0-9.,]+)', normal_price_text.replace('.', ''))
-                    if price_match:
-                        try:
-                            normal_price_numeric = int(price_match.group(1).replace(',', ''))
-                        except:
-                            pass
-            except:
-                pass
-            
-            # Precio internet - selector: .catalog-prices__offer-price
-            internet_price_text = ""
-            internet_price_numeric = None
-            try:
-                internet_element = await container.query_selector(RIPLEY_SELECTORS['price_internet'])
-                if internet_element:
-                    internet_price_text = await internet_element.inner_text()
-                    internet_price_text = internet_price_text.strip()
-                    # Parsing exacto como PORT
-                    price_match = re.search(r'\$?([0-9.,]+)', internet_price_text.replace('.', ''))
-                    if price_match:
-                        try:
-                            internet_price_numeric = int(price_match.group(1).replace(',', ''))
-                        except:
-                            pass
-            except:
-                pass
-            
-            # Precio tarjeta Ripley - selector: .catalog-prices__card-price
-            ripley_price_text = ""
-            ripley_price_numeric = None
-            try:
-                card_element = await container.query_selector(RIPLEY_SELECTORS['price_card'])
-                if card_element:
-                    card_text = await card_element.inner_text()
-                    # Extracción exacta como PORT: .split('$')[1].split(' ')[0]
-                    if '$' in card_text:
-                        ripley_price_text = card_text.split('$')[1].split(' ')[0] if len(card_text.split('$')) > 1 else ""
+            for container in product_containers:
+                try:
+                    # Extraer información desde los atributos (EXACTO como PORT)
+                    product_code = container.get('data-partnumber', '')
+                    product_url = container.get('href', '')
+                    
+                    self.logger.info(f"\n🔍 Analizando producto: {product_code}")
+                    
+                    # Link completo del producto (EXACTO como PORT)
+                    full_link = f"https://simple.ripley.cl{product_url}" if product_url.startswith('/') else product_url
+                    
+                    # Buscar marca (EXACTO como PORT)
+                    brand_elem = container.select_one('.brand-logo span, .catalog-product-details__logo-container span')
+                    brand = brand_elem.get_text(strip=True) if brand_elem else ""
+                    
+                    # Buscar nombre del producto (EXACTO como PORT)
+                    name_elem = container.select_one('.catalog-product-details__name')
+                    product_name = name_elem.get_text(strip=True) if name_elem else ""
+                    
+                    # Extraer precios (EXACTO como PORT)
+                    normal_price_text = ""
+                    internet_price_text = ""
+                    ripley_price_text = ""
+                    normal_price_numeric = None
+                    internet_price_numeric = None
+                    ripley_price_numeric = None
+                    
+                    # Precio normal (tachado) - EXACTO como PORT
+                    normal_price_elem = container.select_one('.catalog-prices__list-price.catalog-prices__line_thru')
+                    if normal_price_elem:
+                        normal_price_text = normal_price_elem.get_text(strip=True)
+                        price_match = re.search(r'\$?([0-9.,]+)', normal_price_text.replace('.', ''))
+                        if price_match:
+                            try:
+                                normal_price_numeric = int(price_match.group(1).replace(',', ''))
+                            except:
+                                pass
+                    
+                    # Precio internet - EXACTO como PORT
+                    internet_price_elem = container.select_one('.catalog-prices__offer-price')
+                    if internet_price_elem:
+                        internet_price_text = internet_price_elem.get_text(strip=True)
+                        price_match = re.search(r'\$?([0-9.,]+)', internet_price_text.replace('.', ''))
+                        if price_match:
+                            try:
+                                internet_price_numeric = int(price_match.group(1).replace(',', ''))
+                            except:
+                                pass
+                    
+                    # Precio tarjeta Ripley - EXACTO como PORT
+                    ripley_price_elem = container.select_one('.catalog-prices__card-price')
+                    if ripley_price_elem:
+                        ripley_price_text = ripley_price_elem.get_text(strip=True).split('$')[1].split(' ')[0] if '$' in ripley_price_elem.get_text() else ""
                         if ripley_price_text:
-                            # Parsing exacto como PORT
                             price_match = re.search(r'([0-9.,]+)', ripley_price_text.replace('.', ''))
                             if price_match:
                                 try:
                                     ripley_price_numeric = int(price_match.group(1).replace(',', ''))
                                 except:
                                     pass
-            except:
-                pass
-            
-            # 5. Descuento - selector: .catalog-product-details__discount-tag
-            discount_percent = ""
-            try:
-                discount_element = await container.query_selector(RIPLEY_SELECTORS['discount'])
-                if discount_element:
-                    discount_percent = await discount_element.inner_text()
-                    discount_percent = discount_percent.strip()
-            except:
-                pass
-            
-            # ==========================================
-            # 6. IMAGEN - COMPLETA COMO PORT
-            # ==========================================
-            image_url = ""
-            image_alt = ""
-            try:
-                img_element = await container.query_selector(RIPLEY_SELECTORS['image'])
-                if img_element:
-                    src = await img_element.get_attribute('src')
-                    alt = await img_element.get_attribute('alt')
-                    if src:
-                        image_url = src
-                    if alt:
-                        image_alt = alt
-            except:
-                pass
-            
-            # ==========================================
-            # 7. COLORES - EXACTO COMO PORT (selector: .catalog-colors-option-outer)
-            # ==========================================
-            colors = []
-            try:
-                color_elements = await container.query_selector_all(RIPLEY_SELECTORS['colors'])
-                for color_element in color_elements:
-                    color_title = await color_element.get_attribute('title')
-                    if color_title:
-                        colors.append(color_title)
-            except:
-                pass
-            
-            # ==========================================
-            # 8. EMBLEMAS/BADGES - EXACTO COMO PORT (selector: .emblem)
-            # ==========================================
-            emblems = []
-            try:
-                emblem_elements = await container.query_selector_all(RIPLEY_SELECTORS['badges'])
-                for emblem_element in emblem_elements:
-                    emblem_text = await emblem_element.inner_text()
-                    if emblem_text:
-                        emblems.append(emblem_text.strip())
-            except:
-                pass
-            
-            # ==========================================
-            # 9. ESPECIFICACIONES - REGEX EXACTOS DEL PORT
-            # ==========================================
-            storage = ""
-            ram = ""
-            screen_size = ""
-            camera = ""
-            
-            if product_name:
-                # Storage - regex PORT: r'(\d+)\s*gb(?!\s+ram)'
-                storage_match = re.search(RIPLEY_SPECS_REGEX['storage'], product_name.lower())
-                if storage_match:
-                    storage = f"{storage_match.group(1)}GB"
-                
-                # RAM - regex PORT: r'(\d+)\s*gb\s+ram'
-                ram_match = re.search(RIPLEY_SPECS_REGEX['ram'], product_name.lower())
-                if ram_match:
-                    ram = f"{ram_match.group(1)}GB"
-                
-                # Tamaño de pantalla - regex PORT: r'(\d+\.?\d*)"'
-                screen_match = re.search(RIPLEY_SPECS_REGEX['screen_size'], product_name)
-                if screen_match:
-                    screen_size = f"{screen_match.group(1)}\""
-                
-                # Cámara - regex PORT: r'(\d+)mp'
-                camera_match = re.search(RIPLEY_SPECS_REGEX['camera'], product_name.lower())
-                if camera_match:
-                    camera = f"{camera_match.group(1)}MP"
-            
-            # ==========================================
-            # CREAR PRODUCTO CON ESTRUCTURA EXACTA DEL PORT
-            # ==========================================
-            
-            # Solo agregar productos válidos (condición del PORT)
-            if not (product_code and product_name):
-                return None
-            
-            # Construir título completo
-            title_parts = []
-            if brand:
-                title_parts.append(brand)
-            if product_name:
-                title_parts.append(product_name)
-            title = " ".join(title_parts)
-            title = re.sub(r'\s+', ' ', title).strip()
-            
-            # Determinar precio principal (internet o el menor disponible)
-            current_price = internet_price_numeric or ripley_price_numeric or normal_price_numeric or 0
-            original_price = normal_price_numeric or current_price
-            
-            # Calcular descuento si hay diferencia
-            discount_percentage = 0
-            if original_price and current_price and original_price > current_price:
-                discount_percentage = int(((original_price - current_price) / original_price) * 100)
-            
-            product = ProductData(
-                title=title,
-                current_price=float(current_price) if current_price else 0.0,
-                original_price=float(original_price) if original_price else 0.0,
-                discount_percentage=discount_percentage,
-                currency="CLP",
-                availability="in_stock",
-                product_url=full_link,
-                image_urls=[image_url] if image_url else [],
-                brand=brand,
-                sku=product_code,
-                rating=0.0,
-                retailer=self.retailer,
-                extraction_timestamp=datetime.now(),
-                additional_info={
-                    'extraction_method': 'port_complete_fields',
-                    'container_index': index,
                     
-                    # ==== TODOS LOS CAMPOS DEL PORT ORIGINAL ====
-                    'product_code': product_code,
-                    'name': product_name,
-                    'screen_size': screen_size,
-                    'storage': storage,
-                    'ram': ram,
-                    'camera': camera,
-                    'colors': ', '.join(colors) if colors else "",
+                    # Descuento - EXACTO como PORT
+                    discount_elem = container.select_one('.catalog-product-details__discount-tag')
+                    discount_percent = discount_elem.get_text(strip=True) if discount_elem else ""
                     
-                    # Precios con texto y numérico (exacto como PORT)
-                    'normal_price_text': normal_price_text,
-                    'normal_price': normal_price_numeric,
-                    'internet_price_text': internet_price_text,
-                    'internet_price': internet_price_numeric,
-                    'ripley_price_text': ripley_price_text,
-                    'ripley_price': ripley_price_numeric,
-                    'discount_percent': discount_percent,
+                    # Imagen principal - EXACTO como PORT
+                    img_elem = container.select_one('img')
+                    image_url = img_elem.get('src', '') if img_elem else ""
+                    image_alt = img_elem.get('alt', '') if img_elem else ""
                     
-                    # Emblemas y otros
-                    'emblems': ', '.join(emblems) if emblems else "",
-                    'image_url': image_url,
-                    'image_alt': image_alt,
-                    'product_url': full_link,
-                    'scraped_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-            )
+                    # Colores disponibles - EXACTO como PORT
+                    color_elements = container.select('.catalog-colors-option-outer')
+                    colors = []
+                    for color_elem in color_elements:
+                        color_title = color_elem.get('title', '')
+                        if color_title:
+                            colors.append(color_title)
+                    
+                    # Emblemas/badges - EXACTO como PORT
+                    emblem_elements = container.select('.emblem')
+                    emblems = []
+                    for emblem in emblem_elements:
+                        emblem_text = emblem.get_text(strip=True)
+                        if emblem_text:
+                            emblems.append(emblem_text)
+                    
+                    # Extraer especificaciones del nombre - EXACTO como PORT
+                    storage = ""
+                    ram = ""
+                    screen_size = ""
+                    camera = ""
+                    
+                    # Almacenamiento
+                    storage_match = re.search(r'(\d+)\s*gb(?!\s+ram)', product_name.lower())
+                    if storage_match:
+                        storage = f"{storage_match.group(1)}GB"
+                    
+                    # RAM
+                    ram_match = re.search(r'(\d+)\s*gb\s+ram', product_name.lower())
+                    if ram_match:
+                        ram = f"{ram_match.group(1)}GB"
+                    
+                    # Tamaño de pantalla
+                    screen_match = re.search(r'(\d+\.?\d*)"', product_name)
+                    if screen_match:
+                        screen_size = f"{screen_match.group(1)}\""
+                    
+                    # Cámara
+                    camera_match = re.search(r'(\d+)mp', product_name.lower())
+                    if camera_match:
+                        camera = f"{camera_match.group(1)}MP"
+                    
+                    # Solo agregar productos válidos - MAPEAR campos PORT a estructura V5
+                    if product_code and product_name:
+                        product_data = ProductData(
+                            title=product_name,  # name -> title
+                            current_price=internet_price_numeric if internet_price_numeric else 0.0,  # internet_price -> current_price
+                            original_price=normal_price_numeric if normal_price_numeric else 0.0,  # normal_price -> original_price
+                            card_price=ripley_price_numeric if ripley_price_numeric else 0.0,  # ripley_price -> card_price
+                            brand=brand,
+                            sku=product_code,  # product_code -> sku
+                            product_url=full_link,
+                            image_urls=[image_url] if image_url else [],  # image_url -> image_urls
+                            retailer="ripley",
+                            category="celulares",
+                            additional_info={
+                                'screen_size': screen_size,
+                                'storage': storage,
+                                'ram': ram,
+                                'camera': camera,
+                                'colors': ', '.join(colors),
+                                'normal_price_text': normal_price_text,
+                                'internet_price_text': internet_price_text,
+                                'ripley_price_text': ripley_price_text,
+                                'discount_percent': discount_percent,
+                                'emblems': ', '.join(emblems),
+                                'image_alt': image_alt,
+                                'scraped_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            }
+                        )
+                        
+                        products.append(product_data)
+                        
+                        # Log igual que PORT
+                        self.logger.info(f"  [OK] Código: {product_code}")
+                        self.logger.info(f"  [OK] Marca: {brand}")
+                        self.logger.info(f"  [OK] Nombre: {product_name[:50]}...")
+                        self.logger.info(f"  [OK] Precio Normal: {normal_price_text}")
+                        self.logger.info(f"  [OK] Precio Internet: {internet_price_text}")
+                        self.logger.info(f"  [OK] Precio Ripley: {ripley_price_text}")
+                        self.logger.info(f"  [OK] Descuento: {discount_percent}")
+                        self.logger.info(f"  [OK] Specs: {screen_size} | {storage} | {ram} | {camera}")
+                        if colors:
+                            self.logger.info(f"  [OK] Colores: {', '.join(colors)}")
+                        if emblems:
+                            self.logger.info(f"  [OK] Emblemas: {', '.join(emblems[:2])}...")  # Solo primeros 2
+                        
+                except Exception as e:
+                    self.logger.error(f"  [ERROR] procesando contenedor: {e}")
+                    continue
             
-            return product
+            self.logger.info(f"✅ RIPLEY PORT: Extraídos {len(products)} productos")
+            return products
             
         except Exception as e:
-            self.logger.debug(f"⚠️ Error extrayendo producto individual: {e}")
-            return None
-
-    def _extract_specs_ripley_regex(self, product_name: str) -> Dict[str, str]:
-        """🔧 Extraer especificaciones con regex exactos del PORT"""
-        
-        specs = {}
-        
-        if not product_name:
-            return specs
-        
-        try:
-            # Storage (regex exacto PORT)
-            storage_match = re.search(RIPLEY_SPECS_REGEX['storage'], product_name, re.IGNORECASE)
-            if storage_match:
-                specs['storage'] = f"{storage_match.group(1)}GB"
-            
-            # RAM (regex exacto PORT)
-            ram_match = re.search(RIPLEY_SPECS_REGEX['ram'], product_name, re.IGNORECASE)
-            if ram_match:
-                specs['ram'] = f"{ram_match.group(1)}GB"
-            
-            # Screen size (regex exacto PORT)
-            screen_match = re.search(RIPLEY_SPECS_REGEX['screen_size'], product_name)
-            if screen_match:
-                specs['screen_size'] = f"{screen_match.group(1)}\""
-            
-            # Camera (regex exacto PORT)
-            camera_match = re.search(RIPLEY_SPECS_REGEX['camera'], product_name, re.IGNORECASE)
-            if camera_match:
-                specs['camera'] = f"{camera_match.group(1)}MP"
-                
-        except Exception as e:
-            self.logger.debug(f"⚠️ Error extrayendo specs: {e}")
-        
-        return specs
-
-    def _parse_price_ripley_method(self, price_text: str) -> float:
-        """💰 Parsear precio con método exacto del PORT"""
-        
-        if not price_text:
-            return 0.0
-        
-        try:
-            # Limpiar precio (método PORT)
-            price_match = re.search(r'([0-9.,]+)', price_text.replace('$', '').replace('.', ''))
-            if price_match:
-                try:
-                    return float(price_match.group(1).replace(',', ''))
-                except:
-                    return 0.0
-            return 0.0
-            
-        except (ValueError, AttributeError):
-            return 0.0
-
-    async def validate_extraction(self, products: List[ProductData]) -> Tuple[bool, List[str]]:
-        """✅ Validación PORT compatible para Ripley"""
-        
-        issues = []
-        
-        if not products:
-            issues.append("No se extrajeron productos con selectores PORT")
-            return False, issues
-        
-        valid_products = 0
-        for i, product in enumerate(products):
-            product_id = f"Producto {i+1}"
-            
-            # Validar datos críticos (como PORT)
-            if not product.title or len(product.title) < 3:
-                issues.append(f"{product_id}: Título inválido")
-                continue
-            
-            if product.current_price <= 0:
-                issues.append(f"{product_id}: Precio inválido")
-                continue
-                
-            if product.product_url and 'ripley.cl' not in product.product_url:
-                issues.append(f"{product_id}: URL no es de Ripley")
-                continue
-            
-            valid_products += 1
-        
-        # Criterio PORT: al menos 80% válidos
-        success_rate = valid_products / len(products) if products else 0
-        if success_rate < 0.8:
-            issues.append(f"Tasa de éxito baja: {success_rate:.1%} (mínimo 80%)")
-        
-        is_valid = len(issues) == 0
-        
-        if is_valid:
-            self.logger.info(f"✅ Validación PORT exitosa: {valid_products}/{len(products)} productos válidos")
-        else:
-            self.logger.warning(f"⚠️ Validación PORT con issues: {len(issues)} problemas")
-        
-        return is_valid, issues
-
-# ==========================================
-# TESTING Y MAIN EXECUTION
-# ==========================================
-
-async def test_ripley_improved_scraper():
-    """🧪 Test del scraper Ripley mejorado"""
-    
-    print("🧪 TEST RIPLEY SCRAPER V5 MEJORADO")
-    print("=" * 50)
-    
-    scraper = RipleyScraperV5Improved()
-    
-    try:
-        # Test de scraping
-        result = await scraper.scrape_category(
-            category="celulares",
-            max_products=200
-        )
-        
-        print(f"✅ Test completado:")
-        print(f"   Éxito: {result.success}")
-        print(f"   Productos: {len(result.products)}")
-        print(f"   Tiempo: {result.execution_time:.1f}s")
-        
-        if result.products:
-            print(f"\n📦 Muestra de productos:")
-            for i, product in enumerate(result.products[:3], 1):
-                current_price = f"${product.current_price:,.0f}" if product.current_price else "N/A"
-                original_price = f" (antes: ${product.original_price:,.0f})" if product.original_price > product.current_price else ""
-                
-                print(f"{i}. {product.title}")
-                print(f"   Precio: {current_price}{original_price}")
-                print(f"   SKU: {product.sku}")
-                print(f"   URL: {product.product_url[:60]}...")
-                
-                # Mostrar especificaciones si están disponibles
-                specs = []
-                if product.additional_info.get('storage'):
-                    specs.append(product.additional_info['storage'])
-                if product.additional_info.get('ram'):
-                    specs.append(product.additional_info['ram'])
-                if product.additional_info.get('screen_size'):
-                    specs.append(product.additional_info['screen_size'])
-                    
-                if specs:
-                    print(f"   Specs: {' | '.join(specs)}")
-        
-        # Test de validación
-        is_valid, issues = await scraper.validate_extraction(result.products)
-        print(f"\n🔍 Validación: {'✅ EXITOSA' if is_valid else '❌ CON PROBLEMAS'}")
-        if issues:
-            for issue in issues[:3]:
-                print(f"   - {issue}")
-        
-    except Exception as e:
-        print(f"❌ Error en test: {e}")
-
-if __name__ == "__main__":
-    # Configurar logging para test
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(levelname)s:%(name)s:%(message)s'
-    )
-    
-    asyncio.run(test_ripley_improved_scraper())
+            self.logger.error(f"❌ Error extracting products RIPLEY PORT: {e}")
+            import traceback
+            self.logger.error(f"❌ Traceback: {traceback.format_exc()}")
+            return []

@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-🏪 AbcDin Chile Scraper v5 MEJORADO - Integración de Selectores PORT
-===================================================================
+🏪 AbcDin Chile Scraper v5 PARALELO - PORT Integrado + Optimizaciones de Velocidad
+===================================================================================
 
-INTEGRA SELECTORES EXACTOS DE scrappers_port/abc_scraper.py que SÍ FUNCIONAN
-en la arquitectura V5 con Playwright async, aplicando las mismas optimizaciones
-exitosas implementadas para Ripley, Paris y Hites.
+INTEGRA MEJORAS DE VELOCIDAD DE PARIS/FALABELLA + SELECTORES PORT FUNCIONALES
+- 🚀 SCRAPING PARALELO: 5 páginas simultáneas (igual que Paris/Falabella)
+- ⚡ TIMEOUTS OPTIMIZADOS: 30s total, 3s por elemento (ultra-rápido)
+- 🎯 DETECCIÓN AUTO-STOP: Páginas vacías automáticas
+- 📊 CONFIGURACIÓN CENTRALIZADA: Desde config.json
 
 ✅ SELECTORES ESPECÍFICOS MIGRADOS:
 - div.lp-product-tile.js-lp-product-tile (selector principal)
@@ -16,16 +18,14 @@ exitosas implementadas para Ripley, Paris y Hites.
 - .internet.price .price-value (precio internet)
 - .normal.price .price-value (precio normal)
 
-✅ LÓGICA DE PARSING MIGRADA:
-- Extracción por data-value attributes para precios
-- JSON parsing de data-gtm-click para product ID
-- Manejo de precios múltiples (La Polar, Internet, Normal)
-- Rating por Power Reviews (.pr-snippet-rating-decimal)
-- Especificaciones técnicas (.prices-actions__destacados__items)
-- Badges flotantes y promocionales
+✅ OPTIMIZACIONES DE VELOCIDAD INTEGRADAS:
+- 📦 Paginación paralela con batch_size=5
+- ⏰ Timeouts ultra-rápidos (30s total vs 90s anterior)
+- 🔄 Auto-stop inteligente con detección de páginas vacías
+- 📜 Scroll optimizado (2s inicial, 1s scroll, 0.5s mid-scroll)
+- 🎛️ Configuración desde config.json (como Paris/Falabella)
 
-🎯 OBJETIVO: 100% compatibilidad con scraper PORT que SÍ EXTRAE DATOS
-Incluye optimizaciones específicas para evitar timeout y bloqueos anti-bot
+🎯 OBJETIVO: Máxima velocidad con 100% compatibilidad scraper PORT funcional
 """
 
 import asyncio
@@ -35,6 +35,7 @@ import json
 from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 from urllib.parse import urljoin
+from pathlib import Path
 
 from playwright.async_api import Page, ElementHandle
 
@@ -66,16 +67,16 @@ logger = logging.getLogger(__name__)
 # SELECTORES EXACTOS DEL PORT (FUNCIONALES) 
 # ======================================
 
-# Selector principal (el que SÍ encuentra productos en AbcDin)
+# Selector principal (EXACTO del PORT funcional)
 PRODUCT_CONTAINER_SELECTOR = "div.lp-product-tile.js-lp-product-tile"
 
-# Selectores de datos específicos (del PORT funcional)
+# Selectores de datos específicos (EXACTOS del PORT funcional)
 ABCDIN_SELECTORS = {
     'brand': '.brand-name',
-    'name': '.pdp-link a',
+    'name': '.pdp-link a', 
     'image': '.tile-image',
     'price_la_polar': '.la-polar.price .price-value',
-    'price_internet': '.internet.price .price-value',
+    'price_internet': '.internet.price .price-value', 
     'price_normal': '.normal.price .price-value',
     'discount': '.promotion-badge',
     'rating': '.pr-snippet-rating-decimal',
@@ -102,32 +103,61 @@ class AbcdinScraperV5Improved(BaseScraperV5):
     def __init__(self):
         super().__init__("abcdin")
         
-        # URLs exactas (del PORT)
+        # URL base exacta del PORT funcional
+        self.base_url = "https://www.abc.cl/tecnologia/celulares/smartphones/"
+        
+        # URLs por categoría (del PORT)
         self.base_urls = {
             'home': 'https://www.abc.cl',
             'celulares': 'https://www.abc.cl/tecnologia/celulares/smartphones/',
+            'smartphones': 'https://www.abc.cl/tecnologia/celulares/smartphones/',
             'tablets': 'https://www.abc.cl/tecnologia/tablets/',
             'computadores': 'https://www.abc.cl/tecnologia/computadores/notebooks/',
             'television': 'https://www.abc.cl/tecnologia/television/'
         }
         
-        # Configuración específica de AbcDin (optimizada para evitar timeouts)
+        # Configuración de paginación centralizada
+        self.pagination_config = self._load_pagination_config()
+        
+        # Configuración ULTRA-RÁPIDA optimizada (igual que Paris/Falabella)
         self.config = {
-            'page_timeout': 90000,             # 90 segundos (ABC puede ser muy lento)
-            'load_wait': 15000,                # 15 segundos inicial (más tiempo)
-            'scroll_step': 300,                # Paso de scroll más grande
-            'scroll_delay': 4000,              # 4 segundos entre scrolls (más tiempo)
-            'post_scroll_wait': 3000,          # Espera post-scroll
-            'batch_size': 15,                  # Lotes para procesar
-            'element_timeout': 20000,          # Timeout muy generoso
-            
-            # Configuración anti-detección específica para ABC
+            'initial_wait': 2,         # 2 segundos mínimos
+            'scroll_wait': 1,          # 1 segundo después del scroll
+            'mid_scroll_wait': 0.5,    # 0.5 segundos después del scroll a mitad
+            'element_timeout': 3000,   # 3 segundos timeout por elemento
+            'page_timeout': 30000,     # 30 segundos total optimizado
+            'batch_size': 15,          # Lotes para procesar
             'requires_visible_browser': False,  # No necesita visible como Ripley
-            'scroll_count': 3,                 # 3 scrolls como en PORT
+            'scroll_count': 3,         # 3 scrolls como en PORT
             'wait_until': 'domcontentloaded'   # Cambiar de networkidle para evitar timeout
         }
         
-        self.logger.info("🏪 AbcDin Scraper V5 MEJORADO inicializado - Selectores PORT + Anti-timeout")
+        self.logger.info("🏪 AbcDin Scraper V5 - PARALELO + PORT inicializado")
+
+    def _load_pagination_config(self) -> Dict[str, Any]:
+        """📄 Cargar configuración de paginación desde config.json"""
+        try:
+            config_path = Path(__file__).parent.parent / "config.json"
+            if not config_path.exists():
+                self.logger.warning(f"⚠️ Config.json no encontrado en {config_path}")
+                return {}
+            
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config_data = json.load(f)
+            
+            abcdin_config = config_data.get('retailers', {}).get('abcdin', {})
+            pagination_config = abcdin_config.get('paginacion', {})
+            
+            if pagination_config:
+                self.logger.info(f"✅ Configuración de paginación AbcDin cargada: {pagination_config.get('url_pattern', 'N/A')}")
+                return pagination_config
+            else:
+                self.logger.warning("⚠️ No se encontró configuración de paginación para AbcDin")
+                return {}
+                
+        except Exception as e:
+            self.logger.error(f"💥 Error cargando configuración de paginación: {e}")
+            return {}
 
     async def scrape_category(
         self, 
@@ -149,8 +179,12 @@ class AbcdinScraperV5Improved(BaseScraperV5):
             # Obtener página con configuración optimizada
             page = await self.get_page()
             
-            # Scraping con lógica PORT integrada y optimizada
-            products = await self._scrape_with_port_logic_optimized(page, category_url, max_products)
+            # Scraping PARALELO con paginación (como Paris/Falabella)
+            products = await self._scrape_with_pagination_parallel(page, max_products)
+            
+            # Guardar JSON individual como Paris/Falabella
+            if products:
+                await self._save_retailer_json_complete(products, self.session_id, execution_time)
             
             execution_time = (datetime.now() - start_time).total_seconds()
             
@@ -165,12 +199,12 @@ class AbcdinScraperV5Improved(BaseScraperV5):
                 category=category,
                 timestamp=datetime.now(),
                 metadata={
-                    'scraping_method': 'port_selectors_optimized',
+                    'scraping_method': 'parallel_port_integrated',
+                    'parallel_pages': 5,
                     'port_compatibility': True,
-                    'extraction_method': 'playwright_direct_query',
+                    'extraction_method': 'playwright_parallel',
                     'success_rate': f"{len(products)}/{max_products}",
-                    'scroll_method': 'abcdin_style_scroll',
-                    'anti_timeout': True
+                    'pagination_used': len(self.pagination_config) > 0
                 }
             )
             
@@ -193,8 +227,159 @@ class AbcdinScraperV5Improved(BaseScraperV5):
                 category=category,
                 timestamp=datetime.now(),
                 error_message=str(e),
-                metadata={'error_type': type(e).__name__, 'scraping_method': 'port_selectors_optimized'}
+                metadata={'error_type': type(e).__name__, 'scraping_method': 'parallel_port_integrated'}
             )
+
+    async def _scrape_with_pagination_parallel(self, initial_page: Page, max_products: int) -> List[ProductData]:
+        """📦 Scraping PARALELO con 5 páginas simultáneas + lógica AbcDin optimizada"""
+        
+        all_products = []
+        current_batch_start = 0  # AbcDin usa start=0, not page=1
+        consecutive_empty_batches = 0
+        
+        # Configuración de paralelismo y detección (como Paris/Falabella)
+        batch_size = 5  # 5 páginas simultáneas
+        max_empty_batches = 2
+        max_pages_config = self.pagination_config.get('max_pages', 50) if self.pagination_config else 50
+        auto_stop_enabled = self.pagination_config.get('auto_stop', True) if self.pagination_config else True
+        page_increment = self.pagination_config.get('page_increment', 36) if self.pagination_config else 36
+        sz_param = self.pagination_config.get('sz_param', 36) if self.pagination_config else 36
+        
+        self.logger.info(f"🚀 Iniciando AbcDin PARALELO:")
+        self.logger.info(f"   📄 Max páginas: {max_pages_config}")
+        self.logger.info(f"   ⚡ Páginas paralelas: {batch_size}")
+        self.logger.info(f"   🔚 Auto-stop: {'Activado' if auto_stop_enabled else 'Desactivado'}")
+        self.logger.info(f"   📏 Increment: {page_increment}, Size: {sz_param}")
+        
+        while len(all_products) < max_products and current_batch_start < (max_pages_config * page_increment):
+            # Preparar lote de páginas
+            batch_pages = []
+            for i in range(batch_size):
+                start_value = current_batch_start + (i * page_increment)
+                if start_value >= (max_pages_config * page_increment):
+                    break
+                batch_pages.append(start_value)
+            
+            if not batch_pages:
+                break
+            
+            self.logger.info(f"🚀 Procesando lote AbcDin páginas start={batch_pages[0]} a start={batch_pages[-1]}")
+            
+            # Procesar páginas en paralelo
+            batch_results = await self._process_abcdin_pages_parallel(batch_pages, sz_param)
+            
+            # Consolidar resultados del lote
+            batch_products = []
+            empty_pages_in_batch = 0
+            
+            for page_result in batch_results:
+                if page_result:
+                    batch_products.extend(page_result)
+                else:
+                    empty_pages_in_batch += 1
+            
+            # Verificar si el lote está vacío
+            if not batch_products:
+                consecutive_empty_batches += 1
+                self.logger.warning(f"⚠️ Lote vacío {consecutive_empty_batches}/{max_empty_batches}")
+                
+                if auto_stop_enabled and consecutive_empty_batches >= max_empty_batches:
+                    self.logger.info("🛑 Auto-stop activado: demasiados lotes vacíos")
+                    break
+            else:
+                consecutive_empty_batches = 0
+                all_products.extend(batch_products)
+                self.logger.info(f"✅ Lote completado: +{len(batch_products)} productos (Total: {len(all_products)})")
+            
+            # Avanzar al siguiente lote
+            current_batch_start += (batch_size * page_increment)
+            
+            # Delay entre lotes para evitar sobrecarga
+            await asyncio.sleep(1)
+            
+            # Verificar si ya tenemos suficientes productos
+            if len(all_products) >= max_products:
+                break
+        
+        final_products = all_products[:max_products]
+        self.logger.info(f"✅ AbcDin PARALELO terminado: {len(final_products)} productos finales")
+        
+        return final_products
+
+    async def _process_abcdin_pages_parallel(self, start_values: List[int], sz_param: int) -> List[List[ProductData]]:
+        """⚡ Procesar páginas de AbcDin en paralelo"""
+        
+        tasks = []
+        for start_value in start_values:
+            task = self._scrape_single_abcdin_page(start_value, sz_param)
+            tasks.append(task)
+        
+        # Ejecutar todas las tareas en paralelo
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # Procesar resultados
+        valid_results = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                self.logger.error(f"❌ Error en página start={start_values[i]}: {result}")
+                valid_results.append([])
+            else:
+                valid_results.append(result or [])
+        
+        return valid_results
+
+    async def _scrape_single_abcdin_page(self, start_value: int, sz_param: int) -> List[ProductData]:
+        """📄 Scraper de una sola página de AbcDin con lógica PORT"""
+        
+        page = None
+        try:
+            # Crear nueva página para este hilo paralelo
+            page = await self.get_page()
+            if not page:
+                return []
+            
+            # Construir URL con paginación AbcDin (PORT usa abc.cl)
+            url = f"https://www.abc.cl/tecnologia/celulares/smartphones?start={start_value}&sz={sz_param}"
+            
+            # Navegar con timeout optimizado
+            await page.goto(url, wait_until=self.config['wait_until'], timeout=self.config['page_timeout'])
+            
+            # Espera inicial mínima (optimizada)
+            await page.wait_for_timeout(self.config['initial_wait'] * 1000)
+            
+            # Scroll rápido
+            await self._abcdin_fast_scroll(page)
+            
+            # Extraer productos con método PORT optimizado
+            products = await self._extract_products_port_optimized(page)
+            
+            self.logger.debug(f"📄 Página start={start_value}: {len(products)} productos")
+            
+            return products
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error scraping página start={start_value}: {e}")
+            return []
+            
+        finally:
+            if page:
+                try:
+                    await page.close()
+                except:
+                    pass
+
+    async def _abcdin_fast_scroll(self, page: Page):
+        """📜 Scroll rápido optimizado para AbcDin"""
+        try:
+            # Scroll rápido a la mitad y al final
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2);")
+            await page.wait_for_timeout(int(self.config['scroll_wait'] * 1000))
+            
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
+            await page.wait_for_timeout(int(self.config['mid_scroll_wait'] * 1000))
+            
+        except Exception as e:
+            self.logger.debug(f"⚠️ Error en scroll rápido: {e}")
 
     async def _scrape_with_port_logic_optimized(self, page: Page, url: str, max_products: int) -> List[ProductData]:
         """📦 Scraping usando lógica exacta del PORT pero optimizada para evitar timeouts"""
@@ -724,6 +909,77 @@ class AbcdinScraperV5Improved(BaseScraperV5):
         
         return is_valid, issues
 
+    async def _save_retailer_json_complete(self, products: List[ProductData], session_id: str, execution_time: float):
+        """💾 Guardar resultados COMPLETOS en JSON específico por retailer con timestamp"""
+        try:
+            # Crear timestamp para el archivo
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            
+            # Crear directorio específico por retailer
+            retailer_dir = Path(__file__).parent.parent / "resultados_json" / self.retailer
+            retailer_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Nombre del archivo con timestamp
+            filename = f"{self.retailer}_productos_{timestamp}.json"
+            filepath = retailer_dir / filename
+            
+            # Convertir ProductData a diccionarios serializables
+            products_data = []
+            for product in products:
+                product_dict = {
+                    'title': product.title,
+                    'sku': product.sku,
+                    'brand': product.brand,
+                    'current_price': product.current_price,
+                    'original_price': product.original_price,
+                    'product_url': product.product_url,
+                    'image_urls': product.image_urls,
+                    'rating': product.rating,
+                    'reviews_count': product.reviews_count,
+                    'retailer': product.retailer,
+                    'category': product.category,
+                    'extraction_timestamp': product.extraction_timestamp.isoformat() if hasattr(product.extraction_timestamp, 'isoformat') else str(product.extraction_timestamp),
+                    'additional_info': product.additional_info
+                }
+                products_data.append(product_dict)
+            
+            # Crear estructura JSON completa
+            json_data = {
+                'retailer': self.retailer,
+                'extraction_timestamp': timestamp,
+                'session_id': session_id,
+                'execution_time_seconds': execution_time,
+                'total_products': len(products),
+                'extraction_method': 'parallel_port_integrated_v5',
+                'pagination_config': self.pagination_config,
+                'source_url': self.base_url,
+                'products': products_data,
+                'extraction_summary': {
+                    'brands_found': list(set(p.get('brand', '') for p in products_data if p.get('brand'))),
+                    'price_range': {
+                        'min_price': min((p.get('current_price', 0) for p in products_data if p.get('current_price', 0) > 0), default=0),
+                        'max_price': max((p.get('current_price', 0) for p in products_data if p.get('current_price', 0) > 0), default=0),
+                        'avg_price': sum(p.get('current_price', 0) for p in products_data if p.get('current_price', 0) > 0) / len([p for p in products_data if p.get('current_price', 0) > 0]) if len([p for p in products_data if p.get('current_price', 0) > 0]) > 0 else 0
+                    },
+                    'products_with_rating': len([p for p in products_data if p.get('rating', 0) > 0]),
+                    'products_with_discount': len([p for p in products_data if p.get('original_price', 0) > p.get('current_price', 0)])
+                }
+            }
+            
+            # Guardar archivo JSON con encoding UTF-8
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(json_data, f, indent=2, ensure_ascii=False)
+            
+            self.logger.info(f"💾 AbcDin JSON guardado: {filepath}")
+            self.logger.info(f"📊 Resumen: {len(products)} productos, {execution_time:.1f}s")
+            
+            return str(filepath)
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error guardando JSON AbcDin: {e}")
+            return None
+
+
 # ==========================================
 # TESTING Y MAIN EXECUTION
 # ==========================================
@@ -748,34 +1004,12 @@ async def test_abcdin_improved_scraper():
         print(f"   Productos: {len(result.products)}")
         print(f"   Tiempo: {result.execution_time:.1f}s")
         
-        if result.products:
-            print(f"\n📦 Muestra de productos:")
-            for i, product in enumerate(result.products[:3], 1):
-                current_price = f"${product.current_price:,.0f}" if product.current_price else "N/A"
-                original_price = f" (antes: ${product.original_price:,.0f})" if product.original_price > product.current_price else ""
-                
-                print(f"{i}. {product.title}")
-                print(f"   Precio: {current_price}{original_price}")
-                print(f"   ID: {product.sku}")
-                print(f"   Rating: {product.rating} estrellas ({product.additional_info.get('reviews_count')} reviews)")
-                
-                # Mostrar especificaciones si están disponibles
-                specs = []
-                if product.additional_info.get('screen_size'):
-                    specs.append(product.additional_info['screen_size'])
-                if product.additional_info.get('internal_memory'):
-                    specs.append(product.additional_info['internal_memory'])
-                if product.additional_info.get('camera_info'):
-                    specs.append(product.additional_info['camera_info'])
-                    
-                if specs:
-                    print(f"   Specs: {' | '.join(specs)}")
-                    
-                # Precios múltiples
-                if product.additional_info.get('la_polar_price'):
-                    print(f"   Precio La Polar: ${product.additional_info['la_polar_price']:,}")
-                if product.additional_info.get('internet_price'):
-                    print(f"   Precio Internet: ${product.additional_info['internet_price']:,}")
+        # Mostrar productos encontrados
+        for i, product in enumerate(result.products[:3], 1):
+            print(f"\n{i}. {product.title}")
+            print(f"   💰 ${product.current_price:,} | Original: ${product.original_price or 0:,}")
+            print(f"   🏷️ {product.brand}")
+            print(f"   🔗 {product.product_url}")
         
         # Test de validación
         is_valid, issues = await scraper.validate_extraction(result.products)
@@ -790,7 +1024,6 @@ async def test_abcdin_improved_scraper():
         traceback.print_exc()
 
 if __name__ == "__main__":
-    # Configurar logging para test
     import logging
     logging.basicConfig(
         level=logging.INFO,
